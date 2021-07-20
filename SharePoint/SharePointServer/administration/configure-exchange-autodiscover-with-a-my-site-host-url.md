@@ -1,11 +1,13 @@
 ---
 title: "Configure Exchange Autodiscover with a My Site Host URL in SharePoint Server"
 ms.reviewer: 
-ms.author: mikeplum
-author: MikePlumleyMSFT
-manager: pamgreen
+ms.author: serdars
+author: SerdarSoysal
+manager: serdars
 ms.date: 11/2/2017
 audience: ITPro
+f1.keywords:
+- NOCSH
 ms.topic: article
 ms.prod: sharepoint-server-itpro
 localization_priority: Normal
@@ -22,7 +24,7 @@ description: "Learn how to configure Exchange Autodiscover to find a user's Shar
   
 In SharePoint Server, a My Site gives users rich social networking and collaboration features that enable content sharing, discussions, and other features for users to do their jobs. The Exchange Server 2013 Autodiscover service configures profile settings on mail clients and mobile devices based on a supplied user name and password. The Autodiscover service can also be configured to allow for a simpler, seamless configuration experience to a My Site for Office 2016 client integration. For example, Office 2016 client and mobile phone apps can use Exchange Autodiscover to find a user's My Site based on the My Site Host URL stored in Active Directory Domain Services (AD DS). Instead of identifying and entering the My Site Host URL, a user's email address and password are the only requirements to configure and provision client functionality for:
   
-- OneDrive for Business — Open and save a document to your OneDrive for Business location.
+- Microsoft OneDrive — Open and save a document to your OneDrive location.
     
 - Access a Newsfeed on a device.
     
@@ -35,7 +37,7 @@ This article provides the steps necessary to update AD DS with your My Site Host
   
 ## Configure Exchange Autodiscover with a My Site Host URL
 
-To update AD DS with the My Site Host URL, you must run a script on an Exchange Server computer by using the Exchange Management Shell. This procedure helps you create the PowerShell script, and then run the script to update AD DS with the specified URL value. This procedure also provides the optional steps to verify and remove a My Site Host URL entry if needed. For more information about how to run scripts, see [Scripting with the Exchange Management Shell](https://go.microsoft.com/fwlink/p/?LinkId=299662) in the Exchange Server 2013 Technical Library. 
+To update AD DS with the My Site Host URL, you must run a script on an Exchange Server computer by using the Exchange Management Shell. This procedure helps you create the PowerShell script, and then run the script to update AD DS with the specified URL value. This procedure also provides the optional steps to verify and remove a My Site Host URL entry if needed. For more information about how to run scripts, see [Scripting with the Exchange Management Shell](/powershell/module/microsoft.powershell.core/about/about_scripts) in the Exchange Server 2013 Technical Library. 
   
  **To configure Exchange Autodiscover with a My Site Host URL**
   
@@ -254,4 +256,3 @@ Once you have configured the My Site Host URL, you can also verify the value in 
 #### Concepts
 
 [Configure My Sites in SharePoint Server](../install/configure-my-sites.md)
-

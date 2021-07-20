@@ -1,11 +1,13 @@
 ---
 title: "Verify that the critical User Profile Application and User Profile Proxy Application timer jobs are available and have not been mistakenly deleted (SharePoint Server)"
 ms.reviewer: 
-ms.author: mikeplum
-author: MikePlumleyMSFT
-manager: pamgreen
+ms.author: serdars
+author: SerdarSoysal
+manager: serdars
 ms.date: 8/31/2017
 audience: ITPro
+f1.keywords:
+- NOCSH
 ms.topic: troubleshooting
 ms.prod: sharepoint-server-itpro
 localization_priority: Normal
@@ -34,7 +36,7 @@ description: "Learn how to resolve the SharePoint Health Analyzer rule: Verify t
     
 3. On the Health Analyzer Rule Definitions - All Rules page, in the **Category: Configuration** section, click the name of the rule. 
     
-4. In the **Health Analyzer Rule Definitions** dialog box, click **Edit Item**.
+4. In the **Health Analyzer Rule Definitions** dialog, click **Edit Item**.
     
 5. Select the **Repair Automatically** check box, and then click **Save**.
     

@@ -1,11 +1,13 @@
 ---
 title: "Stage 1 Create site collections for cross-site publishing in SharePoint Server"
 ms.reviewer: 
-ms.author: jhendr
-author: JoanneHendrickson
-manager: pamgreen
+ms.author: serdars
+author: SerdarSoysal
+manager: serdars
 ms.date: 9/17/2016
 audience: ITPro
+f1.keywords:
+- NOCSH
 ms.topic: article
 ms.prod: sharepoint-server-itpro
 localization_priority: Normal
@@ -19,7 +21,7 @@ description: "Learn how to create site collections for cross-site publishing in 
 [!INCLUDE[appliesto-2013-2016-2019-xxx-md](../includes/appliesto-2013-2016-2019-xxx-md.md)]
   
 > [!NOTE]
-> Most of the features described in this series are available only for private sites collections in SharePoint Online. 
+> Many of the features described in this series are also available for most sites in SharePoint in Microsoft 365. 
   
 ## Start stage 1
 
@@ -49,11 +51,11 @@ To create a Product Catalog Site Collection, go to **Central Administration** --
     
 5. In the field **Primary Site Collection Site Administrator**, enter the site administrator's **user name**. 
     
-The following screen shot provides more guidance.
+The following screenshot provides more guidance.
   
 ![Create Product Catalog](../media/OTCSP_CreateProductCatalog.PNG)
   
-Next, to create a Publishing Portal Site Collection, repeat the previous steps, except for the following difference: from the **Publishing** tab, choose **Publishing Portal**. The title of this site collection is **Contoso**. 
+Next, to create a Publishing Portal Site Collection, repeat the previous steps, except for the following difference: from the **Publishing** tab, select **Publishing Portal**. The title of this site collection is **Contoso**. 
   
 ![Create Publishing Portal](../media/OTCSP_CreatePublishingPortal.PNG)
   

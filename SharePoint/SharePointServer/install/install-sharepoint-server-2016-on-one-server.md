@@ -1,11 +1,13 @@
 ---
 title: "Install SharePoint Servers 2016 or 2019 on one server"
 ms.reviewer: 
-ms.author: mikeplum
-author: MikePlumleyMSFT
-manager: pamgreen
+ms.author: serdars
+author: SerdarSoysal
+manager: serdars
 ms.date: 07/24/2018
 audience: ITPro
+f1.keywords:
+- NOCSH
 ms.topic: get-started-article
 ms.prod: sharepoint-server-itpro
 localization_priority: Priority
@@ -47,7 +49,7 @@ Before you begin to install and configure SharePoint Servers 2016 or 2019, do th
     
 - Ensure that you are prepared to set up the required accounts by using appropriate permissions. For detailed information, see [Initial deployment administrative and service accounts in SharePoint Server](initial-deployment-administrative-and-service-accounts-in-sharepoint-server.md).
     
-- Ensure the Max degree of parallelism is set to 1. For additional information about max degree of parallelism see, [Configure the max degree of parallelism Server Configuration Option](https://docs.microsoft.com/sql/database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option?view=sql-server-2017).
+- Ensure the Max degree of parallelism is set to 1. For additional information about max degree of parallelism see, [Configure the max degree of parallelism Server Configuration Option](/sql/database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option?view=sql-server-2017).
     
  **Security note**: As a security best practice, we recommend that you install SharePoint Servers 2016 or 2019 by using least-privilege administration. 
   
@@ -117,7 +119,7 @@ The following procedure installs binaries, configures security permissions, and 
   
 6. Click **Install Now**.
     
-7. When Setup finishes, a dialog box prompts you to complete the configuration of your server. Ensure that the **Run the SharePoint Products Configuration Wizard now** check box is selected. 
+7. When Setup finishes, a dialog prompts you to complete the configuration of your server. Ensure that the **Run the SharePoint Products Configuration Wizard now** check box is selected. 
     
 8. Click **Close** to start the configuration wizard. 
     
@@ -132,11 +134,11 @@ Use the following procedure to install and configure the configuration database 
   
 1. Verify that the user account that is performing this procedure is the farm administrator user account. For information about the farm administrator user account, see [Initial deployment administrative and service accounts in SharePoint Server](initial-deployment-administrative-and-service-accounts-in-sharepoint-server.md).
     
-2. If you have closed the SharePoint Products Configuration Wizard, you can access it by clicking **Start**, point to **All Apps**, click **Microsoft SharePoint Products**, and then click **SharePoint Products Configuration Wizard**. If the **User Account Control** dialog box appears, click **Continue**.
+2. If you have closed the SharePoint Products Configuration Wizard, you can access it by clicking **Start**, point to **All Apps**, click **Microsoft SharePoint Products**, and then click **SharePoint Products Configuration Wizard**. If the **User Account Control** dialog appears, click **Continue**.
     
 3. On the **Welcome to SharePoint Products** page, click **Next**.
     
-4. In the dialog box that notifies you that some services might have to be restarted during configuration, click **Yes**.
+4. In the dialog that notifies you that some services might have to be restarted during configuration, click **Yes**.
     
 5. On the **Connect to a server farm** page, click **Create a new server farm**, and then click **Next**.
     
@@ -227,9 +229,9 @@ If you receive a proxy server error message, perform the following procedure:
     
 5. In the **Add this web site to the zone** box, type the URL to your site, and then click **Add**.
     
-6. Click **Close** to close the **Trusted Sites** dialog box. 
+6. Click **Close** to close the **Trusted Sites** dialog. 
     
-7. Click **OK** to close the **Internet Options** dialog box. 
+7. Click **OK** to close the **Internet Options** dialog. 
     
  **To disable Internet Explorer Enhanced Security settings**
   
@@ -243,7 +245,7 @@ If you receive a proxy server error message, perform the following procedure:
     
 4. In the **Security Information** section, click **Configure IE ESC**.
     
-    The **Internet Explorer Enhanced Security Configuration** dialog box appears. 
+    The **Internet Explorer Enhanced Security Configuration** dialog appears. 
     
 5. In the **Administrators** section, click **Off** to disable the Internet Explorer Enhanced Security settings, and then click **OK**.
     
@@ -267,9 +269,9 @@ If you receive a proxy server error message, perform the following procedure:
     
 8. Select the **Bypass proxy server for local addresses** check box. 
     
-9. Click **OK** to close the **Local Area Network (LAN) Settings** dialog box. 
+9. Click **OK** to close the **Local Area Network (LAN) Settings** dialog. 
     
-10. Click **OK** to close the **Internet Options** dialog box. 
+10. Click **OK** to close the **Internet Options** dialog. 
     
 ### Run the Farm Configuration Wizard
 <a name="configurebrowser"> </a>
@@ -329,5 +331,3 @@ After you install and configure SharePoint Server, your browser window opens to 
 - **Configure outgoing email** You can configure outgoing email so that your Simple Mail Transfer Protocol (SMTP) server sends email alerts to site users and notifications to site administrators. You can configure both the "From" email address and the "Reply" email address that appear in outgoing alerts. 
     
 - **Configure Search settings** You can configure Search settings to crawl the content in SharePoint Server. 
-    
-

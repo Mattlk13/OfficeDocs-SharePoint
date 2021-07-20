@@ -3,19 +3,24 @@ title: "How to create and edit permission levels"
 ms.reviewer: srice
 ms.author: mikeplum
 author: MikePlumleyMSFT
-manager: pamgreen
+manager: serdars
+recommendations: true
 audience: Admin
 ROBOTS: NOINDEX
+f1.keywords:
+- NOCSH
 ms.topic: article
 ms.service: sharepoint-online
 localization_priority: Normal
+search.appverid:
+- MET150
 ms.assetid: 53c86040-07fa-4ea7-bc55-34ee96b437fe
 description: "Learn how to create different permission levels for different groups of people within a site collection."
 ---
 
 # Permission levels
 
-While SharePoint allows considerable customization of site permissions, including custom permission levels, we highly recommend using the built-in SharePoint groups for communication site permissions and managing team site permissions through the associated Office 365 group. This allows for much easier administration. For information about managing permissions in the SharePoint modern experience, see [Sharing and permissions in the SharePoint modern experience](modern-experience-sharing-permissions.md).
+While SharePoint allows considerable customization of site permissions, including custom permission levels, we highly recommend using the built-in SharePoint groups for communication site permissions and managing team site permissions through the associated Microsoft 365 group. This allows for much easier administration. For information about managing permissions in the SharePoint modern experience, see [Sharing and permissions in the SharePoint modern experience](modern-experience-sharing-permissions.md).
 
 If you do need to create custom permission levels, this article describes how.
 
@@ -103,6 +108,9 @@ You can delete any permission level, except for **Full Control** and **Limited A
   
 To delete a permission level, on the **Permissions Levels** page, select the check box next to the permission level that you want to delete, and then chose **Delete Selected Permission Levels**.
   
+> [!IMPORTANT]
+> It is possible to create permission levels which do not grant the minimum required permissions. The modern user experience uses client side rendering which requires that all users have the "Use Remote Interfaces" permission. Removing "Use Remote Permissions" from a permissions level will result in Access Denied errors that either prevent features on a modern page from loading or prevent the entire modern page from loading, resulting in an Access Denied error for the user. 
+
 ## Best practices for permission levels
 <a name="__best_practices_for"> </a>
 

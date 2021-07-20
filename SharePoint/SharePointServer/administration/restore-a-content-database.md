@@ -1,10 +1,12 @@
 ---
 title: "Restore content databases in SharePoint Server"
 ms.reviewer: 
-ms.author: mikeplum
-author: MikePlumleyMSFT
-manager: pamgreen
+ms.author: serdars
+author: SerdarSoysal
+manager: serdars
 audience: ITPro
+f1.keywords:
+- NOCSH
 ms.topic: article
 ms.prod: sharepoint-server-itpro
 localization_priority: Normal
@@ -101,7 +103,7 @@ You can use Central Administration to restore a farm or components of a farm.
     > [!NOTE]
     > If the content database is not selectable, you must use PowerShell or SQL Server tools to restore the content database. 
   
-6. On the Restore from Backup — Step 3 of 3: Select Restore Options page, in the **Restore Options** section, under **Type of Restore**, click the **Same configuration** option. A dialog box appears that asks you to confirm the operation. Click **OK**.
+6. On the Restore from Backup — Step 3 of 3: Select Restore Options page, in the **Restore Options** section, under **Type of Restore**, click the **Same configuration** option. A dialog appears that asks you to confirm the operation. Click **OK**.
     
     Click **Start Restore**.
     
@@ -136,7 +138,7 @@ You can use SQL Server tools to restore a content database by following these st
     
     The database is automatically taken offline during the recovery operation and cannot be accessed by other processes.
     
-6. In the **Restore Database** dialog box, specify the destination and the source, and then select the backup set or sets that you want to restore. 
+6. In the **Restore Database** dialog, specify the destination and the source, and then select the backup set or sets that you want to restore. 
     
     The default values for destination and source are appropriate for most recovery scenarios.
     
@@ -153,7 +155,7 @@ You can use SQL Server tools to restore a content database by following these st
    - The third option, **RECOVER WITH STANDBY** is not used in this scenario.
     
     > [!NOTE]
-    > For more information about these recovery options, see [Restore Database (Options Page)](https://go.microsoft.com/fwlink/p/?LinkID=717106&amp;clcid=0x409).
+    > For more information about these recovery options, see [Restore Database (Options Page)](/sql/relational-databases/backup-restore/restore-database-options-page?viewFallbackFrom=sql-server-2014).
   
 10. Click **OK** to complete the recovery operation.
     
@@ -167,4 +169,3 @@ You can use SQL Server tools to restore a content database by following these st
 #### Concepts
 
 [Back up content databases in SharePoint Server](back-up-a-content-database.md)
-

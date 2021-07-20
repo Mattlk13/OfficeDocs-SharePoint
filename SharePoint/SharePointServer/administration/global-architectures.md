@@ -1,11 +1,13 @@
 ---
 title: "Global architectures for SharePoint Server"
 ms.reviewer: 
-ms.author: mikeplum
-author: MikePlumleyMSFT
-manager: pamgreen
+ms.author: serdars
+author: SerdarSoysal
+manager: serdars
 ms.date: 9/5/2017
 audience: ITPro
+f1.keywords:
+- NOCSH
 ms.topic: article
 ms.prod: sharepoint-server-itpro
 localization_priority: Normal
@@ -38,7 +40,7 @@ This article uses the following terms:
 ## Evaluate your WAN connections
 <a name="section2"> </a>
 
-The most important factor that drives architectures for WAN environments is the performance of SharePoint Server across the WAN connections. Before you consider architecture options for your WAN environment, first evaluate the performance that users will experience for the most common actions they will perform. This can be done by using systematic benchmark testing across multiple WAN connections, or with simple user testing against a test environment. You can also create an evaluation site in Office 365 within the same region as the main company location, and test the user experience from multiple geographic locations.
+The most important factor that drives architectures for WAN environments is the performance of SharePoint Server across the WAN connections. Before you consider architecture options for your WAN environment, first evaluate the performance that users will experience for the most common actions they will perform. This can be done by using systematic benchmark testing across multiple WAN connections, or with simple user testing against a test environment. You can also create an evaluation site in Microsoft 365 within the same region as the main company location, and test the user experience from multiple geographic locations.
   
 If your organization currently deploys more than one farm geographically by using an earlier version of the product, you might be able to succeed with either a single, central-farm environment or with fewer farms. Do not assume that your organization will require the same number of farms as you deployed with an earlier version.
   
@@ -49,7 +51,7 @@ The first and best option to serve a world-wide user base is to deploy SharePoin
   
 ![Central environment model](../media/WANArch_central_model.gif)
   
-Due to the performance improvements in SharePoint Server global customers who are well connected with WAN connections can expect to succeed with a centralized deployment of SharePoint Server. For enterprise-scale customers, this might include more than one farm that is deployed to a single datacenter. Most customers can deploy a single farm to meet the needs of an organization (for example, United Airlines). Organizations can also use Office 365 as a central environment to serve a world-wide user base.
+Due to the performance improvements in SharePoint Server global customers who are well connected with WAN connections can expect to succeed with a centralized deployment of SharePoint Server. For enterprise-scale customers, this might include more than one farm that is deployed to a single datacenter. Most customers can deploy a single farm to meet the needs of an organization (for example, United Airlines). Organizations can also use Microsoft 365 as a central environment to serve a world-wide user base.
   
 If you deploy SharePoint Server on premises, several strategies can help optimize a centralized environment across WAN connections.
   
@@ -63,7 +65,7 @@ Several features in Windows Server can improve performance for users who connect
   
 - BranchCache-- BranchCache, a feature of the Windows 7, Windows Server 2008 R2, and Windows Server 2012 operating systems, caches content from file and web servers on a WAN on computers at a local branch office. In a geographically distributed SharePoint Server environment, BranchCache can optimize WAN performance by caching large files that users download from SharePoint Server. 
     
-- Quality of Service (QoS)— Windows 2000 introduced QoS features that Windows Server 2012 has enhanced. QoS enables you to meet the service requirements of a workload or an application by measuring network bandwidth, detecting changing network conditions (such as congestion or availability of bandwidth), and prioritizing - or throttling - network traffic. For example, you can use QoS to prioritize traffic for latency-sensitive applications and to control the effect of latency-insensitive traffic (such as bulk data transfers). You can use QoS to prioritize requests for applications that are critical for users. In addition, you can deprioritize applications or processes that adversely affect performance, such as backup processes or large downloads. For more information about QoS features in Windows Server 2012, see [Quality of Service (QoS) Overview](https://go.microsoft.com/fwlink/p/?LinkId=248576).
+- Quality of Service (QoS)— Windows 2000 introduced QoS features that Windows Server 2012 has enhanced. QoS enables you to meet the service requirements of a workload or an application by measuring network bandwidth, detecting changing network conditions (such as congestion or availability of bandwidth), and prioritizing - or throttling - network traffic. For example, you can use QoS to prioritize traffic for latency-sensitive applications and to control the effect of latency-insensitive traffic (such as bulk data transfers). You can use QoS to prioritize requests for applications that are critical for users. In addition, you can deprioritize applications or processes that adversely affect performance, such as backup processes or large downloads. For more information about QoS features in Windows Server 2012, see [Quality of Service (QoS) Overview](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831679(v=ws.11)).
     
 ### WAN accelerators
 
@@ -96,14 +98,12 @@ Office Online Server is an Office server product that delivers browser-based ver
   
 A Office Online Server farm is typically located in the same datacenter as the SharePoint Server 2016 farm, although this is not a requirement. Locating a Office Online Server farm in a remote datacenter where SharePoint sites are not located will not improve performance. For more information, see [Office Web Apps Server overview](/webappsserver/office-web-apps-server-overview).
   
-### OneDrive for Business
+### Microsoft OneDrive
 
-OneDrive for Business lets users sync their My Site library or other SharePoint libraries on team sites to their computers. They can then work with files in these libraries directly in Windows Explorer. Users can access these files even when they are offline. Updates to files sync with SharePoint when a user is online.
-  
-OneDrive for Business works well in environments that have intermittent connections or in environments that have high latency or low bandwidth connections. It is not intended to be used by many users who are editing the same file offline at the same time. For more information see [Sync your OneDrive or other SharePoint libraries to your computer with OneDrive for Business](https://go.microsoft.com/fwlink/p/?LinkId=279879).
+The OneDrive sync app lets users sync their My Site library and other SharePoint libraries on team sites to their computers. They can then work with files in these libraries directly in File Explorer. Users can access these files even when they are offline. File changes sync automatically when a user is back online.
   
 > [!NOTE]
-> At this time, the OneDrive for Business next generation sync app is not available in SharePoint Server. 
+> The new OneDrive sync app (OneDrive.exe) is supported on SharePoint Server 2019. [More info](../install/new-onedrive-sync-client.md) 
   
 ## Design a central site with multiple farms
 <a name="section5"> </a>
@@ -160,7 +160,7 @@ We do not recommend sharing the Search service application across these types of
   
 In-country farms represent a different challenge. If the purpose of an in-country farm is to prevent documents and files from residing in locations outside a political boundary, we do not recommend crawling content over the WAN. A search index contains at least fragments of the crawled content. Furthermore, a temporary copy of each document is downloaded to the search farm for processing. Therefore, a central farm that crawls an in-country farm includes a copy of the data in that in-country farm. If this is against company policy, we recommend that you use Remote SharePoint result sources instead. With this configuration, search results can include content from an in-country farm and content continues to reside only on the local farm, unless a user downloads a copy to their local computer.
   
-The one scenario in which crawling content over WAN connections is allowed is with a hybrid deployment in which an on-premises SharePoint Server farm is used to crawl content in an Office 365 Dedicated farm (O365-D) and provide search services to that farm. With the Office 365 Dedicated subscription plan each customer environment is placed on a dedicated server farm. Crawling the Office 365 dedicated farm provides a single relevancy-ranked set of results for the two environments. The dedicated Office 365 environment differs from the multi-tenant Office 365 environment. For hybrid environments that include the Office 365 multi-tenant environment, crawling the multi-tenant environment is not possible and the recommendation is to provide centralized search by using remote result sources.
+The one scenario in which crawling content over WAN connections is allowed is with a hybrid deployment in which an on-premises SharePoint Server farm is used to crawl content in a Microsoft 365 Dedicated farm (O365-D) and provide search services to that farm. With the Microsoft 365 Dedicated subscription plan each customer environment is placed on a dedicated server farm. Crawling the Microsoft 365 dedicated farm provides a single relevancy-ranked set of results for the two environments. The dedicated Microsoft 365 environment differs from the multi-tenant Microsoft 365 environment. For hybrid environments that include the Microsoft 365 multi-tenant environment, crawling the multi-tenant environment is not possible and the recommendation is to provide centralized search by using remote result sources.
   
 Despite the recommendations, sharing the Search service application over WAN connections is supported and can be implemented in the following ways:
   
@@ -178,5 +178,3 @@ The following table summarizes the differences between crawling over the WAN and
 |User experience  <br/> |Users are presented with a single list of results.  <br/> |Results are presented in in a single list. However, the results are grouped in blocks by result source. You can configure the number of results within each group.  <br/> |
 |Advantages  <br/> |Search results are contained in a single search-ranked list.  <br/> Search is managed centrally.  <br/> |WAN crawling is not used.  <br/> Search results are potentially fresher, based on the crawl schedule.  <br/> If you also configure remote farms to include result sources for other farms, enterprise-wide search is available from remote farms in addition to the central farm.  <br/> |
 |Disadvantages  <br/> |Crawling over the WAN takes time and uses bandwidth.  <br/> Search results might not be as fresh as if the content were crawled locally.  <br/> Enterprise-wide search is available only from the central farm.  <br/> |Users see multiple groupings of results.  <br/> Search results are not ranked across the organization.  <br/> Search must be managed at multiple locations.  <br/> |
-   
-

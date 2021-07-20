@@ -1,11 +1,13 @@
 ---
 title: "How to set up a product-centric website in SharePoint Server"
 ms.reviewer: 
-ms.author: jhendr
-author: JoanneHendrickson
-manager: pamgreen
+ms.author: serdars
+author: SerdarSoysal
+manager: serdars
 ms.date: 2/9/2018
 audience: ITPro
+f1.keywords:
+- NOCSH
 ms.topic: article
 ms.prod: sharepoint-server-itpro
 localization_priority: Normal
@@ -25,7 +27,7 @@ To give you an idea of the goals for the Contoso website, here are some screen s
 ![Contoso Pages](../media/OTCSP_ContosoPages.jpg)
   
 > [!NOTE]
-> Most of the features described in this series are available only for private site collections in SharePoint Online. 
+> Most of the features described in this series are available only for private site collections in SharePoint in Microsoft 365. 
   
 ## Articles in this series
 

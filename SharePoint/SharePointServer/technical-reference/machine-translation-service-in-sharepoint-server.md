@@ -1,10 +1,12 @@
 ---
 title: "Machine Translation service in SharePoint Server knowledge articles"
 ms.reviewer: 
-ms.author: mikeplum
-author: MikePlumleyMSFT
-manager: pamgreen
+ms.author: serdars
+author: SerdarSoysal
+manager: serdars
 audience: ITPro
+f1.keywords:
+- NOCSH
 ms.topic: troubleshooting
 ms.prod: sharepoint-server-itpro
 localization_priority: Normal
@@ -180,7 +182,7 @@ Resolution 2: Create a new Machine Translation Service application
     
 3. On the ribbon, click **Delete**.
     
-4. In the **Delete Service Application** dialog box, click **OK**.
+4. In the **Delete Service Application** dialog, click **OK**.
     
 5. Create a new Machine Translation Service application.
     
@@ -241,7 +243,7 @@ Resolution 5: Create a new Machine Translation Service application:
     
 3. On the ribbon, click **Delete**.
     
-4. In the **Delete Service Application** dialog box, click **OK**.
+4. In the **Delete Service Application** dialog, click **OK**.
     
 5. Create a new Machine Translation Service application.
     
@@ -292,7 +294,7 @@ Resolution 2: Verify the SQL Server network connection:
     
 Resolution 3: Verify Server to Server Authentication is configured correctly:
   
-See [Configure server-to-server authentication in SharePoint Server](/sharepoint/security-for-sharepoint-server/security-for-sharepoint-server).
+See [Configure server-to-server authentication in SharePoint Server](../security-for-sharepoint-server/security-for-sharepoint-server.md).
   
 ## Machine Translation Service: Worker failure
 <a name="TransWorker"> </a>
@@ -353,7 +355,7 @@ Resolution 5: Create a new Machine Translation Service application
     
 3. On the ribbon, click **Delete**.
     
-4. In the **Delete Service Application** dialog box, click OK. 
+4. In the **Delete Service Application** dialog, click OK. 
     
 5. Create a new Machine Translation Service application.
     
@@ -371,4 +373,3 @@ Resolution 5: Create a new Machine Translation Service application
 [System Center Monitoring Pack for SharePoint Server 2013](https://go.microsoft.com/fwlink/p/?LinkId=272568)
   
 [System Center Monitoring Pack for SharePoint Server 2016](https://go.microsoft.com/fwlink/?LinkID=746863&amp;clcid=0x409)
-

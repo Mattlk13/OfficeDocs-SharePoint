@@ -1,11 +1,13 @@
 ---
 title: "Deploy custom features to upgraded site collections in SharePoint Server 2013"
 ms.reviewer: 
-ms.author: mikeplum
-author: MikePlumleyMSFT
-manager: pamgreen
+ms.author: serdars
+author: SerdarSoysal
+manager: serdars
 ms.date: 2/21/2018
 audience: ITPro
+f1.keywords:
+- NOCSH
 ms.topic: article
 ms.prod: sharepoint-server-itpro
 localization_priority: Normal
@@ -30,7 +32,7 @@ This section describes prerequisite information that you need to know before you
 ### Who needs to read this and why
 <a name="Ad-WhoNeeds"> </a>
 
-This article is for IT professionals who must work with developers to deploy and maintain full-trust code based custom features across multiple site collections on a SharePoint Server 2013 farm. You should read this article to learn how you can use legacy custom features when you upgrade to SharePoint 2013, and what to do to help ensure that they work seamlessly for your users when site collections are upgraded from compatibility mode. It links to additional articles that provide more details for your developers.
+This article is for IT professionals who must work with developers to deploy and maintain full-trust code based custom features across multiple site collections on a SharePoint Server 2013 farm. To learn how you can use legacy custom features when you upgrade to SharePoint 2013, and what to do to help ensure that they work seamlessly for your users when site collections are upgraded from compatibility mode, see this article. It links to additional articles that provide more details for your developers.
   
 After a SharePoint Server 2010 farm is upgraded to SharePoint Server 2013, all site collections run in SharePoint 2010 compatibility mode. They remain in this mode until each site collection is upgraded to SharePoint 2013 mode. This way, your users can use the SharePoint Server 2010 user interface and functionality they're familiar with until you upgrade the individual site collection. You can also use the legacy custom features that you might have used in SharePoint Server 2010. You eventually will want to upgrade your site collections to SharePoint 2013 mode to take advantage of the new features and functionality it provides. When you make this upgrade, custom features that worked in SharePoint 2010 compatibility mode might no longer work. You need to make sure that there is continuity across SharePoint modes with the same features that are being used. This article describes how to do this.
   
@@ -77,7 +79,7 @@ The **Install-SPSolution** PowerShell cmdlet also includes a compatibility-level
 
 ![SharePoint 2010 and 2013 Root folders](../media/FMHives.jpg)
   
-You should also be aware that when you deploy a solution package to a SharePoint 2013 farm, some files are copied to specific locations regardless of the compatibility level. For more details about where files are copied to, see [Planning Deployment of Farm Solutions for SharePoint 2013](https://blogs.technet.com/b/mspfe/archive/2013/02/04/planning-deployment-of-farm-solutions-for-sharepoint-2013.aspx).
+You should also be aware that when you deploy a solution package to a SharePoint 2013 farm, some files are copied to specific locations regardless of the compatibility level. For more details about where files are copied to, see [Planning Deployment of Farm Solutions for SharePoint 2013](/archive/blogs/technet/mspfe/planning-deployment-of-farm-solutions-for-sharepoint-2013).
   
 Site collections in either mode in the farm point to their corresponding hive so that they can use the custom features that are provided in the solution package. 
   
@@ -118,7 +120,7 @@ When you deploy custom features to a SharePoint 2013 farm that has been upgraded
 |**Scenario 3** <br/> |Legacy solution for SharePoint 2010 compatibility mode, and build a new solution to implement new functionality for SharePoint 2013.  <br/> |
    
 > [!NOTE]
-> For details about where solution package files are installed in the farm based on compatibility level, see the TechNet blog post, [Planning Deployment of Farm Solutions for SharePoint 2013](https://blogs.technet.com/b/mspfe/archive/2013/02/04/planning-deployment-of-farm-solutions-for-sharepoint-2013.aspx). 
+> For details about where solution package files are installed in the farm based on compatibility level, see the TechNet blog post, [Planning Deployment of Farm Solutions for SharePoint 2013](/archive/blogs/technet/mspfe/planning-deployment-of-farm-solutions-for-sharepoint-2013). 
   
 ### Scenario 1: Legacy solution for SharePoint 2010 compatibility mode, and functionality is expected to remain the same when upgraded to SharePoint 2013
 <a name="Add-Scen1"> </a>
@@ -160,7 +162,7 @@ In this scenario, the custom feature works correctly in SharePoint Server 2010. 
   
 Because the custom feature is expected to work in both SharePoint modes, you can use the same custom feature assemblies. You must install the solution package for both SharePoint modes as you did for the previous scenario. The key difference in this scenario is that the solution package must include logic that enables feature functionality that is conditionally based on site collection compatibility. 
   
-For example, let's say you have a method named Sample() implemented in a custom feature that was designed for SharePoint 2010. If you want to change its implementation in SharePoint 2013 mode, your code should include conditional logic that uses the [SPSite.CompatibilityLevel property](https://msdn.microsoft.com/library/office/microsoft.sharepoint.spsite.compatibilitylevel%28v=office.15%29.aspx):
+For example, let's say you have a method named Sample() implemented in a custom feature that was designed for SharePoint 2010. If you want to change its implementation in SharePoint 2013 mode, your code should include conditional logic that uses the [SPSite.CompatibilityLevel property](/previous-versions/office/sharepoint-server/jj167856(v=office.15)):
   
 ```
 void Sample()
@@ -170,7 +172,7 @@ else {/*New O15 implementation*/}}
 }
 ```
 
-By doing this, the same feature assembly serves both SharePoint 2010 and SharePoint 2013 versions of the feature. Feature masking isn't used in this scenario either because you're not only using the same feature assembly but also the same solution package. The same files for the custom feature are copied to the "14" and "15" \Template\Features directories. For more information, see the "Planning Considerations" section of the TechNet blog post, [Planning Deployment of Farm Solutions for SharePoint 2013](https://blogs.technet.com/b/mspfe/archive/2013/02/04/planning-deployment-of-farm-solutions-for-sharepoint-2013.aspx).
+By doing this, the same feature assembly serves both SharePoint 2010 and SharePoint 2013 versions of the feature. Feature masking isn't used in this scenario either because you're not only using the same feature assembly but also the same solution package. The same files for the custom feature are copied to the "14" and "15" \Template\Features directories. For more information, see the "Planning Considerations" section of the TechNet blog post, [Planning Deployment of Farm Solutions for SharePoint 2013](/archive/blogs/technet/mspfe/planning-deployment-of-farm-solutions-for-sharepoint-2013).
   
 The steps for this scenario include the following:
   
@@ -284,18 +286,18 @@ For web application scoped features, if the root site collection has not been up
 ### Master Page Considerations
 <a name="Add-MasterPage"> </a>
 
-Regarding branding customizations, custom master pages are reset by default to seattle.master after a site collection upgrade in SharePoint 2013. If you are using the feature masking scenario, you need to reset any custom master pages that you have created for SharePoint 2013 site collections. For details about how to do this, see the MSDN article [Use Feature upgrade to apply new SharePoint Server 2013 master pages when upgrading from SharePoint 2010](https://go.microsoft.com/fwlink/?LinkId=396567).
+Regarding branding customizations, custom master pages are reset by default to seattle.master after a site collection upgrade in SharePoint 2013. If you are using the feature masking scenario, you need to reset any custom master pages that you have created for SharePoint 2013 site collections. For details about how to do this, see the MSDN article [Use Feature upgrade to apply new SharePoint Server 2013 master pages when upgrading from SharePoint 2010](/sharepoint/dev/general-development/use-feature-upgrade-to-apply-new-sharepoint-master-pages-when-upgrading-fro).
   
 > [!NOTE]
-> For more information about the branding considerations you need to make when you upgrade site collections in SharePoint 2013, see [Branding issues that may occur when upgrading to SharePoint 2013](https://office.microsoft.com/office365-sharepoint-online-enterprise-help/branding-issues-that-may-occur-when-upgrading-to-sharepoint-2013-HA104052656.aspx).
+> For more information about the branding considerations you need to make when you upgrade site collections in SharePoint 2013, see [Branding issues that may occur when upgrading to SharePoint 2013](/upgrade-and-update/upgrade-and-update/branding-issues-that-may-occur-when-upgrading-to-sharepoint-2013.md).
   
 ## See also
 <a name="Add-OtherConsider"> </a>
 
 #### Other Resources
 
-[Create a plan for current customizations during upgrade to SharePoint 2013](/SharePoint/upgrade-and-update/create-a-communication-plan-for-the-upgrade-to-sharepoint-2013)
+[Create a plan for current customizations during upgrade to SharePoint 2013](./create-a-communication-plan-for-the-upgrade-to-sharepoint-2013.md)
   
-[SharePoint 2013 and SharePoint Online solution pack for branding and site provisioning](https://www.microsoft.com/download/details.aspx?id=42030)
+[SharePoint 2013 and SharePoint in Microsoft 365 solution pack for branding and site provisioning](https://www.microsoft.com/download/details.aspx?id=42030)
   
-[Branding issues that may occur when upgrading to SharePoint 2013](https://office.microsoft.com/office365-sharepoint-online-enterprise-help/branding-issues-that-may-occur-when-upgrading-to-sharepoint-2013-HA104052656.aspx)
+[Branding issues that may occur when upgrading to SharePoint 2013](/upgrade-and-update/upgrade-and-update/branding-issues-that-may-occur-when-upgrading-to-sharepoint-2013.md)

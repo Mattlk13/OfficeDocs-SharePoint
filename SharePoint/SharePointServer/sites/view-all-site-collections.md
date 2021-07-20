@@ -1,10 +1,12 @@
 ---
 title: "View all site collections in SharePoint Server"
 ms.reviewer: 
-ms.author: mikeplum
-author: MikePlumleyMSFT
-manager: pamgreen
+ms.author: serdars
+author: SerdarSoysal
+manager: serdars
 audience: ITPro
+f1.keywords:
+- NOCSH
 ms.topic: article
 ms.prod: sharepoint-server-itpro
 localization_priority: Normal
@@ -54,7 +56,7 @@ Refer to the following table in step 3.
     
 ### To view all site collections by using Microsoft PowerShell
 
-1. Verify that you meet the following minimum requirements: See [Add-SPShellAdmin](/SharePoint/administration/manage-permissions-for-a-web-application).
+1. Verify that you meet the following minimum requirements: See [Add-SPShellAdmin](../administration/manage-permissions-for-a-web-application.md).
     
 2. Open **SharePoint Management Shell**.
     
@@ -75,5 +77,4 @@ We recommend that you use Microsoft PowerShell when performing command-line admi
 
 #### Other Resources
 
-[Manage site collections and global settings in the SharePoint admin center](https://go.microsoft.com/fwlink/?linkid=845346)
-
+[SharePoint planning guide](../../SharePointOnline/planning-guide.md)

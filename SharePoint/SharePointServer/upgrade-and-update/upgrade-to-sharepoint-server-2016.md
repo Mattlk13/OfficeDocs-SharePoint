@@ -1,11 +1,13 @@
 ---
 title: "Upgrade to SharePoint Server 2016"
 ms.reviewer: 
-ms.author: mikeplum
-author: MikePlumleyMSFT
-manager: pamgreen
+ms.author: serdars
+author: SerdarSoysal
+manager: serdars
 ms.date: 3/7/2018
 audience: ITPro
+f1.keywords:
+- NOCSH
 ms.topic: hub-page
 ms.prod: sharepoint-server-itpro
 localization_priority: Normal

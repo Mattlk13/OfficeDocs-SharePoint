@@ -1,10 +1,12 @@
 ---
 title: "Plan sites and site collections in SharePoint Server"
 ms.reviewer: 
-ms.author: mikeplum
-author: MikePlumleyMSFT
-manager: pamgreen
+ms.author: serdars
+author: SerdarSoysal
+manager: serdars
 audience: ITPro
+f1.keywords:
+- NOCSH
 ms.topic: article
 ms.prod: sharepoint-server-itpro
 localization_priority: Normal
@@ -20,13 +22,13 @@ description: "Learn the critical decisions that you need to make in your SharePo
 
 [!INCLUDE[appliesto-2013-2016-2019-xxx-md](../includes/appliesto-2013-2016-2019-xxx-md.md)] 
   
-Every SharePoint Server site belongs to only one site collection and a site collection is made up of one top-level site and all sites below it. As shown in the following figure, a site collection is the top level of organization in a SharePoint Server web application. The number of site collections you can have in a single web application depends on the capacity of your server infrastructure. For more information about SharePoint Server boundaries, see [Software boundaries and limits for SharePoint Servers 2016 and 2019](../install/software-boundaries-and-limits-0.md). For more information about SharePoint Server site collections, see [Overview of sites and site collections in SharePoint Server](sites-and-site-collections-overview.md).
+Every SharePoint Server site belongs to only one site collection and a site collection is made up of one top-level site and all sites below it. As shown in the following figure, a site collection is the top level of organization in a SharePoint Server web application. The number of site collections you can have in a single web application depends on the capacity of your server infrastructure. For more info about SharePoint Server boundaries, see [Software boundaries and limits for SharePoint Servers 2016 and 2019](../install/software-boundaries-and-limits-0.md). For more information about SharePoint Server site collections, see [Overview of sites and site collections in SharePoint Server](sites-and-site-collections-overview.md).
   
 **Figure: Structure of a site collection in SharePoint Server**
 
 ![Diagram of a site collection](../media/DiagramOfSiteCollection.gif)
   
-The SharePoint Server 2019 modern experience is similar to the experience in SharePoint Online. The modern experience is compelling, flexible, and easier to use. The main difference is hub sites aren't available in SharePoint Server. We do recommend in SharePoint Server 2019 that you create site collections for each unit of work instead of creating subsites. This will make it easier when migrating your SharePoint farm to SharePoint Online. For more information about the modern experience in SharePoint Server 2019, see [Differences between SharePoint Server 2016 and 2019](https://support.office.com/article/ba84c8a3-3ce2-4252-926e-c67654ceb4a3).
+The SharePoint Server 2019 modern experience is similar to the experience in SharePoint in Microsoft 365. The modern experience is compelling, flexible, and easier to use. The main difference is hub sites aren't available in SharePoint Server. We do recommend in SharePoint Server 2019 that you create site collections for each unit of work instead of creating subsites. This will make it easier when migrating your SharePoint farm to SharePoint in Microsoft 365. For more info about the modern experience in SharePoint Server 2019, see [Differences between SharePoint Server 2016 and 2019](https://support.office.com/article/ba84c8a3-3ce2-4252-926e-c67654ceb4a3).
     
 ## Sites and site collections planning principles
 <a name="section1"> </a>
@@ -134,7 +136,7 @@ You can use one of two ways to make published content available to users: author
 ### Plan other sites
 <a name="Section2e"> </a>
 
-You can plan to make it possible for site users to create additional sites. For example, you can plan to give a My Site to each team member who uses a site. A My Site is a team site that is based on SharePoint Server and has public and private views. You can also make it possible for team members to create other sites, such as Document Workspace sites, when they collaborate on documents and other projects. Similarly, you can give users of an Internet site access to collaboration sites as part of a web-based service. For example, you can give them permissions to create Meeting Workspace sites and participate in online meetings as part of their experience of using your site. For more information, see [Configure self-service site creation in SharePoint Server 2019](/SharePoint/sites/configure-self-service-site-creation-in-sharepoint-server-2019).
+You can plan to make it possible for site users to create additional sites. For example, you can plan to give a My Site to each team member who uses a site. A My Site is a team site that is based on SharePoint Server and has public and private views. You can also make it possible for team members to create other sites, such as Document Workspace sites, when they collaborate on documents and other projects. Similarly, you can give users of an Internet site access to collaboration sites as part of a web-based service. For example, you can give them permissions to create Meeting Workspace sites and participate in online meetings as part of their experience of using your site. For more information, see [Configure self-service site creation in SharePoint Server 2019](./configure-self-service-site-creation-in-sharepoint-server-2019.md).
   
 For information about the kinds of sites that you can create, see [Overview of sites and site collections in SharePoint Server](sites-and-site-collections-overview.md).
   
@@ -215,4 +217,3 @@ For more information, see the PowerShell reference for SharePoint Server article
 #### Other Resources
 
 [Overview of SharePoint site collections](sites-and-site-collections-overview.md#section1)
-

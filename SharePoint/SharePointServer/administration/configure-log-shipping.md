@@ -1,11 +1,13 @@
 ---
 title: "Configure log shipping in SharePoint Server"
 ms.reviewer: 
-ms.author: mikeplum
-author: MikePlumleyMSFT
-manager: pamgreen
+ms.author: serdars
+author: SerdarSoysal
+manager: serdars
 ms.date: 2/22/2018
 audience: ITPro
+f1.keywords:
+- NOCSH
 ms.topic: article
 ms.prod: sharepoint-server-itpro
 localization_priority: Normal
@@ -61,9 +63,9 @@ For detailed information about log shipping, refer to the articles listed in the
 
 |**URL**|**Description**|
 |:-----|:-----|
-|[About Log Shipping (SQL Server)](https://go.microsoft.com/fwlink/?LinkId=392694) <br/> |Describes log shipping transaction log backups and the options that are available.  <br/> |
-|[Configure Log Shipping (SQL Server)](https://go.microsoft.com/fwlink/?LinkId=392695) <br/> |Describes how to configure log shipping in SQL Server 2012 by using SQL Server Management Studio or Transact-SQL.  <br/> |
-|[View the Log Shipping Report (SQL Server Management Studio)](https://go.microsoft.com/fwlink/?LinkId=392693) <br/> |Explains how to view the Transaction Log Shipping Status report in SQL Server Management Studio. You can run a status report at a monitor server, primary server, or secondary server.  <br/> |
+|[About Log Shipping (SQL Server)](/sql/database-engine/log-shipping/about-log-shipping-sql-server) <br/> |Describes log shipping transaction log backups and the options that are available.  <br/> |
+|[Configure Log Shipping (SQL Server)](/sql/database-engine/log-shipping/configure-log-shipping-sql-server) <br/> |Describes how to configure log shipping in SQL Server 2012 by using SQL Server Management Studio or Transact-SQL.  <br/> |
+|[View the Log Shipping Report (SQL Server Management Studio)](/sql/database-engine/log-shipping/view-the-log-shipping-report-sql-server-management-studio) <br/> |Explains how to view the Transaction Log Shipping Status report in SQL Server Management Studio. You can run a status report at a monitor server, primary server, or secondary server.  <br/> |
    
 ## Performance considerations
 <a name="Perf"> </a>
@@ -113,7 +115,7 @@ The log-shipping infrastructure used for our disaster-recovery solution environm
   
 **Log shipping infrastructure and data flow**
 
-![Shows the log shipping infrastructure and directional flow between the on-premise and Azure farms.](../media/AZarch_LSinfrastructure.png)
+![The log shipping infrastructure and directional flow between the on-premises and Azure farms.](../media/AZarch_LSinfrastructure.png)
   
 The previous diagram shows the log shipping infrastructure and data flow. The diagram shows the SQL Server database servers and the file servers in the production farm and the Azure recovery farm. These farms are nearly identical, and each contains a primary and secondary replica for each AlwaysOn availability group. The file servers, FIL1 and AZ-FIL1, are configured the same, including the number of hard disks and disk sizes. Additional servers in the farm are not shown.
   
@@ -378,7 +380,6 @@ The required steps to configure, run, and validate log shipping are condensed an
 [Configure SQL Server AlwaysOn Availability Groups for SharePoint Server](configure-an-alwayson-availability-group.md)
 #### Other Resources
 
-[About Log Shipping (SQL Server)](https://go.microsoft.com/fwlink/?LinkID=392694&amp;clcid=0x409)
+[About Log Shipping (SQL Server)](/sql/database-engine/log-shipping/about-log-shipping-sql-server)
   
-[Replication Tutorials](https://go.microsoft.com/fwlink/?linkid=858913)
-
+[Replication Tutorials](/sql/relational-databases/replication/replication-tutorials)

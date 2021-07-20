@@ -1,11 +1,13 @@
 ---
 title: "Configure server-to-server authentication between publishing and consuming farms"
 ms.reviewer: 
-ms.author: mikeplum
-author: MikePlumleyMSFT
-manager: pamgreen
+ms.author: serdars
+author: SerdarSoysal
+manager: serdars
 ms.date: 8/10/2018
 audience: ITPro
+f1.keywords:
+- NOCSH
 ms.topic: article
 ms.prod: sharepoint-server-itpro
 localization_priority: Normal
@@ -32,7 +34,7 @@ When a farm consumes the User Profile service application of a publishing farm, 
 The procedure in this article requires that you already configured the following:
 
 - Shared the User Profile service application between a consuming and a publishing farm as documented in [Share service applications across farms in SharePoint Server](share-service-applications-across-farms.md).
-- Configured the Subscription Settings and App Management service applications on both publishing and consuming farms as documented in [section "Configure the Subscription Settings and App Management service applications" of this article](/sharepoint/administration/configure-an-environment-for-apps-for-sharepoint#configure-the-subscription-settings-and-app-management-service-applications)
+- Configured the Subscription Settings and App Management service applications on both publishing and consuming farms as documented in [section "Configure the Subscription Settings and App Management service applications" of this article](./configure-an-environment-for-apps-for-sharepoint.md#configure-the-subscription-settings-and-app-management-service-applications)
 
 Verify that you have the following memberships:
 

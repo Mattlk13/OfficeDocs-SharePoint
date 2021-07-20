@@ -1,11 +1,13 @@
 ---
 title: "Stage 11 Upload and apply display templates to the Content Search Web Part in SharePoint Server"
 ms.reviewer: 
-ms.author: jhendr
-author: JoanneHendrickson
-manager: pamgreen
+ms.author: serdars
+author: SerdarSoysal
+manager: serdars
 ms.date: 12/29/2016
 audience: ITPro
+f1.keywords:
+- NOCSH
 ms.topic: article
 ms.prod: sharepoint-server-itpro
 localization_priority: Normal
@@ -19,7 +21,7 @@ description: "Learn how to upload and apply display templates to the Content Sea
 [!INCLUDE[appliesto-2013-2016-2019-xxx-md](../includes/appliesto-2013-2016-2019-xxx-md.md)]
   
 > [!NOTE]
-> Most of the features described in this series are available only for private sites collections in SharePoint Online. 
+> Many of the features described in this series are also available for most sites in SharePoint in Microsoft 365. 
   
 ## Quick overview
 
@@ -64,7 +66,7 @@ The image below shows how the control display template and item display template
   
 ![Web Part Display Templates](../media/OTCSP_WebPartDisplayTemplates.png)
   
-For more conceptual information about display templates, and for more information about how to create your own display templates, see [SharePoint 2013 Design Manager display templates](https://go.microsoft.com/fwlink/p/?LinkId=401787).
+For more conceptual information about display templates, and for more information about how to create your own display templates, see [SharePoint 2013 Design Manager display templates](/sharepoint/dev/general-development/sharepoint-design-manager-design-packages).
   
 ### How to upload display templates
 <a name="BKMK_HowToUploadDisplayTemplates"> </a>
@@ -94,9 +96,9 @@ So now we're ready to apply these display templates to our Content Search Web Pa
 
 We first want to apply display templates to the CSWP on our category page. So, let's browse to "Audio."
   
-1. Click the **Settings** menu --> **Edit Page**. 
+1. Select the **Settings** menu > **Edit Page**. 
     
-2. In the Web Part, click the **Web Part Menu --\> Edit Web Part**. 
+2. In the Web Part, select the **Web Part** menu > **Edit Web Part**. 
     
 3. In the Web Part tool pane, in the **Display Templates** section, to apply the control display template, from the **Control** menu, select your control display template. In our Contoso scenario, this is **Contoso Electronics List with Paging**. 
     
@@ -106,7 +108,7 @@ We first want to apply display templates to the CSWP on our category page. So, l
     
      ![Apply Item Template](../media/OTCSP_ApplyItemTemplate.png)
   
-5. Click **OK**, and then save the page. 
+5. Select **OK**, and then save the page. 
     
      ![Audio 3 Items](../media/OTCSP_Audio3Items.png)
   
@@ -116,7 +118,7 @@ Suddenly, our "Audio" page is looking like it has been to one of those makeover 
     
      ![Number To Show](../media/OTCSP_NumberToShow.png)
   
-7. Click **OK**, and then save the page. 
+7. Select **OK**, and then save the page. 
     
      ![Audio 2](../media/OTCSP_Audio2.png)
   
@@ -126,9 +128,9 @@ Now our "Audio" page is looking really good. By using the paging arrows, we can 
   
 Now that our category page has a Contoso look, the next task is to apply display templates to the CSWP on our catalog item page.
   
-1. Browse to the catalog item page. In our scenario, we can do this by clicking the item "Northwind Traders 50W Car Radio" in the "Audio" category.
+1. Browse to the catalog item page. In our scenario, we can do this by selecting the item "Northwind Traders 50W Car Radio" in the "Audio" category.
     
-2. Repeat steps 1 - 7 in [How to apply display templates to a Content Search Web Part](stage-11-upload-and-apply-display-templates-to-the-content-search-web-part.md#BKMK_HowToApplyDisplayTemplatesToAContentSearchWebPart), but select the control and item display templates for the catalog item page.
+2. Repeat Steps 1 - 7 in [How to apply display templates to a Content Search Web Part](stage-11-upload-and-apply-display-templates-to-the-content-search-web-part.md#BKMK_HowToApplyDisplayTemplatesToAContentSearchWebPart), but select the control and item display templates for the catalog item page.
     
 And now your item details page also has a very nice Contoso look.
   
@@ -148,7 +150,6 @@ Our Contoso site is really starting to look good. But we must also make sure our
 
 #### Other Resources
 
-[SharePoint 2013 Design Manager display templates](https://msdn.microsoft.com/library/jj945138.aspx)
+[SharePoint 2013 Design Manager display templates](/sharepoint/dev/general-development/sharepoint-design-manager-design-packages)
   
-[Overview of Design Manager in SharePoint 2013](https://msdn.microsoft.com/library/jj822363.aspx)
-
+[Overview of Design Manager in SharePoint 2013](/sharepoint/dev/general-development/overview-of-design-manager-in-sharepoint)

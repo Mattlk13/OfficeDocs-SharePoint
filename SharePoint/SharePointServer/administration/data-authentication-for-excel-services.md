@@ -1,11 +1,13 @@
 ---
 title: "Data authentication for Excel Services in SharePoint Server 2013"
 ms.reviewer: 
-ms.author: mikeplum
-author: MikePlumleyMSFT
-manager: pamgreen
+ms.author: serdars
+author: SerdarSoysal
+manager: serdars
 ms.date: 7/7/2017
 audience: ITPro
+f1.keywords:
+- NOCSH
 ms.topic: conceptual
 ms.prod: sharepoint-server-itpro
 localization_priority: Normal
@@ -84,7 +86,7 @@ Each kind of connection has its advantages and drawbacks discussed here. Choose 
 |**Connection type**|**Embedded connections**|**ODC files**|
 |:-----|:-----|:-----|
 |Advantages  <br/> | All connection information is stored in the workbook.  <br/>  Embedded connections require little administrative overhead to support.  <br/>  Embedded connections are easy to create.  <br/> | Linked connections can be centrally stored, managed, audited, shared and access to them controlled by using a data connection library.  <br/>  Workbook authors can use existing connections without having to create queries and connection strings.  <br/>  If the data connection details for a data source change, an administrator only need update one ODC file. With that change, all workbooks that refer to the ODC file will use the updated connection information when the next refresh occurs. (An example of this scenario is when the database server is moved or the database name is changed.)  <br/> |
-|Drawbacks  <br/> | If the data connection details for a data source change, all workbooks with embedded connections to that data source will have to be republished with updated connection information.  <br/>  Embedded data connections are more difficult to audit by SharePoint administrators.  <br/> | Linked connections may require the help of a SharePoint administrator to share, manage and secure.  <br/>  Linked connections are saved in clear text and may contain database passwords. Extra care must be taken to help secure these files.  <br/> |
+|Drawbacks  <br/> | If the data connection details for a data source change, all workbooks with embedded connections to that data source will have to be republished with updated connection info.  <br/>  Embedded data connections are more difficult to audit by SharePoint admins.  <br/> | Linked connections may require the help of a SharePoint admin to share, manage and secure.  <br/>  Linked connections are saved in clear text and may contain database passwords. Extra care must be taken to help secure these files.  <br/> |
    
 Choose a linked data connection, by using an ODC file, for scenarios in which you must have a data connection to an enterprise-scale data source such as SQL Server or Analysis Services. Linked data connections are most useful in scenarios in which they will be shared across many users and in which administrator control of the connection is important.
   
@@ -105,7 +107,7 @@ ODC files must be stored in a trusted data connection library. Centralizing data
     
 - Workbook authors only have a single location to find workbook data connections, reducing confusion and user training.
     
-For information about how to create data connection libraries, see [How to: Create and Use a Data Connection Library](https://go.microsoft.com/fwlink/p/?LinkID=188117) (https://go.microsoft.com/fwlink/p/?LinkID=188117). For information about how to create ODC files, see [Create, edit, and manage connections to external data](https://go.microsoft.com/fwlink/p/?LinkID=196894) (https://go.microsoft.com/fwlink/p/?LinkID=196894). 
+For information about how to create data connection libraries, see [How to: Create and Use a Data Connection Library](/previous-versions/office/developer/sharepoint-2010/ms772101(v=office.14)) (https://go.microsoft.com/fwlink/p/?LinkID=188117). For information about how to create ODC files, see [Create, edit, and manage connections to external data](https://go.microsoft.com/fwlink/p/?LinkID=196894) (https://go.microsoft.com/fwlink/p/?LinkID=196894). 
   
 ### Windows authentication
 
@@ -130,7 +132,7 @@ Choose Kerberos delegation for secure and fast authentication to enterprise-scal
   
 - [Configuring Kerberos Authentication for Microsoft SharePoint 2010 Products](https://go.microsoft.com/fwlink/p/?LinkId=196600) (https://go.microsoft.com/fwlink/p/?LinkId=196600) 
     
-- [Configure Kerberos authentication (SharePoint Server 2010)](/SharePoint/security-for-sharepoint-server/kerberos-authentication-planning)
+- [Configure Kerberos authentication (SharePoint Server 2010)](../security-for-sharepoint-server/kerberos-authentication-planning.md)
     
 #### Secure Store
 
@@ -207,5 +209,3 @@ Refresh can be triggered in one of following ways from within the browser:
 - The end-user clicks on the refresh button on an already open workbook.
     
 If there are no previously cached versions of this workbook, any of these actions will trigger a refresh and update the workbook.
-  
-

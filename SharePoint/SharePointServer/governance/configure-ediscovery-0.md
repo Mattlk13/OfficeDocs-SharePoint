@@ -1,10 +1,12 @@
 ---
 title: "Configure eDiscovery in SharePoint Server"
 ms.reviewer: 
-ms.author: mikeplum
-author: MikePlumleyMSFT
-manager: pamgreen
+ms.author: serdars
+author: SerdarSoysal
+manager: serdars
 audience: ITPro
+f1.keywords:
+- NOCSH
 ms.topic: article
 ms.prod: sharepoint-server-itpro
 localization_priority: Normal
@@ -48,9 +50,9 @@ Perform the following steps:
     
 3. If you want content from Skype for Business Server to be discoverable, configure the server to archive to Exchange Server 2016. For information about how to configure Skype for Business Server 2015 archiving, see [Configure Skype for Business Server 2015 to use Exchange Server archiving](/skypeforbusiness/deploy/integrate-with-exchange-server/use-exchange-archiving).
 
-4. If you want SharePoint Server 2019 users to link to and share documents that are stored in OneDrive for Business instead of attaching file to Outlook messages, see the [Document collaboration](/Exchange/new-features/new-features?view=exchserver-2019#document-collaboration) section in **What's new in Exchange Server**.
+4. If you want SharePoint Server 2019 users to link to and share documents that are stored in OneDrive instead of attaching file to Outlook messages, see the [Document collaboration](/Exchange/new-features/new-features?view=exchserver-2019#document-collaboration) section in **What's new in Exchange Server**.
     
-5. Perform the eDiscovery configuration steps for Exchange. For information about how to configure Exchange Server 2013 for eDiscovery, see [Integration with SharePoint](https://go.microsoft.com/fwlink/?linkid=857898).
+5. Perform the eDiscovery configuration steps for Exchange. For information about how to configure Exchange Server 2013 for eDiscovery, see [Integration with SharePoint](/Exchange/policy-and-compliance/ediscovery/ediscovery).
     
 ## Configure Search to crawl all discoverable content
 <a name="configure-search"> </a>
@@ -73,14 +75,14 @@ We recommend that you create a security group to contain all users of the eDisco
     > [!NOTE]
     > When you change permissions at the web application level, Search re-crawls all of the content in the web application. 
   
-2. If you will grant permissions at the site collection level, make the security group a site collection administrator for each site collection that contains discoverable content. For information about how to add a site collection administrator, see [Add, change, or remove a site collection administrator](/sharepoint/customize-sharepoint-site-permissions).
+2. If you will grant permissions at the site collection level, make the security group a site collection administrator for each site collection that contains discoverable content. For information about how to add a site collection administrator, see [Add, change, or remove a site collection administrator](../../SharePointOnline/customize-sharepoint-site-permissions.md).
     
     > [!IMPORTANT]
     > A site collection administrator must add the security group as an additional site collection administrator by using the **Site Settings** menu. You cannot use Central Administration to make a security group a site collection administrator 
   
 3. Ensure that the security group has permissions to access all file shares and other websites that contain discoverable content.
     
-4. If you will use a SharePoint eDiscovery Center to discover content in Exchange Server, grant the security group permissions to access Exchange Server mailboxes. For information about how to grant permissions in Exchange, see [Integration with SharePoint](https://go.microsoft.com/fwlink/?linkid=857898).
+4. If you will use a SharePoint eDiscovery Center to discover content in Exchange Server, grant the security group permissions to access Exchange Server mailboxes. For information about how to grant permissions in Exchange, see [Integration with SharePoint](/Exchange/policy-and-compliance/ediscovery/ediscovery).
     
 5. Grant the security group permissions to view the crawl log. For information about how to grant permissions to access the crawl log, see [Set-SPEnterpriseSearchCrawlLogReadPermission](/powershell/module/sharepoint-server/Set-SPEnterpriseSearchCrawlLogReadPermission?view=sharepoint-ps).
     

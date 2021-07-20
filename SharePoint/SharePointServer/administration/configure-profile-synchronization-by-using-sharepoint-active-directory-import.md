@@ -1,11 +1,13 @@
 ---
 title: "Configure profile synchronization by using SharePoint Active Directory Import in SharePoint Server"
 ms.reviewer: 
-ms.author: mikeplum
-author: MikePlumleyMSFT
-manager: pamgreen
+ms.author: serdars
+author: SerdarSoysal
+manager: serdars
 ms.date: 2/28/2018
 audience: ITPro
+f1.keywords:
+- NOCSH
 ms.topic: article
 ms.prod: sharepoint-server-itpro
 localization_priority: Normal
@@ -46,7 +48,7 @@ Consider the following situations and note what the AD import option does not su
     
   - If you have a trust between two forests, the trusted forest objects will not be imported.
     
-  - AD import does support importing users from multiple forests provided you create one synchronization connection per forest. As an alternative, consider using Microsoft Identity Manager.
+  - AD import does support importing users from multiple domains provided you create one synchronization connection per domain. As an alternative, consider using Microsoft Identity Manager.
     
 - The AD import option does not support Contact objects (also known as cross-object pointers).
     
@@ -117,7 +119,7 @@ To import profiles, you must have at least one synchronization connection to AD 
     
     The **Authentication Provider Instance** box lists only the authentication providers that are currently used by a web application. 
     
-4. In the **Account name** box, type the name of the account you want the AD import tool to use to perform the synchronization. Use the form  _\<DOMAIN\>_\ _\<UserName\>_. The synchronization account must have Replicate Directory permissions or higher on the root OU of AD DS.
+4. In the **Account name** box, type the name of the account you want the AD import tool to use to perform the synchronization. Use the form  _\<DOMAIN\>_\ _\<UserName\>_. The synchronization account must have Replicate Directory permissions at the root of the forest.
     
 5. In the **Password** and **Confirm password** boxes, type the password for the account. 
     
@@ -126,13 +128,16 @@ To import profiles, you must have at least one synchronization connection to AD 
 7. If a Secure Sockets Layer (SSL) connection is required to connect to the directory service, select **Use SSL-secured connection**.
     
     > [!IMPORTANT]
-    > If you use an SSL connection, you must export the certificate of the domain controller from the AD DS server and import the certificate into the synchronization server. 
+    > If you use an SSL connection, you must export the certificate of the domain controller from the AD DS server and import the certificate into the synchronization server if the SSL certificate is not trusted by the SharePoint server(s).
   
-8. If you want to filter out users that are disabled in AD DS, select the **Filter out disabled users** check box. 
+8. If you want to filter out users that are disabled in AD DS, select the **Filter out disabled users** checkbox. 
     
 9. If you want to filter the objects that you import from the directory service, in the **Filter in LDAP syntax for Active Directory Import** box, type a standard LDAP query expression to define the filter. 
     
 8. In the **Containers** section, click **Populate Containers**, and then select the containers from the directory service that you want to synchronize. All organizational units (OUs) that you select will be synchronized with their child OUs. There is currently no utility that allows you to select a parent OU while excluding any of its child OUs from synchronization.
+
+> [!NOTE]
+> Filtering of objects only occurs during the initial import of that object. Changes to the filter post-import will not impact objects that have already been imported.
     
 9. Click **OK**.
     
@@ -197,4 +202,3 @@ To import profiles, you must have at least one synchronization connection to AD 
 #### Other Resources
 
 [Update-SPProfilePhotoStore](/powershell/module/sharepoint-server/Update-SPProfilePhotoStore?view=sharepoint-ps)
-

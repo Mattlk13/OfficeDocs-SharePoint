@@ -1,11 +1,13 @@
 ---
 title: "Getting started"
-ms.reviewer: 
-ms.author: jhendr
-author: JoanneHendrickson
-manager: pamgreen
+description: "Learn the basics to deploy your SharePoint Server: install, upgrade, or move to the cloud."
+ms.author: serdars
+author: SerdarSoysal
+manager: serdars
 ms.date: 3/12/2018
 audience: ITPro
+f1.keywords:
+- NOCSH
 ms.topic: concetpual
 ms.prod: sharepoint-server-itpro
 localization_priority: Normal
@@ -13,7 +15,7 @@ ms.assetid: c33f0214-4201-4807-9e8f-574d8fd05849
 
 ---
 
-# Getting started
+# Getting started with SharePoint Server
 
 [!INCLUDE[appliesto-2013-2016-2019-xxx-md](includes/appliesto-2013-2016-2019-xxx-md.md)]
 
@@ -21,7 +23,7 @@ ms.assetid: c33f0214-4201-4807-9e8f-574d8fd05849
 
 SharePoint is a powerful collaboration platform that lets you share and manage content, knowledge, and applications to empower teamwork. 
   
-SharePoint Server can be used on-premises or with an Office 365 enterprise subscription to take advantage of all the latest features. Share common resources and applications on sites. Use search to discover information and expertise across your organization. And stay in the know with personalized news in SharePoint home and the SharePoint mobile apps.
+SharePoint Server can be used on-premises or with a Microsoft 365 enterprise subscription to take advantage of all the latest features. Share common resources and applications on sites. Use search to discover information and expertise across your organization. And stay in the know with personalized news in SharePoint home and the SharePoint mobile apps.
 
 To learn more, go to <a href="https://products.office.com/sharepoint/collaboration">Learn about SharePoint. </a>
   
@@ -35,7 +37,7 @@ Depending on your version, system requirements and prerequisites could vary.
 |:-----|:-----|
 |SharePoint Server 2019<br/>|[2019 Hardware and software requirements](install/hardware-and-software-requirements-2019.md)<br/><br/>[2019 Prerequisites](install/prerequisites-0.md)<br/>|
 |SharePoint Server 2016<br/>|[2016 Hardware and software requirements](install/hardware-and-software-requirements.md)<br/><br/>[2016 Prerequisites](install/prerequisites-0.md)<br/>|
-|SharePoint Server 2013<br/>|[2013 Hardware and software requirements](install/hardware-and-software-requirements.md)<br/><br/>[2013 Prerequisites](install/prerequisites.md)<br/>|
+|SharePoint Server 2013<br/>|[2013 Hardware and software requirements](install/hardware-and-software-requirements-0.md)<br/><br/>[2013 Prerequisites](install/prerequisites.md)<br/>|
 
 
 ## How large is your company?  
@@ -70,6 +72,4 @@ Perhaps you already have SharePoint Server and are considering moving to the clo
 |**Are you wanting to...**|**Read**|
 |:-----|:-----|
 |Decide which hybrid solution you should use for your business?  <br/> |[Explore SharePoint Server hybrid](hybrid/explore-sharepoint-server-hybrid.md) <br/> |
-|Find out how you can move your data from on-premises to SharePoint Online? <br/> |[Migrate to SharePoint Online](migrate-to-sharepoint-online/migrate-to-sharepoint-online.md) <br/> |
-   
-
+|Find out how you can move your data from on-premises to SharePoint in Microsoft 365? <br/> |[Migrate to SharePoint](/sharepointmigration/migrate-to-sharepoint-online) <br/> |

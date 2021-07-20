@@ -1,11 +1,13 @@
 ---
 title: "Stage 6 Upload and apply a new master page to a publishing site in SharePoint Server"
 ms.reviewer: 
-ms.author: jhendr
-author: JoanneHendrickson
-manager: pamgreen
+ms.author: serdars
+author: SerdarSoysal
+manager: serdars
 ms.date: 12/29/2016
 audience: ITPro
+f1.keywords:
+- NOCSH
 ms.topic: article
 ms.prod: sharepoint-server-itpro
 localization_priority: Normal
@@ -19,7 +21,7 @@ description: "Learn how to upload and apply a new master page to a publishing si
 [!INCLUDE[appliesto-2013-2016-2019-xxx-md](../includes/appliesto-2013-2016-2019-xxx-md.md)]
   
 > [!NOTE]
-> Most of the features described in this series are available only for private sites collections in SharePoint Online. 
+> Many of the features described in this series are also available for most sites in SharePoint in Microsoft 365. 
   
 ## Quick overview
 
@@ -42,11 +44,11 @@ In this stage, you'll learn:
 > [!NOTE]
 > This article doesn' *t*  cover how to create a master page. It will only cover how to upload and apply an already completed master page file and other design files that are stored locally on your computer. These files are not available for download. 
   
-For information about how to create a master page, see:
+For info about how to create a master page, see:
   
-- [Overview of Design Manager in SharePoint 2013](https://go.microsoft.com/fwlink/p/?LinkId=400533)
+- [Overview of Design Manager in SharePoint 2013](/sharepoint/dev/general-development/overview-of-design-manager-in-sharepoint)
     
-- [How to: Convert an HTML file into a master page in SharePoint 2013](https://go.microsoft.com/fwlink/p/?LinkId=400534)
+- [How to: Convert an HTML file into a master page in SharePoint 2013](/sharepoint/dev/general-development/how-to-convert-an-html-file-into-a-master-page-in-sharepoint)
     
 ## Start stage 6
 
@@ -67,7 +69,7 @@ In SharePoint Server 2016, you can create a master page in HTML format, and Shar
   
 When you add an HTML master page to SharePoint Server 2016, an associated ASP.NET master page is automatically created. Because the two files are associated, any changes that you make to the HTML master page file will be carried over automatically to the associated ASP.NET master page file.
   
-For more information, see [Overview of the SharePoint 2013 page model](https://go.microsoft.com/fwlink/p/?LinkId=400535).
+For more information, see [Overview of the SharePoint 2013 page model](/sharepoint/dev/general-development/overview-of-the-sharepoint-page-model).
   
 ### About the Master Page Gallery
 <a name="BKMK_AboutTheMasterPageGallery"> </a>
@@ -87,7 +89,7 @@ You can use the **Upload Document** button to upload a single file to the Master
     
      ![Design Manager](../media/OTCSP_DesignManager.png)
   
-2. On the **Design Manager Welcome** page, click **3. Upload Design Files.**
+2. On the **Design Manager Welcome** page, select **3. Upload Design Files**.
     
      ![Upload design files](../media/OTCSP_UploadDesignFiles.png)
   
@@ -102,7 +104,7 @@ You can use the **Upload Document** button to upload a single file to the Master
     
      ![Map Network Drive](../media/OTCSP_MapNetworkDrive.png)
   
-5. In the **Folder** field, paste the URL that you copied in step 3, and then click **Finish**. 
+5. In the **Folder** field, paste the URL that you copied in step 3, and then select **Finish**. 
     
      ![Paste URL](../media/OTCSP_PasteURL.png)
   
@@ -117,9 +119,9 @@ In our scenario, we are  *not*  using SharePoint workflows for approval. The fil
   
 To turn off versioning for the Master Page Gallery:
   
-1. On the **LIBRARY** tab, click **Library Settings**. 
+1. On the **LIBRARY** tab, select **Library Settings**. 
     
-2. On the **Settings** page, click **Versioning settings**. 
+2. On the **Settings** page, select **Versioning settings**. 
     
 3. On the **Versioning Settings** page, in the **Content Approval** section, for **Require content approval for submitted items**, select **No**. 
     
@@ -148,7 +150,7 @@ Because we dragged and dropped the HTML master page into the Master Page Galley,
   
 To change the file properties:
   
-1. On the **Master Page Gallery** page, select the newly uploaded master page, and then click **Edit Properties**. 
+1. On the **Master Page Gallery** page, select the newly uploaded master page, and then select **Edit Properties**. 
     
      ![Edit Properties](../media/OTCSP_EditProperties.png)
   
@@ -169,13 +171,13 @@ We are now ready to apply our new master page.
 
 To apply a new master page:
   
-1. From the **Site Settings** page, click **Master page** (under **Look and Feel** ). 
+1. From the **Site Settings** page, select **Master page** (under **Look and Feel** ). 
     
 2. From the **Site Master Page** section, from the **Specify a master page to be used by this site and all sites that inherit from it**, select the newly uploaded master page. In our scenario, this is **ContosoElectronicsMaster**. 
     
      ![Apply Master Page](../media/OTCSP_ApplyMasterPage.png)
   
-By clicking the **Audio** page, we verify that our new master page is now being used. 
+By selecting the **Audio** page, we verify that our new master page is now being used. 
     
      ![New Master Page Applied](../media/OTCSP_NewMasterPageApplied.png)
   
@@ -190,13 +192,12 @@ The next step is to start to work on the page layouts.
 
 #### Other Resources
 
-[Overview of the SharePoint 2013 page model](https://msdn.microsoft.com/library/office/jj191506.aspx)
+[Overview of the SharePoint 2013 page model](/sharepoint/dev/general-development/overview-of-the-sharepoint-page-model)
   
-[How to: Map a network drive to the SharePoint 2013 Master Page Gallery](https://msdn.microsoft.com/library/jj733519.aspx)
+[How to: Map a network drive to the SharePoint 2013 Master Page Gallery](/sharepoint/dev/general-development/how-to-map-a-network-drive-to-the-sharepoint-master-page-gallery)
   
-[Overview of Design Manager in SharePoint 2013](https://msdn.microsoft.com/library/jj822363.aspx)
+[Overview of Design Manager in SharePoint 2013](/sharepoint/dev/general-development/overview-of-design-manager-in-sharepoint)
   
-[How to: Convert an HTML file into a master page in SharePoint Server 2013](https://msdn.microsoft.com/library/jj822370.aspx)
+[How to: Convert an HTML file into a master page in SharePoint Server 2013](/sharepoint/dev/general-development/how-to-convert-an-html-file-into-a-master-page-in-sharepoint)
   
-[How to: Apply a master page to a site in SharePoint Server 2013](https://msdn.microsoft.com/library/jj862339.aspx)
-
+[How to: Apply a master page to a site in SharePoint Server 2013](/sharepoint/dev/general-development/how-to-apply-a-master-page-to-a-site-in-sharepoint)

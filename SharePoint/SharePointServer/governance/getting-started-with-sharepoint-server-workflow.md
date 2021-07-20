@@ -3,9 +3,11 @@ title: "Getting started with SharePoint Server workflow"
 ms.reviewer: 
 ms.author: toresing
 author: tomresing
-manager: pamgreen
+manager: serdars
 ms.date: 3/8/2018
 audience: ITPro
+f1.keywords:
+- NOCSH
 ms.topic: concetpual
 ms.prod: sharepoint-server-itpro
 localization_priority: Normal
@@ -13,7 +15,7 @@ ms.collection:
 - IT_Sharepoint_Server
 - IT_Sharepoint_Server_Top
 ms.assetid: cc73be76-a329-449f-90ab-86822b1c2ee8
-description: "Learn about the two workflow platforms available in SharePoint Serverand the tools for working with them."
+description: "Learn about the two workflow platforms available in SharePoint Server and the tools for working with them."
 ---
 
 # Getting started with SharePoint Server workflow

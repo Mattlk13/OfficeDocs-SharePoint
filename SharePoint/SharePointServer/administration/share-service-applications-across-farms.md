@@ -1,10 +1,12 @@
 ---
 title: "Share service applications across farms in SharePoint Server"
 ms.reviewer: 
-ms.author: mikeplum
-author: MikePlumleyMSFT
-manager: pamgreen
+ms.author: serdars
+author: SerdarSoysal
+manager: serdars
 audience: ITPro
+f1.keywords:
+- NOCSH
 ms.topic: article
 ms.prod: sharepoint-server-itpro
 localization_priority: Normal
@@ -39,9 +41,9 @@ Additionally, a SharePoint (N-1) farm can consume services from a SharePoint Ser
 
 Cross farm service publishing supported scenarios:
 
-- A SharePoint 2013 farm can consume services from a SharePoint 2016 farm
+- A SharePoint 2013 farm can consume services from a SharePoint 2016 farm.
 
-- A SharePoint 2016 farm can consume services from a SharePoint 2019 farm
+- A SharePoint 2016 farm can consume services from a SharePoint 2019 farm.
 
 > [!NOTE]
 > It is not supported to consume services from a server version which is more than one version behind. This means it is not supported for a SharePoint (N-2+) farm to consume services from a SharePoint (N) farm. For example, SharePoint 2013 cannot consume services from SharePoint 2019 as well as SharePoint 2010 cannot consume services from SharePoint 2016.
@@ -52,7 +54,7 @@ Cross farm service publishing supported scenarios:
     
 - Between sites in 2010 mode on a 2013 farm and those in 2013 mode on a 2013 farm
     
-To learn how to work with these restrictions and successfully share services and content between SharePoint 2010 and SharePoint 2013 farms, see [How to upgrade an environment that uses content type syndication (SharePoint Server 2013)](/SharePoint/upgrade-and-update/how-to-upgrade-an-environment-that-uses-content-type-syndication-sharepoint-serv)
+To learn how to work with these restrictions and successfully share services and content between SharePoint 2010 and SharePoint 2013 farms, see [How to upgrade an environment that uses content type syndication (SharePoint Server 2013)](../upgrade-and-update/how-to-upgrade-an-environment-that-uses-content-type-syndication-sharepoint-serv.md)
   
 > [!NOTE]
 > If the server farms are located in different domains, the User Profile service application requires both domains to trust one another. For the Business Data Connectivity service and Secure Store service application administration features to work from the consuming farm, the domain of the publishing farm must trust the domain of the consuming farm. Other cross-farm service applications work without a trust requirement between domains. 
@@ -75,7 +77,7 @@ This article describes the steps that are required to publish and consume servic
     
     For more information, see [Publish service applications in SharePoint Server](publish-a-service-application.md).
     
-3. On the publishing farm, set the permission to the appropriate service applications for the consuming farm
+3. On the publishing farm, set the permission to the appropriate service applications for the consuming farm.
     
     You must give the consuming farm permission to the Application Discovery and Load Balancing Service Application on the publishing farm. After doing this, give the consuming farm permission to the published service applications that it will be consuming.
     
@@ -111,4 +113,3 @@ This article describes the steps that are required to publish and consume servic
 #### Other Resources
 
 [How to upgrade an environment that uses content type syndication (SharePoint Server 2013)](../upgrade-and-update/how-to-upgrade-an-environment-that-uses-content-type-syndication-sharepoint-serv.md)
-

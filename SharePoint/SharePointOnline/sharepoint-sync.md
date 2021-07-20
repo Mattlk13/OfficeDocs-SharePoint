@@ -3,12 +3,19 @@ title: "Sync"
 ms.reviewer: 
 ms.author: kaarins
 author: kaarins
-manager: pamgreen
+manager: serdars
+recommendations: true
 audience: Admin
+f1.keywords:
+- NOCSH
 ms.topic: conceptual
 ms.service: sharepoint-online
+ms.custom:
+- seo-marvel-apr2020
 localization_priority: Normal
-description: "Learn about the SharePoint file sync"
+search.appverid:
+- MET150
+description: "In this article, you'll learn about syncing SharePoint files using the OneDrive sync app for Windows and Mac."
 ---
 
 # SharePoint file sync
@@ -23,6 +30,6 @@ Windows 10 devices come with the OneDrive sync app installed. Office 2016 an
 
 [Read the release notes and install the latest fully released versions](https://support.office.com/article/845dcf18-f921-435e-bf28-4e24b95e5fc0)
 
-[Invalid file names and file types in OneDrive, OneDrive for Business, and SharePoint](https://support.office.com/article/64883a5d-228e-48f5-b3d2-eb39e07630fa)
+[Invalid file names and file types in OneDrive and SharePoint](https://support.office.com/article/64883a5d-228e-48f5-b3d2-eb39e07630fa)
 
-[Fix sync problems](https://support.office.com/article/aaa2d172-8d45-4e94-9c04-5364d04ca2f4)
+[Fix OneDrive sync problems](https://support.office.com/article/fix-onedrive-sync-problems-0899b115-05f7-45ec-95b2-e4cc8c4670b2)

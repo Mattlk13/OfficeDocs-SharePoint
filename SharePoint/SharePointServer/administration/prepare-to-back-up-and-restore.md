@@ -1,10 +1,12 @@
 ---
 title: "Prepare to back up and restore farms in SharePoint Server"
 ms.reviewer: 
-ms.author: mikeplum
-author: MikePlumleyMSFT
-manager: pamgreen
+ms.author: serdars
+author: SerdarSoysal
+manager: serdars
 audience: ITPro
+f1.keywords:
+- NOCSH
 ms.topic: concetpual
 ms.prod: sharepoint-server-itpro
 localization_priority: Normal
@@ -37,7 +39,7 @@ It is important to make sure that you have backed up and can recover the data th
     
 - The database server and farm server that you want to back up must be able to connect to one another.
     
-- If you use SQL Server with Transparent Data Encryption (TDE), and you use either SharePoint tools or SQL Server tools to back up your environment, the TDE encryption key is not backed up or restored. You must manually back up the key. When you restore the environment, you must manually restore the key before you restore the data. For more information, see [Understanding Transparent Data Encryption (TDE)](https://go.microsoft.com/fwlink/p/?LinkID=715574&amp;clcid=0x409).
+- If you use SQL Server with Transparent Data Encryption (TDE), and you use either SharePoint tools or SQL Server tools to back up your environment, the TDE encryption key is not backed up or restored. You must manually back up the key. When you restore the environment, you must manually restore the key before you restore the data. For more information, see [Understanding Transparent Data Encryption (TDE)](/sql/relational-databases/security/encryption/transparent-data-encryption?viewFallbackFrom=sql-server-2014).
     
 ### Restrictions when you back up and restore SharePoint Server
 
@@ -45,7 +47,7 @@ You can't back up or restore everything in a SharePoint environment. For more in
   
 - You cannot use a backup made from one version to restore to another version.
     
-- You can use a backup made from one version to upgrade to another version.
+- You cannot use a backup made from one version to upgrade to another version.
     
 - The update level of the farm to which you restore cannot be lower than the update level of a backup.
     
@@ -67,7 +69,7 @@ Use this procedure to create a shared folder on the network that can receive and
     
 3. On the server on which you want to store the backup data, create a folder.
     
-4. On the **Sharing** tab of the **Properties** dialog box, click **Advanced Sharing**, and then click **Permissions**, add the following accounts and assign them Full Control of the shared folder:
+4. On the **Sharing** tab of the **Properties** dialog, click **Advanced Sharing**, and then click **Permissions**, add the following accounts and assign them Full Control of the shared folder:
     
    - SQL Server service account (MSSQLSERVER)
     
@@ -82,4 +84,3 @@ Use this procedure to create a shared folder on the network that can receive and
 [Backup solutions in SharePoint Server](backup.md)
   
 [Restore solutions in SharePoint Server](restore.md)
-

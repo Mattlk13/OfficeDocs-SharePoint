@@ -1,10 +1,12 @@
 ---
 title: "Upgrade My Sites to SharePoint Server 2019"
 ms.reviewer: 
-ms.author: mikeplum
-author: MikePlumleyMSFT
-manager: pamgreen
+ms.author: serdars
+author: SerdarSoysal
+manager: serdars
 audience: ITPro
+f1.keywords:
+- NOCSH
 ms.topic: get-started-article
 ms.prod: sharepoint-server-itpro
 localization_priority: Normal
@@ -26,7 +28,7 @@ My Sites are personal site collections that end users can use to store their doc
   
 - **My Site Host.** The My Site Host is a special site collection shared among all My Site users. The My Site Host is used to show the profile (person.aspx) and newsfeed pages (default.aspx) on the My Site. The My Site Host is also used for storing the user profile photos. 
     
-- **Personal site collection.** In SharePoint Server 2019, the personal site collection is used to store a user's documents. In SharePoint Server 2019, the personal site collection contains OneDrive for Business, followed content, and so on. 
+- **Personal site collection.** In SharePoint Server 2019, the personal site collection is used to store a user's documents. In SharePoint Server 2019, the personal site collection contains OneDrive, followed content, and so on. 
     
 ## Plan to upgrade My Sites
 
@@ -104,6 +106,6 @@ The personal site collections are upgraded automatically when a user visits thei
   
 #### Other Resources
 
-[Upgrade a site collection](https://support.office.com/article/7f66dfdc-9a3d-4769-8a05-c654e4a27ec2)
+[Upgrade a site collection](upgrade-a-site-collection-2019.md)
   
 [Update-SPProfilePhotoStore](/powershell/module/sharepoint-server/Update-SPProfilePhotoStore?view=sharepoint-ps)

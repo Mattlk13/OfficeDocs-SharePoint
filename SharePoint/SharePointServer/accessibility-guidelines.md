@@ -1,11 +1,13 @@
 ---
 title: "Accessibility guidelines in SharePoint Server 2016"
 ms.reviewer: 
-ms.author: mikeplum
-author: MikePlumleyMSFT
-manager: pamgreen
+ms.author: serdars
+author: SerdarSoysal
+manager: serdars
 ms.date: 3/12/2018
 audience: ITPro
+f1.keywords:
+- NOCSH
 ms.topic: concetpual
 ms.prod: sharepoint-server-itpro
 localization_priority: Normal
@@ -24,7 +26,7 @@ Administrators and other users who have administrative responsibilities typicall
   
 Because SharePoint Server runs as web sites in Internet Information Services (IIS), administrators and users depend on the accessibility features that browsers provide. SharePoint Server supports the accessibility features of supported browsers. For more information, see [Plan browser support in SharePoint Server 2016](install/browser-support-planning-0.md).
   
-Users who don't use a mouse can use a keyboard to navigate the user interface and complete actions. The ability to use the keyboard in this way is a result of support for keyboard interactions that a browser provides. Users who have devices that support touch can also use gestures to complete operations. For more information, see [Touch](https://msdn.microsoft.com/library/windows/desktop/dn742468.aspx).
+Users who don't use a mouse can use a keyboard to navigate the user interface and complete actions. The ability to use the keyboard in this way is a result of support for keyboard interactions that a browser provides. Users who have devices that support touch can also use gestures to complete operations. For more information, see [Touch](/windows/win32/uxguide/inter-touch).
   
 ## SharePoint Server 2016 conformance statement
 
@@ -32,7 +34,7 @@ The following SharePoint Server 2016 conformance statement, VPAT, and EN 301 549
   
 ## Accessibility features in SharePoint Server
 
-Many of the accessibility features in SharePoint Online also apply to SharePoint Server 2016 and SharePoint 2013. For more information about these accessibility features, see the following topics:
+Many of the accessibility features in SharePoint in Microsoft 365 also apply to SharePoint Server 2016 and SharePoint 2013. For more information about these accessibility features, see the following topics:
   
 - [Keyboard shortcuts](https://support.office.com/article/466e33ee-613b-4f47-96bb-1c20f20b1015)
     
@@ -48,6 +50,6 @@ Many of the accessibility features in SharePoint Online also apply to SharePoint
 
 [Microsoft accessibility](https://www.microsoft.com/accessibility/)
   
-[Accessibility features in SharePoint Online](https://support.office.com/article/f291404a-dc7e-44de-a31f-d81b3099c2b9?fromAR=1)
+[Accessibility features in SharePoint in Microsoft 365](https://support.office.com/article/f291404a-dc7e-44de-a31f-d81b3099c2b9?fromAR=1)
   
 [Accessibility support for enterprise](https://support.microsoft.com/accessibility/enterprise-answer-desk)

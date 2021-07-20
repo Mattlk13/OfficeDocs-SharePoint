@@ -1,11 +1,13 @@
 ---
 title: "Synchronize user and group profiles in SharePoint Server 2013"
 ms.reviewer: 
-ms.author: mikeplum
-author: MikePlumleyMSFT
-manager: pamgreen
+ms.author: serdars
+author: SerdarSoysal
+manager: serdars
 ms.date: 2/28/2018
 audience: ITPro
+f1.keywords:
+- NOCSH
 ms.topic: article
 ms.prod: sharepoint-server-itpro
 localization_priority: Normal
@@ -85,7 +87,7 @@ To perform the tasks in this phase, you must be a member of the Farm Administrat
 ### Create a web application to host My Sites
 <a name="WebAppProc"> </a>
 
-In this procedure, you create the web application in which My Sites will reside. We recommend that My Sites be in a separate web application, although the web application may be in an application pool that is shared with other collaboration sites, or it may be in a separate application pool but in a shared IIS website. For more information about SharePoint Server 2013 sites, application pools, and IIS websites, see [Architecture design for SharePoint 2013 IT pros](/sharepoint/). For more detailed instructions about how to create a web application, see [Create a web application in SharePoint Server](/previous-versions/office/sharepoint-server-2010/cc261875(v=office.14)).
+In this procedure, you create the web application in which My Sites will reside. We recommend that My Sites be in a separate web application, although the web application may be in an application pool that is shared with other collaboration sites, or it may be in a separate application pool but in a shared IIS website. For more information about SharePoint Server 2013 sites, application pools, and IIS websites, see [Architecture design for SharePoint 2013 IT pros](../../Hub/index.yml). For more detailed instructions about how to create a web application, see [Create a web application in SharePoint Server](/previous-versions/office/sharepoint-server-2010/cc261875(v=office.14)).
   
  **To create a web application**
   
@@ -225,7 +227,7 @@ If the NetBIOS name of any domain with which you are synchronizing differs from 
     
   - Administrators group on the server on which you are running PowerShell cmdlets.
     
-  - You must read [about_Execution_Policies](https://go.microsoft.com/fwlink/p/?LinkId=193050).
+  - You must read [about_Execution_Policies](/previous-versions//dd347641(v=technet.10)).
     
     An administrator can use the **Add-SPShellAdmin** cmdlet to grant permissions to use SharePoint Server 2013 cmdlets. 
     
@@ -342,7 +344,7 @@ After you start the User Profile synchronization service, for day to day operati
     
 3. Right click **WMI Control**, and then click **Properties**.
     
-4. In the **WMI Control Properties** dialog box, click the **Security** tab. 
+4. In the **WMI Control Properties** dialog, click the **Security** tab. 
     
 5. Expand the **Root** list, and then select the Microsoft FIM 2010 namespace **MicrosoftIdentityIntegrationServer**.
     
@@ -350,7 +352,7 @@ After you start the User Profile synchronization service, for day to day operati
     
 7. Add the farm account to the list of groups and users, and then in the **Permissions for Authenticated Users** box, select **Allow** for the **Remote Enable** permission. 
     
-8.  Click **OK** to dismiss the **Security for ROOT\MicrosoftIdentityIntegrationServer** dialog box, and then click **OK** to dismiss the **WMI Control Properties** dialog box. 
+8.  Click **OK** to dismiss the **Security for ROOT\MicrosoftIdentityIntegrationServer** dialog, and then click **OK** to dismiss the **WMI Control Properties** dialog. 
     
 ### Reset IIS
 <a name="ResetIISProc"> </a>
@@ -367,7 +369,7 @@ If the SharePoint Central Administration website and the User Profile synchroniz
     
 2. Start a Command Prompt with elevated privileges.
     
-3. In the **User Account Control** dialog box, click **Yes**.
+3. In the **User Account Control** dialog, click **Yes**.
     
 4. In the **Administrator: Command Prompt** window, type iisreset and then press ENTER. 
     
@@ -596,7 +598,7 @@ Use this procedure to synchronize profile information between SharePoint Server 
 2. If you have already imported users or created My Sites, and you have enabled NetBIOS domain names, you must disable the My Site cleanup timer job before you start profile synchronization. 
 
 > [!NOTE] 
-> For information about this timer job, please see the [Default timer jobs in SharePoint Server 2013](https://docs.microsoft.com/sharepoint/technical-reference/default-timer-jobs-in-sharepoint-2013). For information about the PowerShell cmdlets that you use to enable and disable this timer job, see [SharePoint Server cmdlet reference](https://docs.microsoft.com/powershell/module/sharepoint-server).
+> For information about this timer job, please see the [Default timer jobs in SharePoint Server 2013](../technical-reference/default-timer-jobs-in-sharepoint-2013.md). For information about the PowerShell cmdlets that you use to enable and disable this timer job, see [SharePoint Server cmdlet reference](/powershell/module/sharepoint-server).
     
 3. If the user account that is performing this procedure is a farm administrator, complete these steps. Otherwise, if the user account is not a farm administrator go to the next step: 
     
@@ -790,4 +792,3 @@ The SharePoint Server 2013 Content Publishing team thanks Spencer Harbar, Enterp
 [Schedule profile synchronization in SharePoint Server](schedule-profile-synchronization.md)
   
 [Plan profile synchronization for SharePoint Server 2013](plan-profile-synchronization-for-sharepoint-server-2013.md)
-

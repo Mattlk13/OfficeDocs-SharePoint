@@ -1,11 +1,13 @@
 ---
 title: "Run a farm that uses read-only databases in SharePoint Server"
 ms.reviewer: 
-ms.author: mikeplum
-author: MikePlumleyMSFT
-manager: pamgreen
+ms.author: serdars
+author: SerdarSoysal
+manager: serdars
 ms.date: 2/27/2018
 audience: ITPro
+f1.keywords:
+- NOCSH
 ms.topic: article
 ms.prod: sharepoint-server-itpro
 localization_priority: Normal
@@ -108,7 +110,7 @@ For more information, see [Get-SPContentDatabase](/powershell/module/sharepoint-
 > [!NOTE]
 > We recommend that you use Microsoft PowerShell when performing command-line administrative tasks. The Stsadm command-line tool has been deprecated, but is included to support compatibility with previous product versions.
   
-You can follow these steps to set read/write content databases to be read-only by using SQL Server Management Studio. You can also use the  `Transact-SQL ALTER DATABASE` statement to set content databases to be read-only. For more information, see [ALTER DATABASE (Transact-SQL)](https://go.microsoft.com/fwlink/p/?LinkID=717355&amp;clcid=0x409).
+You can follow these steps to set read/write content databases to be read-only by using SQL Server Management Studio. You can also use the  `Transact-SQL ALTER DATABASE` statement to set content databases to be read-only. For more information, see [ALTER DATABASE (Transact-SQL)](/sql/t-sql/statements/alter-database-transact-sql).
   
 > [!IMPORTANT]
 > Do not perform this procedure on databases in a failover environment that were log-shipped or mirrored. If a database in a failover environment that is either log-shipped or mirrored is set as read-only then no updates are performed and the backup is not valid.
@@ -153,5 +155,3 @@ It is possible to set any service application database to read-only. However, so
     
     > [!NOTE]
     > When a database is set to read-only, all connections except the one that is setting the read-only flag are stopped. After the read-only flag is set, other connections are enabled. 
-  
-

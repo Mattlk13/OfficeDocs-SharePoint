@@ -1,11 +1,13 @@
 ---
 title: "Install SharePoint 2013 on a single server with a built-in database"
 ms.reviewer: 
-ms.author: mikeplum
-author: MikePlumleyMSFT
-manager: pamgreen
+ms.author: serdars
+author: SerdarSoysal
+manager: serdars
 ms.date: 9/27/2017
 audience: ITPro
+f1.keywords:
+- NOCSH
 ms.topic: get-started-article
 ms.prod: sharepoint-server-itpro
 localization_priority: Normal
@@ -37,7 +39,7 @@ When you deploy SharePoint 2013 on a single server that has a built-in database 
 > This article does not describe how to install SharePoint 2013 in a farm environment, or how to upgrade from previous releases of SharePoint 2013. For more information about how to install SharePoint 2013 on a single-server farm, see [Install SharePoint 2013 on a single server with SQL Server](single-server-with-sql-server.md). For more information about how to install SharePoint 2013 on a multiple server farm, see [Install SharePoint 2013 across multiple servers for a three-tier farm](multiple-servers-for-a-three-tier-farm.md). For more information about upgrade, see [Upgrade from SharePoint 2010 to SharePoint 2013](../upgrade-and-update/upgrade-from-sharepoint-2010-to-sharepoint-2013.md). 
   
 > [!NOTE]
-> The Distributed Cache service gives you a complete social computing experience. For more information about the Distributed Cache service, see [Overview of microblog features, feeds, and the Distributed Cache service in SharePoint Server](/sharepoint/administration/administration), [Manage the Distributed Cache service in SharePoint Server](../administration/manage-the-distributed-cache-service.md), [Plan for feeds and the Distributed Cache service in SharePoint Server](../administration/plan-for-feeds-and-the-distributed-cache-service.md), and [What's new in authentication for SharePoint Server 2013](/SharePoint/what-s-new/new-and-improved-features-in-sharepoint-server-2016)
+> The Distributed Cache service gives you a complete social computing experience. For more information about the Distributed Cache service, see [Overview of microblog features, feeds, and the Distributed Cache service in SharePoint Server](../administration/administration.md), [Manage the Distributed Cache service in SharePoint Server](../administration/manage-the-distributed-cache-service.md), [Plan for feeds and the Distributed Cache service in SharePoint Server](../administration/plan-for-feeds-and-the-distributed-cache-service.md), and [What's new in authentication for SharePoint Server 2013](../what-s-new/new-and-improved-features-in-sharepoint-server-2016.md)
   
 Consider the following restrictions of this method of installation:
   
@@ -116,7 +118,7 @@ The following procedure installs Microsoft SQL Server 2008 R2 SP1 Express Editio
     
 5. On the **Server Type** tab, click **Standalone**.
     
-6. When Setup finishes, a dialog box prompts you to complete the configuration of your server. Ensure that the **Run the SharePoint Products Configuration Wizard now** check box is selected. 
+6. When Setup finishes, a dialog prompts you to complete the configuration of your server. Ensure that the **Run the SharePoint Products Configuration Wizard now** check box is selected. 
     
 7. Click **Close** to start the configuration wizard. 
     
@@ -131,11 +133,11 @@ Use the following procedure to install and configure the configuration database 
   
 1. Verify that the user account that is performing this procedure is the Setup user account. For information about the Setup user account, see [Initial deployment administrative and service accounts in SharePoint Server](initial-deployment-administrative-and-service-accounts-in-sharepoint-server.md).
     
-2. If you have closed the SharePoint Products Configuration Wizard, you can access it by clicking **Start**, point to **All Programs**, click **SharePoint 2013 Products**, and then click **SharePoint 2013 Products Configuration Wizard**. If the **User Account Control** dialog box appears, click **Continue**.
+2. If you have closed the SharePoint Products Configuration Wizard, you can access it by clicking **Start**, point to **All Programs**, click **SharePoint 2013 Products**, and then click **SharePoint 2013 Products Configuration Wizard**. If the **User Account Control** dialog appears, click **Continue**.
     
 3. On the **Welcome to SharePoint Products** page, click **Next**.
     
-4. In the dialog box that notifies you that some services might have to be restarted during configuration, click **Yes**.
+4. In the dialog that notifies you that some services might have to be restarted during configuration, click **Yes**.
     
 5. On the **Configuration Successful** page, click **Finish**.
     
@@ -190,9 +192,9 @@ If you receive a proxy server error message, perform the following procedure:
     
 5. In the **Add this web site to the zone** box, type the URL to your site, and then click **Add**.
     
-6. Click **Close** to close the **Trusted Sites** dialog box. 
+6. Click **Close** to close the **Trusted Sites** dialog. 
     
-7. Click **OK** to close the **Internet Options** dialog box. 
+7. Click **OK** to close the **Internet Options** dialog. 
     
  **To disable Internet Explorer Enhanced Security settings**
   
@@ -206,7 +208,7 @@ If you receive a proxy server error message, perform the following procedure:
     
 4. In the **Security Information** section, click **Configure IE ESC**.
     
-    The **Internet Explorer Enhanced Security Configuration** dialog box appears. 
+    The **Internet Explorer Enhanced Security Configuration** dialog appears. 
     
 5. In the **Administrators** section, click **Off** to disable the Internet Explorer Enhanced Security settings, and then click **OK**.
     
@@ -230,9 +232,9 @@ If you receive a proxy server error message, perform the following procedure:
     
 8. Select the **Bypass proxy server for local addresses** check box. 
     
-9. Click **OK** to close the **Local Area Network (LAN) Settings** dialog box. 
+9. Click **OK** to close the **Local Area Network (LAN) Settings** dialog. 
     
-10. Click **OK** to close the **Internet Options** dialog box. 
+10. Click **OK** to close the **Internet Options** dialog. 
     
 ## Post-installation steps
 <a name="section4"> </a>
@@ -248,5 +250,3 @@ After you install SharePoint 2013, your browser window opens to the SharePoint C
 - **Configure outgoing e-mail** You can configure outgoing e-mail so that your Simple Mail Transfer Protocol (SMTP) server sends e-mail alerts to site users and notifications to site administrators. You can configure both the "From" e-mail address and the "Reply" e-mail address that appear in outgoing alerts. For more information, see [Configure outgoing email for a SharePoint Server farm](../administration/outgoing-email-configuration.md).
     
 - **Configure search settings** You can configure search settings to crawl the content in SharePoint 2013. 
-    
-

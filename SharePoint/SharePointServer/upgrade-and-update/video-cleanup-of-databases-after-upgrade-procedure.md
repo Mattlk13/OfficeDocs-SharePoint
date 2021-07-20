@@ -1,11 +1,13 @@
 ---
 title: "Video Cleanup of databases after upgrade procedure for SharePoint Server 2016"
 ms.reviewer: 
-ms.author: mikeplum
-author: MikePlumleyMSFT
-manager: pamgreen
+ms.author: serdars
+author: SerdarSoysal
+manager: serdars
 ms.date: 5/15/2017
 audience: ITPro
+f1.keywords:
+- NOCSH
 ms.topic: get-started-article
 ms.prod: sharepoint-server-itpro
 localization_priority: Normal
@@ -26,6 +28,4 @@ Listen to two Microsoft Field Engineers as they talk about best practices on how
 
 For a list of the sample scripts to use, see [Post-upgrade scripts](https://gallery.technet.microsoft.com/sharepoint/Post-Upgrade-Cleanup-35099a7a)
   
-For additional information on how to handle cleanup of a database, see [Post Upgrade Cleanup - Missing Server Side Dependencies](https://blogs.technet.microsoft.com/dawiese/2017/05/09/post-upgrade-cleanup-missing-server-side-dependencies/)
-  
-
+For additional information on how to handle cleanup of a database, see [Post Upgrade Cleanup - Missing Server Side Dependencies](/archive/blogs/dawiese/post-upgrade-cleanup-missing-server-side-dependencies)

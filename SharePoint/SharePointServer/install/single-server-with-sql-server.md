@@ -1,11 +1,13 @@
 ---
 title: "Install SharePoint 2013 on a single server with SQL Server"
 ms.reviewer: 
-ms.author: mikeplum
-author: MikePlumleyMSFT
-manager: pamgreen
+ms.author: serdars
+author: SerdarSoysal
+manager: serdars
 ms.date: 2/15/2018
 audience: ITPro
+f1.keywords:
+- NOCSH
 ms.topic: get-started-article
 ms.prod: sharepoint-server-itpro
 localization_priority: Normal
@@ -36,7 +38,7 @@ When you install SharePoint 2013 on a single server, you can configure SharePoin
 
 Before you begin to install and configure SharePoint 2013, do the following:
   
-- Ensure that you are familiar with the operating-system guidelines described in [Performance Tuning Guidelines for Windows Server 2008](https://go.microsoft.com/fwlink/p/?LinkID=121171) and [Performance Tuning Guidelines for Windows Server 2008 R2](https://go.microsoft.com/fwlink/p/?LinkID=184531).
+- Ensure that you are familiar with the operating-system guidelines described in [Performance Tuning Guidelines for Windows Server 2008](https://go.microsoft.com/fwlink/p/?LinkID=121171) and [Performance Tuning Guidelines for Windows Server 2008 R2](/windows-server/administration/performance-tuning/).
     
 - Ensure that you have met all hardware and software requirements. You must have a 64-bit version of Windows Server 2008 R2 SP1. For server farms, you must also have a 64-bit version of SQL Server 2008 R2 SP1. For more information about these requirements, such as specific updates that you must install, see [Hardware and software requirements for SharePoint 2013](hardware-and-software-requirements-0.md).
     
@@ -44,10 +46,10 @@ Before you begin to install and configure SharePoint 2013, do the following:
     
 - Ensure that you are prepared to set up the required accounts by using appropriate permissions. For detailed information, see [Initial deployment administrative and service accounts in SharePoint Server](initial-deployment-administrative-and-service-accounts-in-sharepoint-server.md).
     
-- Ensure the Max degree of parallelism is set to 1. For additional information about max degree of parallelism see, [Configure the max degree of parallelism Server Configuration Option](https://go.microsoft.com/fwlink/p/?LinkId=780865&amp;clcid=0x409)and [Degree of Parallelism](https://go.microsoft.com/fwlink/p/?LinkId=780866&amp;clcid=0x409).
+- Ensure the Max degree of parallelism is set to 1. For additional information about max degree of parallelism see, [Configure the max degree of parallelism Server Configuration Option](/previous-versions/sql/sql-server-2012/ms189094(v=sql.110))and [Degree of Parallelism](/previous-versions/sql/sql-server-2008-r2/ms188611(v=sql.105)).
     
 > [!NOTE]
-> The Distributed Cache service gives you a complete social computing experience. For more information about the Distributed Cache service, see [Overview of microblog features, feeds, and the Distributed Cache service in SharePoint Server](/sharepoint/administration/administration), [Manage the Distributed Cache service in SharePoint Server](../administration/manage-the-distributed-cache-service.md), [Plan for feeds and the Distributed Cache service in SharePoint Server](../administration/plan-for-feeds-and-the-distributed-cache-service.md), and [What's new in authentication for SharePoint Server 2013](/SharePoint/what-s-new/new-and-improved-features-in-sharepoint-server-2016)
+> The Distributed Cache service gives you a complete social computing experience. For more information about the Distributed Cache service, see [Overview of microblog features, feeds, and the Distributed Cache service in SharePoint Server](../administration/administration.md), [Manage the Distributed Cache service in SharePoint Server](../administration/manage-the-distributed-cache-service.md), [Plan for feeds and the Distributed Cache service in SharePoint Server](../administration/plan-for-feeds-and-the-distributed-cache-service.md), and [What's new in authentication for SharePoint Server 2013](../what-s-new/new-and-improved-features-in-sharepoint-server-2016.md)
   
 > [!NOTE]
 > As a security best practice, we recommend that you install SharePoint 2013 by using least-privilege administration. 
@@ -124,7 +126,7 @@ The following procedure installs binaries, configures security permissions, and 
   
 7. Click **Install Now**.
     
-8. When Setup finishes, a dialog box prompts you to complete the configuration of your server. Ensure that the **Run the SharePoint Products and Technologies Configuration Wizard now** check box is selected. 
+8. When Setup finishes, a dialog prompts you to complete the configuration of your server. Ensure that the **Run the SharePoint Products and Technologies Configuration Wizard now** check box is selected. 
     
 9. Click **Close** to start the configuration wizard. 
     
@@ -139,11 +141,11 @@ Use the following procedure to install and configure the configuration database 
   
 1. Verify that the user account that is performing this procedure is the Setup user account. For information about the Setup user account, see [Initial deployment administrative and service accounts in SharePoint Server](initial-deployment-administrative-and-service-accounts-in-sharepoint-server.md).
     
-2. If you have closed the SharePoint Products Configuration Wizard, you can access it by clicking **Start**, point to **All Programs**, click **SharePoint 2013 Products**, and then click **SharePoint 2013 Products Configuration Wizard**. If the **User Account Control** dialog box appears, click **Continue**.
+2. If you have closed the SharePoint Products Configuration Wizard, you can access it by clicking **Start**, point to **All Programs**, click **SharePoint 2013 Products**, and then click **SharePoint 2013 Products Configuration Wizard**. If the **User Account Control** dialog appears, click **Continue**.
     
 3. On the **Welcome to SharePoint Products** page, click **Next**.
     
-4. In the dialog box that notifies you that some services might have to be restarted during configuration, click **Yes**.
+4. In the dialog that notifies you that some services might have to be restarted during configuration, click **Yes**.
     
 5. On the **Connect to a server farm** page, click **Create a new server farm**, and then click **Next**.
     
@@ -230,9 +232,9 @@ If you receive a proxy server error message, perform the following procedure:
     
 5. In the **Add this web site to the zone** box, type the URL to your site, and then click **Add**.
     
-6. Click **Close** to close the **Trusted Sites** dialog box. 
+6. Click **Close** to close the **Trusted Sites** dialog. 
     
-7. Click **OK** to close the **Internet Options** dialog box. 
+7. Click **OK** to close the **Internet Options** dialog. 
     
  **To disable Internet Explorer Enhanced Security settings**
   
@@ -246,7 +248,7 @@ If you receive a proxy server error message, perform the following procedure:
     
 4. In the **Security Information** section, click **Configure IE ESC**.
     
-    The **Internet Explorer Enhanced Security Configuration** dialog box appears. 
+    The **Internet Explorer Enhanced Security Configuration** dialog appears. 
     
 5. In the **Administrators** section, click **Off** to disable the Internet Explorer Enhanced Security settings, and then click **OK**.
     
@@ -270,9 +272,9 @@ If you receive a proxy server error message, perform the following procedure:
     
 8. Select the **Bypass proxy server for local addresses** check box. 
     
-9. Click **OK** to close the **Local Area Network (LAN) Settings** dialog box. 
+9. Click **OK** to close the **Local Area Network (LAN) Settings** dialog. 
     
-10. Click **OK** to close the **Internet Options** dialog box. 
+10. Click **OK** to close the **Internet Options** dialog. 
     
 ### Run the Farm Configuration Wizard
 <a name="configurebrowser"> </a>
@@ -334,5 +336,3 @@ After you install and configure SharePoint 2013, your browser window opens to th
 - **Configure outgoing email** You can configure outgoing email so that your Simple Mail Transfer Protocol (SMTP) server sends email alerts to site users and notifications to site administrators. You can configure both the "From" email address and the "Reply" email address that appear in outgoing alerts. For more information, see [Configure outgoing email for a SharePoint Server farm](../administration/outgoing-email-configuration.md).
     
 - **Configure Search settings** You can configure Search settings to crawl the content in SharePoint 2013. 
-    
-

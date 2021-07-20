@@ -1,11 +1,13 @@
 ---
 title: "Connect a publishing site to a catalog in SharePoint Server"
 ms.reviewer: 
-ms.author: jhendr
-author: JoanneHendrickson
-manager: pamgreen
+ms.author: serdars
+author: SerdarSoysal
+manager: serdars
 ms.date: 7/18/2017
 audience: ITPro
+f1.keywords:
+- NOCSH
 ms.topic: article
 ms.prod: sharepoint-server-itpro
 localization_priority: Normal
@@ -35,7 +37,7 @@ To show content from a library or list that is shared as a catalog, you must con
 <a name="BKMK_Before"> </a>
 
 > [!NOTE]
->  Because SharePoint Server runs as websites in Internet Information Services (IIS), administrators and users depend on the accessibility features that browsers provide. SharePoint Server supports the accessibility features of supported browsers. For more information, see the following resources: > [Plan browser support](https://docs.microsoft.com/sharepoint/install/browser-support-planning-0)> [Accessibility guidelines in SharePoint](https://docs.microsoft.com/sharepoint/accessibility-guidelines)> [Accessibility in SharePoint](https://docs.microsoft.com/sharepoint/dev/general-development/accessibility-in-sharepoint)> [Keyboard shortcuts](https://support.office.com/article/466e33ee-613b-4f47-96bb-1c20f20b1015)> [Touch](https://go.microsoft.com/fwlink/p/?LinkId=246506).
+>  Because SharePoint Server runs as websites in Internet Information Services (IIS), administrators and users depend on the accessibility features that browsers provide. SharePoint Server supports the accessibility features of supported browsers. For more information, see the following resources: > [Plan browser support](../install/browser-support-planning-0.md)> [Accessibility guidelines in SharePoint](../accessibility-guidelines.md)> [Accessibility in SharePoint](/sharepoint/dev/general-development/accessibility-in-sharepoint)> [Keyboard shortcuts](https://support.office.com/article/466e33ee-613b-4f47-96bb-1c20f20b1015)> [Touch](/windows/win32/wintouch/windows-touch-gestures-overview).
   
 Before you connect the publishing site collection to a catalog, review the information in [Plan category pages and catalog item pages](plan-sharepoint-publishing-sites-for-cross-site-publishing.md#BKMK_PlanCategoryPagesAndItemDetailPages). Also verify the following:
   
@@ -77,7 +79,7 @@ Before you connect the publishing site collection to a catalog, review the infor
     
   - Next to the **Root term of hierarchy** box, click **Browse for a valid choice**.
     
-  - In the **Select: Add Terms** dialog box, click the term that corresponds to the level from which you want to integrate the catalog tagging term set, click **Select**, and then click **OK**.
+  - In the **Select: Add Terms** dialog, click the term that corresponds to the level from which you want to integrate the catalog tagging term set, click **Select**, and then click **OK**.
     
   - To integrate the root term that is the parent of the selected term in the publishing site navigation term set, select the **Include root term in site navigation** check box. 
     
@@ -92,7 +94,7 @@ Before you connect the publishing site collection to a catalog, review the infor
     
   - Click **Browse for a valid choice** to display the publishing site navigation term set. 
     
-  - In the **Select: Add Terms** dialog box, click the term that corresponds to the level from which you want to integrate the catalog tagging term set, click **Select**, and then click **OK**.
+  - In the **Select: Add Terms** dialog, click the term that corresponds to the level from which you want to integrate the catalog tagging term set, click **Select**, and then click **OK**.
     
 9. If you want changes to the catalog tagging term set to be updated on the publishing site, in the **Navigation Pinning** section, select the **Pin terms to site navigation** check box. By default, this option is selected. If you clear this check box, changes made to the catalog tagging term set are not reflected on the publishing site navigation. 
     
@@ -138,7 +140,7 @@ Before you connect the publishing site collection to a catalog, review the infor
 If you want to remove the content of a connected catalog from a publishing site, you have to disconnect the publishing site from the catalog.
   
 > [!IMPORTANT]
-> If you have integrated a catalog tagging term set into the publishing site navigation term set, the tagging terms will not be removed from the navigation when you disconnect from the catalog. To remove the tagging terms from the navigation, you have to delete the terms in Term Store Management. For more information, see [Create and manage terms in a term set](https://docs.microsoft.com/sharepoint/create-and-manage-terms).
+> If you have integrated a catalog tagging term set into the publishing site navigation term set, the tagging terms will not be removed from the navigation when you disconnect from the catalog. To remove the tagging terms from the navigation, you have to delete the terms in Term Store Management. For more information, see [Create and manage terms in a term set](../../SharePointOnline/create-and-manage-terms.md).
   
 Also, if you had SharePoint Server automatically create a category page and an item details page for the catalog pages, these will not be deleted from the Pages library when you disconnect from the catalog.
   
@@ -157,5 +159,4 @@ Also, if you had SharePoint Server automatically create a category page and an i
 
 #### Other Resources
 
-[Blog post: Connect your publishing site to a catalog](https://blogs.technet.com/b/tothesharepoint/archive/2013/03/07/stage-5-connect-your-publishing-site-to-a-catalog.aspx)
-
+[Blog post: Connect your publishing site to a catalog](/archive/blogs/tothesharepoint/stage-5-connect-your-publishing-site-to-a-catalog)

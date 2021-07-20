@@ -1,10 +1,12 @@
 ---
 title: "Restore User Profile Service applications in SharePoint Server"
 ms.reviewer: 
-ms.author: mikeplum
-author: MikePlumleyMSFT
-manager: pamgreen
+ms.author: serdars
+author: SerdarSoysal
+manager: serdars
 audience: ITPro
+f1.keywords:
+- NOCSH
 ms.topic: article
 ms.prod: sharepoint-server-itpro
 localization_priority: Normal
@@ -103,7 +105,7 @@ Use the following procedures to restore a User Profile service application by us
     
 6. On the Restore from Backup — Step 3 of 3: Select Restore Options page, in the **Restore Component** section, make sure that **Farm\Shared Services Applications\\<User Profile Service service application name\>** appears in the **Restore the following component** list. 
     
-    In the **Restore Options** section, under **Type of restore**, select the **Same configuration** option. A dialog box will appear that asks you to confirm the operation. Click **OK**.
+    In the **Restore Options** section, under **Type of restore**, select the **Same configuration** option. A dialog will appear that asks you to confirm the operation. Click **OK**.
     
 7. Click **Start Restore**.
     
@@ -143,9 +145,9 @@ You cannot restore the complete service application or service application proxy
     
 8. Right-click the database that you want to restore, point to **Tasks**, and then click **Restore Database**.
     
-9. In the **Restore Database** dialog box, on the **Options** page, select the kind of recovery that you want to perform from the **Recovery state** list.
+9. In the **Restore Database** dialog, on the **Options** page, select the kind of recovery that you want to perform from the **Recovery state** list.
     
-    For more information about which recovery type to use, see [ Recovery Models (SQL Server) ](https://go.microsoft.com/fwlink/p/?LinkID=626889&amp;clcid=0x409).
+    For more information about which recovery type to use, see [ Recovery Models (SQL Server) ](/sql/relational-databases/backup-restore/recovery-models-sql-server?viewFallbackFrom=sql-server-2014).
     
 10. On the **General** page, in the **Destination for restore** section, select the database from the **To database** list.
     
@@ -180,4 +182,3 @@ You cannot restore the complete service application or service application proxy
 #### Other Resources
 
 [Windows PowerShell for SharePoint Server reference](/powershell/module/sharepoint-server/?view=sharepoint-ps)
-

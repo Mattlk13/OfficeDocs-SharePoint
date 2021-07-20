@@ -1,11 +1,13 @@
 ---
 title: "Configure basic authentication for a claims-based web application in SharePoint Server"
 ms.reviewer: 
-ms.author: mikeplum
-author: MikePlumleyMSFT
-manager: pamgreen
+ms.author: serdars
+author: SerdarSoysal
+manager: serdars
 ms.date: 2/28/2018
 audience: ITPro
+f1.keywords:
+- NOCSH
 ms.topic: get-started-article
 ms.prod: sharepoint-server-itpro
 localization_priority: Normal
@@ -46,7 +48,7 @@ Use the IIS Manager console to configure IIS to enable basic authentication for 
     
 - Extranet
     
-The Default zone is the zone that is first created when a web application is created. The other zones are created by extending a web application. For more information, see [Extend claims-based web applications in SharePoint](/SharePoint/administration/extend-a-claims-based-web-application).
+The Default zone is the zone that is first created when a web application is created. The other zones are created by extending a web application. For more information, see [Extend claims-based web applications in SharePoint](./extend-a-claims-based-web-application.md).
   
  **To configure IIS to enable basic authentication**
   
@@ -62,7 +64,7 @@ The Default zone is the zone that is first created when a web application is cre
     
 6. Right-click **Basic Authentication**, and then click **Edit**.
     
-7. In the **Edit Basic Authentication Settings** dialog box, in the **Default domain** text box, type the appropriate default domain. 
+7. In the **Edit Basic Authentication Settings** dialog, in the **Default domain** text box, type the appropriate default domain. 
     
     The default domain is the name of a domain against which you want users to be authenticated when they do not provide a domain name.
     
@@ -72,10 +74,10 @@ The Default zone is the zone that is first created when a web application is cre
     
 The web site is now configured to use basic authentication.
   
-You can also configure basic authentication when you create a web application in SharePoint Server Central Administration by selecting **Basic authentication (password is sent in clear text)** in the **Claims Authentication Types** section of the **Create New Web Application** dialog box. 
+You can also configure basic authentication when you create a web application in SharePoint Server Central Administration by selecting **Basic authentication (password is sent in clear text)** in the **Claims Authentication Types** section of the **Create New Web Application** dialog. 
   
 > [!SECURITY NOTE]
-> In the **Claims Authentication Types** section of the **Create New Web Application** dialog box, you can select **Integrated Windows authentication**, **Basic authentication (password is sent in clear text)**, or both. If you select both, SharePoint Server will offer both authentication types to the client web browser. The client web browser then determines the type of authentication to use. If you only select **Basic authentication (password is sent in clear text)**, make sure that you enable SSL for this web application. 
+> In the **Claims Authentication Types** section of the **Create New Web Application** dialog, you can select **Integrated Windows authentication**, **Basic authentication (password is sent in clear text)**, or both. If you select both, SharePoint Server will offer both authentication types to the client web browser. The client web browser then determines the type of authentication to use. If you only select **Basic authentication (password is sent in clear text)**, make sure that you enable SSL for this web application. 
   
 ## See also
 <a name="Section2"> </a>
@@ -85,7 +87,6 @@ You can also configure basic authentication when you create a web application in
 [Configure Digest authentication for a claims-based Web application](configure-digest-authentication-for-a-claims-based-web-application.md)
 #### Other Resources
 
-[Plan for user authentication methods in SharePoint Server](/SharePoint/security-for-sharepoint-server/plan-user-authentication)
+[Plan for user authentication methods in SharePoint Server](../security-for-sharepoint-server/plan-user-authentication.md)
   
-[Extend claims-based web applications in SharePoint](/SharePoint/administration/extend-a-claims-based-web-application)
-
+[Extend claims-based web applications in SharePoint](./extend-a-claims-based-web-application.md)

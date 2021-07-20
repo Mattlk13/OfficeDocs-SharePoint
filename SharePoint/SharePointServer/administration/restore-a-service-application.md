@@ -1,10 +1,12 @@
 ---
 title: "Restore service applications in SharePoint Server"
 ms.reviewer: 
-ms.author: mikeplum
-author: MikePlumleyMSFT
-manager: pamgreen
+ms.author: serdars
+author: SerdarSoysal
+manager: serdars
 audience: ITPro
+f1.keywords:
+- NOCSH
 ms.topic: article
 ms.prod: sharepoint-server-itpro
 localization_priority: Normal
@@ -129,7 +131,7 @@ Use the following procedure to restore a service application by using the ShareP
     
 6. On the Restore from Backup — Step 3 of 3: Select Restore Options page, in the **Restore Component** section, make sure that **Farm\Shared Services Applications\\<Service application\>** appears in the **Restore the following component** list. 
     
-    In the **Restore Options** section, under **Type of restore**, select the **Same configuration** option. A dialog box will appear that asks you to confirm the operation. Click **OK**.
+    In the **Restore Options** section, under **Type of restore**, select the **Same configuration** option. A dialog will appear that asks you to confirm the operation. Click **OK**.
     
     Click **Start Restore**.
     
@@ -152,7 +154,7 @@ You cannot restore the complete service application by using SQL Server tools. H
     
 4. Right-click the database that you want to restore, point to **Tasks**, point to **Restore**, and then click **Database**.
     
-5. In the **Restore Database** dialog box, on the General page, select the database to restore to from the **To database** drop-down list.
+5. In the **Restore Database** dialog, on the General page, select the database to restore to from the **To database** drop-down list.
     
 6. Select the restore source from the **From database** drop-down list.
     
@@ -160,7 +162,7 @@ You cannot restore the complete service application by using SQL Server tools. H
     
 8. On the Options tab, select the recovery state from the **Recover state** section.
     
-    For more information about which recovery type to use, see [ Recovery Models (SQL Server) ](https://go.microsoft.com/fwlink/p/?LinkID=626889&amp;clcid=0x409) in SQL Server Books Online.
+    For more information about which recovery type to use, see [ Recovery Models (SQL Server) ](/sql/relational-databases/backup-restore/recovery-models-sql-server?viewFallbackFrom=sql-server-2014) in SQL Server Books Online.
     
 9. Click **OK** to restore the database.
     
@@ -172,4 +174,3 @@ You cannot restore the complete service application by using SQL Server tools. H
 #### Concepts
 
 [Back up service applications in SharePoint Server](back-up-a-service-application.md)
-

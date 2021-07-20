@@ -3,9 +3,12 @@ title: "Migration Assessment Scan Custom Profile Property Mappings"
 ms.reviewer: 
 ms.author: jhendr
 author: JoanneHendrickson
-manager: pamgreen
+manager: serdars
+recommendations: true
 ms.date: 7/5/2017
 audience: ITPro
+f1.keywords:
+- NOCSH
 ms.topic: article
 ms.service: sharepoint-online
 localization_priority: Priority
@@ -28,11 +31,11 @@ Learn how to mitigate issues with Custom Profile Property mappings during migrat
 
 In the source environment, it was possible to add additional profile property mappings to the User Profile Service Application. The profile property mappings enable SharePoint to pull in profile property values from data sources outside of SharePoint. For example, you could map a profile property to an attribute in Active Directory. During a profile sync, SharePoint populated the user's profile with the value from Active Directory. Another scenario was to leverage Business Connectivity Services (BCS) to populate profile property values from a database or web service.
   
-The target environment leverages Azure Active Directory (AAD) to populate the SharePoint profile values. SharePoint will synchronize the most common profile data from Azure Active Directory into SharePoint. The target environment does not support extending the AAD schema and configuring additional profile property mappings. If you need to populate data that is not provided by the out of the box profile property mappings, it is required to write a program that will push the values you want into the profile properties in the service.
+The target environment leverages Azure Active Directory (Azure AD) to populate the SharePoint profile values. SharePoint will synchronize the most common profile data from Azure Active Directory into SharePoint. The target environment does not support extending the Azure AD schema and configuring additional profile property mappings. If you need to populate data that is not provided by the out of the box profile property mappings, it is required to write a program that will push the values you want into the profile properties in the service.
   
 For guidance on updating profile property values leveraging the Client Side Object Model (CSOM), see:
   
-- [SharePoint user profile properties now writable with CSOM](https://blogs.msdn.microsoft.com/vesku/2014/11/07/sharepoint-user-profile-properties-now-writable-with-csom/)
+- [SharePoint user profile properties now writable with CSOM](/archive/blogs/vesku/sharepoint-user-profile-properties-now-writable-with-csom)
     
 This scan output will provide you with a list of profile property mappings that will not be included in the target environment. This will enable you to make a decision on the direction moving forward.
   
@@ -76,5 +79,3 @@ This scan report contains a list of all the profile property mappings that will 
 |:-----|:-----|:-----|
 |Phonetic First Name  <br/> |SPS-PhoneticFirstName  <br/> |MsDS-PhoneticFirstName  <br/> |
 |Phonetic Display Name  <br/> |SPS-PhoneticDisplayName  <br/> |MsDS-PhoneticDisplayName  <br/> |
-   
-

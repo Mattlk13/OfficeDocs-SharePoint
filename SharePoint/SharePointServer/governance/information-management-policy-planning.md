@@ -1,11 +1,13 @@
 ---
 title: "Plan for information management policy in SharePoint Server"
 ms.reviewer: 
-ms.author: kaarins
-author: kaarins
-manager: pamgreen
+ms.author: serdars
+author: SerdarSoysal
+manager: serdars
 ms.date: 3/1/2018
 audience: ITPro
+f1.keywords:
+- NOCSH
 ms.topic: article
 ms.prod: sharepoint-server-itpro
 localization_priority: Normal
@@ -113,4 +115,7 @@ When you plan your solution's policies, first determine organization-wide policy
   
 A typical example of an organization-wide policy is one that is designed to promote best practices in auditing and retaining product specifications across the divisions of an organization. A single Site Collection policy is designed to be applied to all product specifications so that they are consistently audited and retained. After the Site Collection policy is designed and tested, it is exported and then imported to Site Collection Policy galleries of other site collections in which product specifications are stored. It is then associated with all product specification content types in the various site collections to impose the policy on all product specifications.
   
+## See also
+<a name="section6"> </a>
 
+For the SharePoint in Microsoft 365 version of this article, see [Create and apply information management policies](/microsoft-365/compliance/create-info-mgmt-policies).

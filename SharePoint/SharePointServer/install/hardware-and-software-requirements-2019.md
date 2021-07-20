@@ -1,11 +1,13 @@
 ---
 title: "Hardware and software requirements for SharePoint Server 2019"
 ms.reviewer: 
-ms.author: mikeplum
-author: MikePlumleyMSFT
-manager: pamgreen
+ms.author: serdars
+author: SerdarSoysal
+manager: serdars
 ms.date: 7/24/2018
 audience: ITPro
+f1.keywords:
+- NOCSH
 ms.topic: interactive-tutorial
 ms.prod: sharepoint-server-itpro
 localization_priority: Priority
@@ -74,13 +76,13 @@ The requirements in the following section apply to the following installations:
     
   
 > [!NOTE]
-> SharePoint Server 2019 supports drives that are formatted with the Resilient File System (ReFS). For additional information about ReFs, see [Resilient File System Overview](https://go.microsoft.com/fwlink/p/?LinkId=618431) and [Resilient File System](https://go.microsoft.com/fwlink/p/?LinkId=618432)
+> SharePoint Server 2019 supports drives that are formatted with the Resilient File System (ReFS). For additional information about ReFs, see [Resilient File System Overview](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831724(v=ws.11)) and [Resilient File System](/windows/win32/w8cookbook/resilient-file-system--refs-)
 
 > [!IMPORTANT]
-> SharePoint Server 2019 requires a minimum Active Directory domain and forest functional level of Windows Server 2003 (native). For more information about Active Directory functional levels, see [Forest and Domain Functional Levels](https://docs.microsoft.com/windows-server/identity/ad-ds/active-directory-functional-levels).
+> SharePoint Server 2019 requires a minimum Active Directory domain and forest functional level of Windows Server 2003 (native). For more information about Active Directory functional levels, see [Forest and Domain Functional Levels](/windows-server/identity/ad-ds/active-directory-functional-levels).
   
 > [!IMPORTANT]
-> SharePoint Server 2019 does not support single label domain names. For more information, see [Information about configuring Windows for domains with single-label DNS names](https://go.microsoft.com/fwlink/p/?LinkID=193849). 
+> SharePoint Server 2019 does not support single label domain names. For more information, see [Information about configuring Windows for domains with single-label DNS names](/troubleshoot/windows-server/identity/deployment-operation-ad-domains). 
   
 The Microsoft SharePoint Products Preparation Tool can assist you in the installation of the software prerequisites for SharePoint Server 2019. Ensure that you have an Internet connection because some prerequisites are installed from the Internet.
   
@@ -226,7 +228,7 @@ In scenarios where installing prerequisites directly from the Internet is not po
 
 - [Visual C++ Redistributable Package for Visual Studio 2012](https://go.microsoft.com/fwlink/?LinkId=627156)
     
-- [Visual C++ Redistributable Package for Visual Studio 2017](https://visualstudio.microsoft.com/downloads/)
+- [Visual C++ Redistributable Package for Visual Studio 2017](https://go.microsoft.com/fwlink/?LinkId=848299)
     
 - [Exchange Web Services Managed API, version 1.2](https://go.microsoft.com/fwlink/p/?linkid=238668)
     

@@ -1,16 +1,18 @@
 ---
 title: "Search center scenarios in SharePoint Server"
 ms.reviewer: 
-ms.author: mikeplum
-author: MikePlumleyMSFT
-manager: pamgreen
+ms.author: serdars
+author: SerdarSoysal
+manager: serdars
 ms.date: 7/26/2017
 audience: ITPro
+f1.keywords:
+- NOCSH
 ms.topic: article
 ms.prod: sharepoint-server-itpro
 localization_priority: Normal
 ms.assetid: 3380e554-d1f8-46d6-9df0-cc102945f922
-description: "Use the information in this section to learn how to develop Search Center scenarios in SharePoint Server."
+description: "To learn how to develop Search Center scenarios in SharePoint Server, see this section."
 ---
 
 # Search center scenarios in SharePoint Server

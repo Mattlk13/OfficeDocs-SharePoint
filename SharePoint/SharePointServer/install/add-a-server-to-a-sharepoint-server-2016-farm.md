@@ -1,11 +1,13 @@
 ---
 title: "Add a server to a SharePoint Server 2016 or SharePoint Server 2019 farm"
 ms.reviewer: 
-ms.author: mikeplum
-author: MikePlumleyMSFT
-manager: pamgreen
+ms.author: serdars
+author: SerdarSoysal
+manager: serdars
 ms.date: 6/1/2017
 audience: ITPro
+f1.keywords:
+- NOCSH
 ms.topic: get-started-article
 ms.prod: sharepoint-server-itpro
 localization_priority: Normal
@@ -99,7 +101,7 @@ After you install the prerequisites, follow these steps to install SharePoint Se
   
 6. Click **Install Now**.
     
-7. When Setup finishes, a dialog box prompts you to run the **SharePoint Products Configuration Wizard**. You can start the wizard immediately or from the Windows command prompt later.
+7. When Setup finishes, a dialog prompts you to run the **SharePoint Products Configuration Wizard**. You can start the wizard immediately or from the Windows command prompt later.
     
 ## Add the new SharePoint server to the farm
 <a name="addserver"> </a>

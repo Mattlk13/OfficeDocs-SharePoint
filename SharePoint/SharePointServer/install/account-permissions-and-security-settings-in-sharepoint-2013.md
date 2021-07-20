@@ -1,11 +1,13 @@
 ---
 title: "Account permissions and security settings in SharePoint 2013"
 ms.reviewer: 
-ms.author: mikeplum
-author: MikePlumleyMSFT
-manager: pamgreen
+ms.author: serdars
+author: SerdarSoysal
+manager: serdars
 ms.date: 9/8/2017
 audience: ITPro
+f1.keywords:
+- NOCSH
 ms.topic: get-started-article
 ms.prod: sharepoint-server-itpro
 localization_priority: Normal
@@ -45,7 +47,7 @@ One of the following SharePoint components automatically configures most of the 
     
 ### Farm administrator user  account
 
-This account is a uniquely identifiable account assigned to the SharePoint administrator and is used to set up each server in your farm by running the SharePoint Configuration Wizard, the initial Farm Creation Wizard, and PowerShell. The account must be a domain user. For the examples in this article, the farm administrator account is used for farm administration, and you can use Central Administration to manage it. Some configuration options such as configuration of the SharePoint 2013 Search query server require local administration permissions. The farm administrator user account requires the following permissions:
+This account is a uniquely identifiable account assigned to the SharePoint admin and is used to set up each server in your farm by running the SharePoint Configuration Wizard, the initial Farm Creation Wizard, and PowerShell. The account must be a domain user. For the examples in this article, the farm administrator account is used for farm administration, and you can use Central Administration to manage it. Some configuration options such as configuration of the SharePoint 2013 Search query server require local administration permissions. The farm administrator user account requires the following permissions:
   
 - It must be a member of the Local Administrators group on each server in the SharePoint farm.
     
@@ -223,7 +225,7 @@ Members of the WSS_SHELL_ACCESS role have the execute permission for all stored 
 The **SP_READ_ONLY** role should be used for setting the database to read only mode instead of using sp_dboption. This role as its name suggests should be used when only read access is required for data such as usage and telemetry data. 
   
 > [!NOTE]
-> The sp_dboption stored procedure is not available in SQL Server 2012. For more information about sp_dboption see [sp_dboption (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=507398). 
+> The sp_dboption stored procedure is not available in SQL Server 2012. For more information about sp_dboption see [sp_dboption (Transact-SQL)](/previous-versions/sql/sql-server-2008-r2/ms187310(v=sql.105)). 
   
 The SP_READ_ONLY SQL role will have the following permissions:
   

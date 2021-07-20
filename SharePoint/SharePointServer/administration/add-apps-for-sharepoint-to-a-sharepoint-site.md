@@ -1,11 +1,13 @@
 ---
 title: "Add apps for SharePoint to a SharePoint site"
 ms.reviewer: 
-ms.author: mikeplum
-author: MikePlumleyMSFT
-manager: pamgreen
+ms.author: serdars
+author: SerdarSoysal
+manager: serdars
 ms.date: 5/30/2017
 audience: ITPro
+f1.keywords:
+- NOCSH
 ms.topic: article
 ms.prod: sharepoint-server-itpro
 localization_priority: Normal
@@ -69,7 +71,7 @@ The following procedures provide steps for adding apps from these sources.
   
 4. Click the app you want to add.
     
-5. In the Grant Permission to an App dialog box, if you trust the app, click **Allow Access**.
+5. In the Grant Permission to an App dialog, if you trust the app, click **Allow Access**.
     
     The app for SharePoint is added and appears in Apps section of your Site Contents list.
     
@@ -91,7 +93,7 @@ The following procedures provide steps for adding apps from these sources.
     
 7. Follow the steps to log in and purchase the app, if required.
     
-8. In the **Grant Permission to an App** dialog box, if you trust the app, click **Allow Access**.
+8. In the **Grant Permission to an App** dialog, if you trust the app, click **Allow Access**.
     
     The app for SharePoint is added and appears in the Apps section of your Site Contents list.
     

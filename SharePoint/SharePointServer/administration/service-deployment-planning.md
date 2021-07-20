@@ -1,11 +1,13 @@
 ---
 title: "Plan service deployment in SharePoint Server"
 ms.reviewer: 
-ms.author: mikeplum
-author: MikePlumleyMSFT
-manager: pamgreen
+ms.author: serdars
+author: SerdarSoysal
+manager: serdars
 ms.date: 8/18/2017
 audience: ITPro
+f1.keywords:
+- NOCSH
 ms.topic: article
 ms.prod: sharepoint-server-itpro
 localization_priority: Normal
@@ -44,7 +46,7 @@ For more information about these SharePoint 2013 topology approaches, see the fo
     
 For information about SharePoint Server 2016 topology, see the following model:
   
-- [Planning for a MinRole server deployment in SharePoint Server](/sharepoint/install/planning-for-a-minrole-server-deployment-in-sharepoint-server)
+- [Planning for a MinRole server deployment in SharePoint Server](../install/planning-for-a-minrole-server-deployment-in-sharepoint-server.md)
     
 ## Services on server for streamlined topologies in SharePoint 2013
 <a name="Section1"> </a>
@@ -66,7 +68,7 @@ For information about SharePoint Server 2016 topology, see the following model:
 |Microsoft SharePoint Foundation Subscription Settings Service  <br/> |Microsoft SharePoint Foundation Subscription Settings Service  <br/> |Front-end server  <br/> |You must use Microsoft PowerShell to deploy this service. Start this service if you have deployed service applications in multi-tenant mode or if the farm includes sites that use site subscriptions. This service stores settings and configuration data for tenants in a multi-tenant environment. After you start this service, web applications consume the service automatically.  <br/> |
 |PerformancePoint  <br/> |PerformancePoint Service  <br/> |Front-end server  <br/> ||
 |PowerPoint Conversion  <br/> |PowerPoint Conversion Service  <br/> |Application server  <br/> |This service converts PowerPoint presentations to other formats. It typically runs on one or more application servers. It starts one or more worker processes to perform conversions. When actively converting, a worker process may use up a complete processor core. Memory usage depends on the size and content of files being converted. You can use Microsoft PowerShell cmdlets to control the number of worker processes that are used. Several other configuration options are also available through Microsoft PowerShell cmdlets.  <br/> |
-|Search  <br/> |Lotus Notes Connector  <br/> |Search server  <br/> |Refer to documentation to learn how to configure Lotus Notes Connector which crawls data on a Lotus Domino server.  <br/> |
+|Search  <br/> |Lotus Notes Connector  <br/> |Search server  <br/> |To learn how to configure Lotus Notes Connector which crawls data on a Lotus Domino server, see the documentation.  <br/> |
 |Search  <br/> |Search Host Controller Service  <br/> |Search servers  <br/> |This service manages the search topology components. The service is automatically started on all servers that run search topology components.  <br/> |
 |Search  <br/> |Search Query and Site Settings Service  <br/> |Search servers  <br/> |This service load balances queries within the search topology. It also detects farm-level changes to the search service and puts these in the Search Admin database. The service is automatically started on all servers that run the query processing component.  <br/> |
 |Search  <br/> |SharePoint Server Search  <br/> |Search servers  <br/> |This service crawls content for the search index. This service is automatically started on all servers that run search topology components. The service cannot be stopped or started from the Services on Server page.  <br/> |
@@ -109,7 +111,7 @@ For information about SharePoint Server 2016 topology, see the following model:
 |Microsoft SharePoint Foundation Subscription Settings Service  <br/> |Microsoft SharePoint Foundation Subscription Settings Service  <br/> |Front-end server  <br/> |This service application is deployed only by using PowerShell. In hosting environments, this service is typically started on one or more application servers. Start this service if you have deployed service applications in multi-tenant mode or if the farm includes sites that use site subscriptions. This service stores settings and configuration data for tenants in a multi-tenant environment. After it is started, web applications consume this service automatically.  <br/> |
 |PerformancePoint  <br/> |PerformancePoint Service  <br/> |Front-end server  <br/> ||
 |PowerPoint Conversion  <br/> |PowerPoint Conversion Service  <br/> |Application Server  <br/> |This service converts PowerPoint presentations to other formats. It typically runs on one or more application servers. It starts one or more worker processes to perform conversions. When actively converting, a worker process may use up a whole processor core. Memory usage depends on the size and content of files being converted. The number of worker processes that are used can be controlled through PowerShell cmdlets. Several other configuration options are also available through PowerShell cmdlets.  <br/> |
-|Search  <br/> |Lotus Notes Connector  <br/> |Search Server  <br/> |Refer to documentation to learn how to configure Lotus Notes Connector which crawls data on a Lotus Domino server.  <br/> |
+|Search  <br/> |Lotus Notes Connector  <br/> |Search Server  <br/> |To learn how to configure Lotus Notes Connector which crawls data on a Lotus Domino server, see the documentation.  <br/> |
 |Search  <br/> |Search Host Controller Service  <br/> |Search servers  <br/> |This service manages the search topology components. The service is automatically started on all servers that run search topology components.  <br/> |
 |Search  <br/> |Search Query and Site Settings Service  <br/> |Search servers  <br/> |This service load balances queries within the search topology. It also detects farm-level changes to the search service and puts these in the Search Admin database. The service is automatically started on all servers that run the query processing component.  <br/> |
 |Search  <br/> |SharePoint Server Search  <br/> |Search servers  <br/> |This service crawls content for the search index. This service is automatically started on all servers that run search topology components. The service cannot be stopped or started from the Services on Server page.  <br/> |
@@ -131,12 +133,11 @@ For information about SharePoint Server 2016 topology, see the following model:
 ||Microsoft SharePoint Foundation Workflow Timer Service  <br/> |Web server  <br/> |This service is automatically configured to run on all web servers in a farm.  <br/> |
 ||Request Management  <br/> |Web server or dedicated servers  <br/> |In integrated mode, Request Management runs on all web servers in a farm. In dedicated mode servers in a separate Request Management farm are between the hardware load balancer and one or more SharePoint farms.  <br/> |
    
-For a list of **Services on Server** in SharePoint Server 2016, see [Description of MinRole and associated services in SharePoint Server 2016](/SharePoint/administration/description-of-minrole-and-associated-services-in-sharepoint-server-2016).
+For a list of **Services on Server** in SharePoint Server 2016, see [Description of MinRole and associated services in SharePoint Server 2016](./description-of-minrole-and-associated-services-in-sharepoint-server-2016.md).
   
 ## See also
 <a name="Section2"> </a>
 
 #### Other Resources
 
-[Plan for SharePoint Server](/SharePoint/getting-started)
-
+[Plan for SharePoint Server](../getting-started.md)

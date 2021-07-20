@@ -1,11 +1,13 @@
 ---
 title: "Plan for user authentication methods in SharePoint Server"
 ms.reviewer: 
-ms.author: mikeplum
-author: MikePlumleyMSFT
-manager: pamgreen
+ms.author: serdars
+author: SerdarSoysal
+manager: serdars
 ms.date: 3/2/2018
 audience: ITPro
+f1.keywords:
+- NOCSH
 ms.topic: concetpual
 ms.prod: sharepoint-server-itpro
 localization_priority: Normal
@@ -72,7 +74,7 @@ To configure a web application to use classic mode authentication, you must use 
   
 A SharePoint 2013 farm can include a mix of web applications that use both modes. Some services do not differentiate between user accounts that are traditional Windows accounts and Windows claims accounts. 
   
-For more information about migrating before upgrading, see [Migrate from classic-mode to claims-based authentication](/sharepoint/security-for-sharepoint-server/security-for-sharepoint-server).
+For more information about migrating before upgrading, see [Migrate from classic-mode to claims-based authentication](./security-for-sharepoint-server.md).
   
 For more information about migrating after upgrading, see [Migrate from classic-mode to claims-based authentication in SharePoint Server](/previous-versions/office/sharepoint-server-2010/gg251985(v=office.14)).
   
@@ -351,5 +353,3 @@ The following diagram shows multiple zones that are implemented to accommodate d
 ![One zone for each authentication type](../media/Aut_multipleZones.gif)
   
 In the diagram, the default zone is used for remote employees. Each zone has a different URL associated with it. Employees use a different zone depending on whether they are working in the office or are working remotely.
-  
-

@@ -1,11 +1,13 @@
 ---
 title: "Changing the ranking of classic search results in SharePoint Server"
 ms.reviewer: 
-ms.author: mikeplum
-author: MikePlumleyMSFT
-manager: pamgreen
+ms.author: serdars
+author: SerdarSoysal
+manager: serdars
 ms.date: 9/4/2017
 audience: ITPro
+f1.keywords:
+- NOCSH
 ms.topic: article
 ms.prod: sharepoint-server-itpro
 localization_priority: Normal
@@ -17,7 +19,7 @@ description: "Learn how to change the ranking of classic search results in Share
 
 [!INCLUDE[appliesto-2013-2016-2019-xxx-md](../includes/appliesto-2013-2016-2019-xxx-md.md)]
   
- **Audience:** SharePoint Server and SharePoint Online search administrators. 
+ **Audience:** SharePoint Server and SharePoint in Microsoft 365 search administrators. 
   
  **Before you start:**
   
@@ -33,7 +35,7 @@ To change the ranking of classic search results, you need:
     
 ## Why is search result ranking important?
 
-Whether you're working with an Enterprise Search Center on premises, with SharePoint Online, or with a cross-site publishing solution, your search results will be ranked. In most cases, this default search result ranking should be just fine.
+Whether you're working with an Enterprise Search Center on premises, with SharePoint in Microsoft 365, or with a cross-site publishing solution, your search results will be ranked. In most cases, this default search result ranking should be just fine.
   
 But, sometimes, you may want to influence the ranking of search results to make results even more relevant to your end-users. We recently published a set of  articles that explain how you can change the ranking of search results and that will help you understand how search result ranking works in SharePoint Server. (See references later in this article.)
   
@@ -45,7 +47,7 @@ Search results are ranked using a ranking model. A ranking model calculates the 
 
 If you are not satisfied with the search result ranking that SharePoint provides, we recommend that you add query rules to optimize search result ranking for your search scenarios.
   
-The good thing about query rules is that they are available to a large range of search administrators. You can add query rules to the Search service application as a search administrator on premises, or as a tenant administrator in SharePoint Online. You can also add and reuse query rules as a site collection administrator or site owner, both on premises and online.
+The good thing about query rules is that they are available to a large range of search administrators. You can add query rules to the Search service application as a search administrator on premises, or as a global or SharePoint admin in Microsoft 365. You can also add and reuse query rules as a site collection administrator or site owner, both on premises and online.
   
 For each query rule, you can influence the way that you sort, rank and display search results. Each query rule consists of a query rule condition and a query rule action. Whenever a query matches a query rule condition, the query rule action that you specify in the query rule is triggered. After you have entered a condition, you can specify to:
   
@@ -75,8 +77,6 @@ When you create a custom ranking model, you copy an existing SharePoint Server r
   
 As with any ranking model that is included with SharePoint Server, a custom ranking model calculates the position of a search result in the result set. A search result is considered relevant if it receives a high rank score. A high rank score is a specific numeric score that's calculated by the search engine that uses a ranking model. A ranking model is a list of one or more rank stages that contain a set of rank features. The ranking model defines how the search engine calculates the relevance rank using various factors, which are represented in the ranking model as rank features.
   
-There are several ranking models available in SharePoint Server. For more details, see [Overview of search result ranking in SharePoint Server](overview-of-search-result-ranking.md). Most search results are ranked using the Default Search Model. Read [Customizing ranking models to improve relevance in SharePoint 2013](https://go.microsoft.com/fwlink/p/?LinkId=401186) on MSDN to learn more about the most important ranking features in the Default Search Model. This article also explains how to deploy a custom ranking model. 
+There are several ranking models available in SharePoint Server. For more details, see [Overview of search result ranking in SharePoint Server](overview-of-search-result-ranking.md). Most search results are ranked using the Default Search Model. Read [Customizing ranking models to improve relevance in SharePoint 2013](/sharepoint/dev/general-development/customizing-ranking-models-to-improve-relevance-in-sharepoint) on MSDN to learn more about the most important ranking features in the Default Search Model. This article also explains how to deploy a custom ranking model. 
   
 We hope that the articles give you an overview of how search result ranking works and how you can change it.
-  
-

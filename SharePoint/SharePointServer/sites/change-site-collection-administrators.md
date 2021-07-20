@@ -1,10 +1,12 @@
 ---
 title: "Change site collection administrators in SharePoint Server"
 ms.reviewer: 
-ms.author: mikeplum
-author: MikePlumleyMSFT
-manager: pamgreen
+ms.author: serdars
+author: SerdarSoysal
+manager: serdars
 audience: ITPro
+f1.keywords:
+- NOCSH
 ms.topic: article
 ms.prod: sharepoint-server-itpro
 localization_priority: Normal
@@ -98,5 +100,4 @@ Use this procedure to specify the user to be removed from the site collection ad
 [Create a site collection in SharePoint Server](create-a-site-collection.md)
 #### Other Resources
 
-[Manage administrators for a site collection](https://go.microsoft.com/fwlink/?linkid=845358)
-
+[Manage administrators for a site collection](../../SharePointOnline/manage-site-collection-administrators.md)

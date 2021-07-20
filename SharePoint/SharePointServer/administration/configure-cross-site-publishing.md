@@ -1,11 +1,13 @@
 ---
 title: "Configure cross-site publishing in SharePoint Server"
 ms.reviewer: 
-ms.author: jhendr
-author: JoanneHendrickson
-manager: pamgreen
+ms.author: serdars
+author: SerdarSoysal
+manager: serdars
 ms.date: 7/18/2017
 audience: ITPro
+f1.keywords:
+- NOCSH
 ms.topic: article
 ms.prod: sharepoint-server-itpro
 localization_priority: Normal
@@ -25,7 +27,7 @@ Before you configure cross-site publishing, make sure that you understand the co
 <a name="BKMK_Accessibility"> </a>
 
 > [!NOTE]
->  Because SharePoint Server runs as websites in Internet Information Services (IIS), administrators and users depend on the accessibility features that browsers provide. SharePoint Server supports the accessibility features of supported browsers. For more information, see the following resources: > [Plan browser support in SharePoint 2013](https://go.microsoft.com/fwlink/p/?LinkId=246502)> [Accessibility guidelines in SharePoint Server 2016](https://docs.microsoft.com/sharepoint/accessibility-guidelines)> [Accessibility features in SharePoint Online](https://go.microsoft.com/fwlink/p/?LinkId=246501)> [Keyboard shortcuts](https://support.office.com/article/86d68234-7f1a-40fc-a3d6-4c39c7a5ddaf)> [Windows Touch Gestures Overview](https://go.microsoft.com/fwlink/p/?LinkId=246506)
+>  Because SharePoint Server runs as websites in Internet Information Services (IIS), administrators and users depend on the accessibility features that browsers provide. SharePoint Server supports the accessibility features of supported browsers. For more information, see the following resources: > [Plan browser support in SharePoint 2013](../install/browser-support-planning.md)> [Accessibility guidelines in SharePoint Server 2016](../accessibility-guidelines.md)> [Accessibility features in SharePoint in Microsoft 365](https://go.microsoft.com/fwlink/p/?LinkId=246501)> [Keyboard shortcuts](https://support.office.com/article/86d68234-7f1a-40fc-a3d6-4c39c7a5ddaf)> [Windows Touch Gestures Overview](/windows/win32/wintouch/windows-touch-gestures-overview)
   
 ## Create site collections for cross-site publishing
 <a name="BKMK_Create_site_collections"> </a>
@@ -69,9 +71,9 @@ Before you create content for authoring sites, review "Plan term sets for taggin
 
 You create and manage term sets by using the Term Store Management Tool. For information about how to create and manage term sets, see the following articles:
   
-- [Set up a new term set](https://docs.microsoft.com/sharepoint/set-up-new-term-set)
+- [Set up a new term set](../../SharePointOnline/set-up-new-term-set.md)
     
-- [Create and manage terms in a term set](https://docs.microsoft.com/sharepoint/create-and-manage-terms)
+- [Create and manage terms in a term set](../../SharePointOnline/create-and-manage-terms.md)
     
 After you have created a term set, you have to make it available for tagging content. If you used the Product Catalog Site Collection template to create the authoring site collection, and you have created a term set in this site collection, you do not have to do this operation. By default, new term sets created in the Product Catalog site collection are available for tagging content.
   
@@ -198,7 +200,7 @@ After you create a term set on the authoring site collection, you have to make i
     
 10. Right-click the term set that you want to make available to all site collections, and then click **Move Term Set**.
     
-11. In the **Term Set Move** dialog box, click the global term set that you want to move the term set to, and then click **OK**.
+11. In the **Term Set Move** dialog, click the global term set that you want to move the term set to, and then click **OK**.
     
 12. Refresh the page.
     
@@ -263,5 +265,3 @@ Some actions — for example, doing search schema management to enable refiners 
 #### Concepts
 
 [Automatically created managed properties in SharePoint Server](../technical-reference/automatically-created-managed-properties-in-sharepoint.md)
-
-

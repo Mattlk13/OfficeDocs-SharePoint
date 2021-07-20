@@ -1,11 +1,13 @@
 ---
 title: "More cache hosts are running in this deployment than are registered with SharePoint (SharePoint Server)"
 ms.reviewer: 
-ms.author: mikeplum
-author: MikePlumleyMSFT
-manager: pamgreen
+ms.author: serdars
+author: SerdarSoysal
+manager: serdars
 ms.date: 12/5/2017
 audience: ITPro
+f1.keywords:
+- NOCSH
 ms.topic: troubleshooting
 ms.prod: sharepoint-server-itpro
 localization_priority: Normal
@@ -36,7 +38,7 @@ description: "Learn how to resolve the SharePoint Health Analyzer rule: More Cac
     
 4. In the **Services** list, double-click **AppFabric Caching Service**.
     
-5. In the **AppFabric Caching Service Properties (Local Computer)** dialog box, click **Stop**.
+5. In the **AppFabric Caching Service Properties (Local Computer)** dialog, click **Stop**.
     
 ## See also
 <a name="server"> </a>

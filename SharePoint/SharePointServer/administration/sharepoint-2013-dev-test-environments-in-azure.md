@@ -1,11 +1,13 @@
 ---
 title: "SharePoint 2013 dev/test environments in Azure"
 ms.reviewer: 
-ms.author: mikeplum
-author: MikePlumleyMSFT
-manager: pamgreen
+ms.author: serdars
+author: SerdarSoysal
+manager: serdars
 ms.date: 03/15/2019
 audience: ITPro
+f1.keywords:
+- NOCSH
 ms.topic: hub-page
 ms.prod: sharepoint-server-itpro
 localization_priority: Normal
@@ -92,11 +94,11 @@ Executing a local copy of the template with the parameters file with Azure Power
 In this procedure, you download copies of the basic SharePoint 2013 farm template files, modify them as needed, and then execute the template with Azure PowerShell.
   
 > [!NOTE]
-> These commands use [the latest version of Azure PowerShell](https://azure.microsoft.com/documentation/articles/powershell-install-configure/). 
+> These commands use [the latest version of Azure PowerShell](/powershell/azure/). 
   
 Create a local folder to store the ARM template files for the basic SharePoint 2013 farm. Fill in the **$myFolder** variable value (removing the text and the "<" and ">" characters between the quotes) and run the following commands from Azure PowerShell: 
   
-```
+```powershell
 $myFolder="<your local folder path, such as C:\azure\templates\BasicSPFarm>"
 $url1="https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/sharepoint-three-vm/azuredeploy.json"
 $url2="https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/sharepoint-three-vm/azuredeploy.parameters.json"
@@ -110,7 +112,7 @@ $webclient.DownloadFile($url2,$filePath)
 
 Ensure that the download was successful with this command.
   
-```
+```powershell
 dir $myFolder
 ```
 
@@ -155,33 +157,33 @@ Modify the **azuredeploy.json** file as needed for your basic SharePoint 2013 fa
     
 Next, sign in to Azure PowerShell.
   
-```
+```powershell
 Connect-AzAccount
 ```
 
 Determine the Azure subscription for the basic SharePoint farm with this command.
   
-```
+```powershell
 Get-AzSubscription | Sort SubscriptionName | Select SubscriptionName
 ```
 
 Set your subscription to the correct one with these commands.
   
-```
+```powershell
 $subscrName="<subscription name>"
 Select-AzSubscription -SubscriptionName $subscrName
 ```
 
 Next, specify the resource group name and Azure location for the deployment with these commands.
   
-```
+```powershell
 $rgName="<resource group name>"
 $locName="<Azure location, such as West US>"
 ```
 
 You can get a list of existing resource groups with this command.
   
-```
+```powershell
 Get-AzResourceGroup | Sort ResourceGroupName | Select ResourceGroupName
 ```
 
@@ -190,7 +192,7 @@ If needed, create a new resource group.
 > [!NOTE]
 > If you are using an existing resource group, the resources and settings of the template can impact the resources within the group. You should perform a careful analysis of the existing resources of the resource group to ensure that do not overlap in an undesirable way. 
   
-```
+```powershell
 New-AzResourceGroup -Name $rgName -Location $locName
 ```
 
@@ -208,28 +210,28 @@ Next, determine the following values, for which you may be prompted when you exe
     
 - sharePointFarmPassphrasePassword
     
-- spDNSPrefix: ![](../media/TableLine.png)
+- spDNSPrefix: ![A blank line that represents the DNS label for the SharePoint server's public IP address](../media/TableLine.png)
     
     This value is the DNS label for the SharePoint server's public IP address, which hosts the first site collection and the Central Administration site.
     
-- sppublicIPAddressName: ![](../media/TableLine.png)
+- sppublicIPAddressName: ![A blank line that represents the DNS host name for the public IP address of the ARM resource](../media/TableLine.png)
     
     The DNS host name for the public IP address of the ARM resource.
     
-- storageAccountNamePrefix: ![](../media/TableLine.png)
+- storageAccountNamePrefix: ![A blank line that represents the prefix for storage names](../media/TableLine.png)
     
     The name must be between 3 and 24 characters in length and use numbers and lower-case letters only. Example: contosotestsp2013farm.
     
 Use these commands to specify a deployment name and execute the template **without** the azuredeploy.parameters.json file: 
   
-```
+```powershell
 $deployName="<deployment name>"
 New-AzResourceGroupDeployment -Name $deployName -ResourceGroupName $rgName -TemplateFile $myFolder\azuredeploy.json
 ```
 
 Use these commands to specify a deployment name and execute the template **with** the azuredeploy.parameters.json file: 
   
-```
+```powershell
 $deployName="<deployment name>"
 New-AzResourceGroupDeployment -Name $deployName -ResourceGroupName $rgName -TemplateFile $myFolder\azuredeploy.json -TemplateParameterFile $myFolder\azuredeploy.parameters.json
 ```
@@ -245,11 +247,11 @@ This can take some time to complete.
 In this procedure, you download copies of the high-availability SharePoint 2013 farm template files, modify them as needed, and then execute the template with Azure PowerShell.
   
 > [!NOTE]
-> These commands use [Azure PowerShell 1.0.0 and later](https://azure.microsoft.com/documentation/articles/powershell-install-configure/). 
+> These commands use [Azure PowerShell 1.0.0 and later](/powershell/azure/). 
   
 Create a local folder to store the ARM template files for the high-availability SharePoint 2013 farm. Fill in the **$myFolder** variable value (removing the text and the "<" and ">" characters between the quotes) and run the following commands from Azure PowerShell: 
   
-```
+```powershell
 $myFolder="<your local folder path, such as C:\azure\templates\HASPFarm>"
 $url1=https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/sharepoint-server-farm-ha/azuredeploy.json"
 $url2="https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/sharepoint-server-farm-ha/azuredeploy.parameters.json"
@@ -262,7 +264,7 @@ $webclient.DownloadFile($url2,$filePath)
 
 Ensure that the download was successful with this command.
   
-```
+```powershell
 dir $myFolder
 ```
 
@@ -311,33 +313,33 @@ Modify the **azuredeploy.json** file as needed for your high-availability ShareP
     
 Next, sign in to Azure PowerShell.
   
-```
+```powershell
 Connect-AzAccount
 ```
 
 Determine the Azure subscription for the high-availability SharePoint farm with this command.
   
-```
+```powershell
 Get-AzSubscription | Sort SubscriptionName | Select SubscriptionName
 ```
 
 Set your subscription to the correct one with these commands.
   
-```
+```powershell
 $subscrName="<subscription name>"
 Select-AzSubscription -SubscriptionName $subscrName
 ```
 
 Next, specify the resource group name and Azure location for the deployment with these commands.
   
-```
+```powershell
 $rgName="<resource group name>"
 $locName="<Azure location, such as West US>"
 ```
 
 You can get a list of existing resource groups with this command.
   
-```
+```powershell
 Get-AzResourceGroup | Sort ResourceGroupName | Select ResourceGroupName
 ```
 
@@ -346,7 +348,7 @@ If needed, create a new resource group.
 > [!NOTE]
 > If you are using an existing resource group, the resources and settings of the template can impact the resources within the group. You should perform a careful analysis of the existing resources of the resource group to ensure that do not overlap in an undesirable way. 
   
-```
+```powershell
 New-AzResourceGroup -Name $rgName -Location $locName
 ```
 
@@ -364,28 +366,28 @@ Next, determine the following values, for which you may be prompted when you exe
     
 - sharePointFarmPassphrasePassword
     
-- spDNSPrefix: ![](../media/TableLine.png)
+- spDNSPrefix: ![A blank line that represents the DNS label](../media/TableLine.png)
     
     This value is the DNS label for the SharePoint server's public IP address, which hosts the first site collection and the Central Administration site.
     
-- sppublicIPAddressName: ![](../media/TableLine.png)
+- sppublicIPAddressName: ![A blank line that represents the DNS host name](../media/TableLine.png)
     
     The DNS host name for the public IP address of the ARM resource.
     
-- storageAccountNamePrefix: ![](../media/TableLine.png)
+- storageAccountNamePrefix: ![A blank line that represents the prefix for names of storage accounts](../media/TableLine.png)
     
     The name must be between 3 and 24 characters in length and  *use numbers and lower-case letters only*  . Example: contosotestsp2013farm. 
     
 Use these commands to specify a deployment name and execute the template **without** the azuredeploy.parameters.json file: 
   
-```
+```powershell
 $deployName="<deployment name>"
 New-AzResourceGroupDeployment -Name $deployName -ResourceGroupName $rgName -TemplateFile $myFolder\azuredeploy.json
 ```
 
 Use these commands to specify a deployment name and execute the template **with** the azuredeploy.parameters.json file: 
   
-```
+```powershell
 $deployName="<deployment name>"
 New-AzResourceGroupDeployment -Name $deployName -ResourceGroupName $rgName -TemplateFile $myFolder\azuredeploy.json -TemplateParameterFile $myFolder\azuredeploy.parameters.json
 ```
@@ -401,12 +403,12 @@ This can take some time to complete.
 
 You can administer the servers of these farms through [Remote Desktop connections](https://azure.microsoft.com/documentation/articles/virtual-machines-windows-connect-logon/).
   
-From the Central Administration SharePoint site, you can configure My sites, SharePoint applications, and other functionality. For more information, see [Configure SharePoint 2013](/SharePoint/install/configure).
+From the Central Administration SharePoint site, you can configure My sites, SharePoint applications, and other functionality. For more information, see [Configure SharePoint 2013](../install/configure.md).
   
 ## Create a SharePoint 2016 dev/test farm
 <a name="powershell"> </a>
 
-See the instructions in [SharePoint Server 2016 dev/test environment in Azure](/SharePoint/administration/sharepoint-server-2016-dev-test-environment-in-azure) to create the following single-server, SharePoint 2016 dev/test farm:. 
+See the instructions in [SharePoint Server 2016 dev/test environment in Azure](./sharepoint-server-2016-dev-test-environment-in-azure.md) to create the following single-server, SharePoint 2016 dev/test farm:. 
   
 ![The single-server SharePoint 2016 farm in Azure.](../media/8cf51483-ecef-4ba4-a9fc-952716ff8132.png)
   
@@ -414,5 +416,4 @@ See the instructions in [SharePoint Server 2016 dev/test environment in Azure](/
 
 [Technical diagrams for SharePoint Server](../technical-reference/technical-diagrams.md)
 
-[SharePoint Server 2016 dev/test environment in Azure](/SharePoint/administration/sharepoint-server-2016-dev-test-environment-in-azure)
-
+[SharePoint Server 2016 dev/test environment in Azure](./sharepoint-server-2016-dev-test-environment-in-azure.md)

@@ -1,11 +1,13 @@
 ---
 title: "Databases used by SharePoint have outdated index statistics (SharePoint Server)"
 ms.reviewer: 
-ms.author: mikeplum
-author: MikePlumleyMSFT
-manager: pamgreen
+ms.author: serdars
+author: SerdarSoysal
+manager: serdars
 ms.date: 12/5/2017
 audience: ITPro
+f1.keywords:
+- NOCSH
 ms.topic: troubleshooting
 ms.prod: sharepoint-server-itpro
 localization_priority: Normal
@@ -39,7 +41,7 @@ description: "Learn how to resolve the SharePoint Health Analyzer rule: Database
     
 4. On the Health Analyzer Rule Definitions - All Rules page, in the **Category: Performance** section, click the name of the rule. 
     
-5. In the **Health Analyzer Rule Definitions** dialog box, click **Edit Item**.
+5. In the **Health Analyzer Rule Definitions** dialog, click **Edit Item**.
     
 6. Select the **Repair Automatically** check box, and then click **Save**.
     
@@ -47,4 +49,4 @@ description: "Learn how to resolve the SharePoint Health Analyzer rule: Database
 
 #### Other Resources
 
-[Index Statistics](https://go.microsoft.com/fwlink/?LinkID=761157&amp;clcid=0x409)
+[Index Statistics](/sql/relational-databases/statistics/statistics?viewFallbackFrom=sql-server-2014)

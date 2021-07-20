@@ -1,11 +1,13 @@
 ---
 title: "Databases used by SharePoint have fragmented indices (SharePoint Server)"
 ms.reviewer: 
-ms.author: mikeplum
-author: MikePlumleyMSFT
-manager: pamgreen
+ms.author: serdars
+author: SerdarSoysal
+manager: serdars
 ms.date: 8/31/2017
 audience: ITPro
+f1.keywords:
+- NOCSH
 ms.topic: troubleshooting
 ms.prod: sharepoint-server-itpro
 localization_priority: Normal
@@ -28,4 +30,4 @@ description: "Learn how to resolve the SharePoint Health Analyzer rule: Database
   
  **Resolution: Reorganize and rebuild indexes**
   
-1. To correct index fragmentation, you can reorganize an index or rebuild an index. For more information, see [Reorganize and Rebuild Indexes](https://go.microsoft.com/fwlink/?LinkID=780583&amp;clcid=0x409).
+1. To correct index fragmentation, you can reorganize an index or rebuild an index. For more information, see [Reorganize and Rebuild Indexes](/sql/relational-databases/indexes/reorganize-and-rebuild-indexes).

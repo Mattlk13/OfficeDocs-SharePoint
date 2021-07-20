@@ -1,11 +1,13 @@
 ---
 title: "Manage crawling in SharePoint Server"
 ms.reviewer: 
-ms.author: mikeplum
-author: MikePlumleyMSFT
-manager: pamgreen
+ms.author: serdars
+author: SerdarSoysal
+manager: serdars
 ms.date: 3/6/2018
 audience: ITPro
+f1.keywords:
+- NOCSH
 ms.topic: article
 ms.prod: sharepoint-server-itpro
 localization_priority: Normal
@@ -39,5 +41,4 @@ The following articles provide information about how to manage crawling in Share
    
 ## See also
 
-[Search in SharePoint Server](https://go.microsoft.com/fwlink/p/?LinkID=261554)
-
+[Search in SharePoint Server](../what-s-new/new-and-improved-features-in-sharepoint-server-2016.md)

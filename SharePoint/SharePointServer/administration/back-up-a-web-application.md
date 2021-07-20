@@ -1,10 +1,12 @@
 ---
 title: "Back up web applications in SharePoint Server"
 ms.reviewer: 
-ms.author: mikeplum
-author: MikePlumleyMSFT
-manager: pamgreen
+ms.author: serdars
+author: SerdarSoysal
+manager: serdars
 audience: ITPro
+f1.keywords:
+- NOCSH
 ms.topic: article
 ms.prod: sharepoint-server-itpro
 localization_priority: Normal
@@ -131,9 +133,9 @@ You cannot back up the complete web application by using SQL Server tools. Howev
     
 4. Right-click the database that you want to back up, point to **Tasks**, and then click **Back Up**.
     
-5. In the **Back Up Database** dialog box, confirm the database name. 
+5. In the **Back Up Database** dialog, confirm the database name. 
     
-6. Next, select the kind of backup that you want to perform from the **Backup type** list. For more information about which backup type to use, see [Recovery Models (SQL Server)](https://go.microsoft.com/fwlink/p/?LinkID=715706&amp;clcid=0x409).
+6. Next, select the kind of backup that you want to perform from the **Backup type** list. For more information about which backup type to use, see [Recovery Models (SQL Server)](/sql/relational-databases/backup-restore/recovery-models-sql-server).
     
 7. In the **Backup component** area, click **Database**.
     
@@ -155,6 +157,3 @@ You cannot back up the complete web application by using SQL Server tools. Howev
 [Back up farms in SharePoint Server](back-up-a-farm.md)
   
 [Plan for backup and recovery in SharePoint Server](backup-and-recovery-planning.md)
-  
-
-

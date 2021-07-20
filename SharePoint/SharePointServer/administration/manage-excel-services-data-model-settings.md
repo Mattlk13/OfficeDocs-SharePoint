@@ -1,11 +1,13 @@
 ---
 title: "Manage Excel Services data model settings (SharePoint Server 2013)"
 ms.reviewer: 
-ms.author: mikeplum
-author: MikePlumleyMSFT
-manager: pamgreen
+ms.author: serdars
+author: SerdarSoysal
+manager: serdars
 ms.date: 7/6/2017
 audience: ITPro
+f1.keywords:
+- NOCSH
 ms.topic: article
 ms.prod: sharepoint-server-itpro
 localization_priority: Normal
@@ -82,12 +84,11 @@ Use the following procedure to remove an instance of SQL Server 2012 SP1 Analysi
     
 4. Hover over the server that you want to edit, click the arrow that appears, and then click **Delete**.
     
-5. Click **OK** on the delete confirmation dialog box. 
+5. Click **OK** on the delete confirmation dialog. 
     
 ## See also
 <a name="proc3"> </a>
 
 #### Other Resources
 
-[Configure Excel Services in SharePoint](/SharePoint/administration/configure-excel-services)
-
+[Configure Excel Services in SharePoint](./configure-excel-services.md)

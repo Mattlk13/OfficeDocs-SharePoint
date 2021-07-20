@@ -1,11 +1,13 @@
 ---
 title: "Services upgrade overview for SharePoint Server 2016"
 ms.reviewer: 
-ms.author: mikeplum
-author: MikePlumleyMSFT
-manager: pamgreen
+ms.author: serdars
+author: SerdarSoysal
+manager: serdars
 ms.date: 9/29/2016
 audience: ITPro
+f1.keywords:
+- NOCSH
 ms.topic: get-started-article
 ms.prod: sharepoint-server-itpro
 localization_priority: Normal
@@ -81,7 +83,7 @@ Specifically, the following service application databases can be upgraded:
 |Secure Store  <br/> |Secure_Store_Service_DB_\<GUID\>  <br/> |
 |User Profile: Profile and Social databases  <br/> |User Profile Service Application_ProfileDB_\<GUID\>  <br/> User Profile Service Application_SocialDB_\<GUID\>  <br/> User Profile Service Application_SyncDB_\<GUID\>  <br/> |
    
-The steps to upgrade these service application databases are included in [Upgrade service applications to SharePoint Server 2016](/SharePoint/upgrade-and-update/upgrade-service-applications-to-sharepoint-server-2016).
+The steps to upgrade these service application databases are included in [Upgrade service applications to SharePoint Server 2016](./upgrade-service-applications-to-sharepoint-server-2016.md).
   
 ## Considerations for specific services
 <a name="Considerations"> </a>
@@ -104,4 +106,3 @@ The following services in SharePoint Server 2016 also require additional steps t
 [Overview of the upgrade process to SharePoint Server 2016](overview-of-the-upgrade-process.md)
   
 [Upgrade content databases to SharePoint Server 2016](upgrade-content-databases.md)
-

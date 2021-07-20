@@ -1,11 +1,13 @@
 ---
 title: "Claims authentication does not validate user in SharePoint Server"
 ms.reviewer: 
-ms.author: mikeplum
-author: MikePlumleyMSFT
-manager: pamgreen
+ms.author: serdars
+author: SerdarSoysal
+manager: serdars
 ms.date: 9/20/2017
 audience: ITPro
+f1.keywords:
+- NOCSH
 ms.topic: article
 ms.prod: sharepoint-server-itpro
 localization_priority: Normal
@@ -104,7 +106,7 @@ Even after you enable the maximum level of ULS logging, SharePoint Server doesn'
     
 You can now use Event Viewer on the AD FS server to examine details about claims from the Applications and Services Logs/AD FS 2.0 Tracing/Debug node. Look for events with Event ID 1001.
   
-You can also enumerate claims with an HttpModule or web part or through OperationContext. For more information, see [How to Get All User Claims at Claims Augmentation Time in SharePoint 2010](https://go.microsoft.com/fwlink/p/?LinkId=275447). This information about SharePoint 2010 applies also to SharePoint 2013.
+You can also enumerate claims with an HttpModule or web part or through OperationContext. For more information, see [How to Get All User Claims at Claims Augmentation Time in SharePoint 2010](/archive/blogs/speschka/how-to-get-all-user-claims-at-claims-augmentation-time-in-sharepoint-2010). This information about SharePoint 2010 applies also to SharePoint 2013.
   
 ## Troubleshooting methodology for claims user authentication
 
@@ -140,7 +142,7 @@ To use the ULS Viewer, download it from [ULS Viewer](https://www.microsoft.com/d
     
 2. In the **ULS Viewer**, click **File**, point to **Open From**, and then click **ULS**.
     
-3. In the **Setup the ULS Runtime feed** dialog box, verify that %CommonProgramFiles% **\Common Files\Microsoft Shared\Web Server Extensions\16\LOGS folder** or **\Common Files\Microsoft Shared\Web Server Extensions\15\LOGS folder** is specified in **Use ULS feed from default log-file directory**. If not, click **Use directory location for real-time feeds** and specify the %CommonProgramFiles% **\Microsoft Shared\Web Server Extensions\16\LOGS folder** or **\Microsoft Shared\Web Server Extensions\15\LOGS folder** in **Log file location**.
+3. In the **Setup the ULS Runtime feed** dialog, verify that %CommonProgramFiles% **\Common Files\Microsoft Shared\Web Server Extensions\16\LOGS folder** or **\Common Files\Microsoft Shared\Web Server Extensions\15\LOGS folder** is specified in **Use ULS feed from default log-file directory**. If not, click **Use directory location for real-time feeds** and specify the %CommonProgramFiles% **\Microsoft Shared\Web Server Extensions\16\LOGS folder** or **\Microsoft Shared\Web Server Extensions\15\LOGS folder** in **Log file location**.
     
     For %CommonProgramFiles%, substitute the value from the CommonProgramFiles environment variable of the server that is running SharePoint Server or SharePoint Foundation. For example, if the location is the C drive, %CommonProgramFiles% is set to C:\Program Files\Common Files.
     
@@ -148,7 +150,7 @@ To use the ULS Viewer, download it from [ULS Viewer](https://www.microsoft.com/d
     
 5. Click **Edit**, and then click **Modify Filter**.
     
-6. In the **Filter by** dialog box, in **Field**, click **Category**.
+6. In the **Filter by** dialog, in **Field**, click **Category**.
     
 7. In **Value**, type **Authentication Authorization** or **Claims Authentication**, and then click **OK**.
     
@@ -170,7 +172,7 @@ To determine how a web application or zone is configured to support one or more 
     
 3. In the list of authentication providers, click the appropriate zone (such as **Default**).
     
-4. In the **Edit Authentication** dialog box, in the **Claims Authentication Types** section, verify the settings for claims authentication. 
+4. In the **Edit Authentication** dialog, in the **Claims Authentication Types** section, verify the settings for claims authentication. 
     
   - For Windows claims authentication, verify that **Enable Windows Authentication** and **Integrated Windows authentication** are selected, and that either **NTLM** or **Negotiate (Kerberos)** is selected as needed. Select **Basic authentication** if it is needed. 
     
@@ -229,7 +231,7 @@ Use a tool such as [HttpWatch](https://go.microsoft.com/fwlink/p/?LinkId=275459)
     For example, you can monitor the HTTP messages that the web client computer sends and the responses of the federation server, which could include security tokens and their claims.
     
 > [!NOTE]
-> If you use Fiddler, the authentication attempt can fail after requiring three authentication prompts. To prevent this behavior, see [Using Fiddler With SAML and SharePoint to Get Past the Three Authentication Prompts](https://go.microsoft.com/fwlink/p/?LinkId=276792).
+> If you use Fiddler, the authentication attempt can fail after requiring three authentication prompts. To prevent this behavior, see [Using Fiddler With SAML and SharePoint to Get Past the Three Authentication Prompts](/archive/blogs/speschka/using-fiddler-with-saml-and-sharepoint-to-get-past-the-three-authentication-prompts).
   
 ### Step 5: Capture and analyze authentication network traffic
 
@@ -273,4 +275,3 @@ For SAML-based claims authentication, you can capture and analyze the traffic be
 [Configure forms-based authentication for a claims-based web application in SharePoint Server](/previous-versions/office/sharepoint-server-2010/ee806890(v=office.14))
   
 [Configure SAML-based claims authentication with AD FS in SharePoint Server](/previous-versions/office/sharepoint-server-2010/hh305235(v=office.14))
-

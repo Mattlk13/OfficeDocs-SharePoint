@@ -1,11 +1,13 @@
 ---
 title: "Create and configure a Search service application in SharePoint Server"
 ms.reviewer: 
-ms.author: mikeplum
-author: MikePlumleyMSFT
-manager: pamgreen
+ms.author: serdars
+author: SerdarSoysal
+manager: serdars
 ms.date: 3/8/2018
 audience: ITPro
+f1.keywords:
+- NOCSH
 ms.topic: article
 ms.prod: sharepoint-server-itpro
 localization_priority: Normal
@@ -69,7 +71,7 @@ The accounts that you use for the Search service, the Search Admin Web Service a
 
 Each Search service application has a separate content index. You can create multiple Search service applications if you want to have different content indexes for different sets of content. For example, if you want to segregate sensitive content (such as employee benefits information) into a separate content index, you can create a separate Search service application to correspond to that set of content.
   
-If your SharePoint environment is hybrid, you can index content that resides in SharePoint Server into the Office 365 content index. In this case you need to create a Search service application of type **cloud**. You can only create one cloud Search service application per farm, but you can create multiple SSAs in combination with the single cloud SSA. 
+If your SharePoint environment is hybrid, you can index content that resides in SharePoint Server into the Office 365 content index. In this case, you must create a Search service application of type **cloud**. You can only create one cloud Search service application per farm, but you can create multiple SSAs in combination with the single cloud SSA. 
   
 > [!NOTE]
 > Each Search service application has its own search topology. If you create more than one Search service application in a farm, we recommend that you allocate dedicated servers for the search topology of each Search service application. Deploying several Search service applications to the same servers will significantly increase the resource requirements (CPU and memory) on those servers. 
@@ -139,7 +141,7 @@ Use the following procedure to specify the default content access account.
   
 1. On the Search Administration page, in the **System Status** section, click the link in the **Default content access account** row. 
     
-2. In the **Default Content Access Account** dialog box, in the **Account** box, type the account that you created for content access in the form  _domain\user name_.
+2. In the **Default Content Access Account** dialog, in the **Account** box, type the account that you created for content access in the form  _domain\user name_.
     
 3. Type the password for this account in the **Password** and **Confirm Password** boxes. 
     
@@ -155,7 +157,7 @@ Use the following procedure to specify the contact email address.
   
 1. On the Search Administration page, in the **System Status** section, click the link for the **Contact e-mail address**.
     
-2. In the **Search E-mail Setting** dialog box, in the **E-mail Address** box, type the email address that you want to appear in the logs of servers that are crawled by the search system. 
+2. In the **Search E-mail Setting** dialog, in the **E-mail Address** box, type the email address that you want to appear in the logs of servers that are crawled by the search system. 
     
 3. Click **OK**.
     
@@ -178,10 +180,9 @@ When you create a Search service application, the SharePoint Server Search servi
     
 - [Plan enterprise search architecture in SharePoint Server 2016](plan-enterprise-search-architecture.md)
     
-- [Plan your search architecture in SharePoint Server for cloud hybrid search](/SharePoint/hybrid/plan-cloud-hybrid-search-for-sharepoint)
+- [Plan your search architecture in SharePoint Server for cloud hybrid search](../hybrid/plan-cloud-hybrid-search-for-sharepoint.md)
     
 ## See also
 <a name="begin"> </a>
 
 [Create a Search Center site in SharePoint Server](create-a-search-center-site.md)
-

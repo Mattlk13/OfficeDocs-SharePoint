@@ -1,11 +1,13 @@
 ---
 title: "System requirements for SharePoint Servers 2016 and 2019"
 ms.reviewer: 
-ms.author: mikeplum
-author: MikePlumleyMSFT
-manager: pamgreen
+ms.author: serdars
+author: SerdarSoysal
+manager: serdars
 ms.date: 01/8/2018
 audience: ITPro
+f1.keywords:
+- NOCSH
 ms.topic: concetpual
 ms.prod: sharepoint-server-itpro
 localization_priority: Normal
@@ -14,7 +16,7 @@ ms.collection:
 - IT_Sharepoint_Server_Top
 ms.assetid: 64233599-f18c-4081-a3ce-450e878a1b9f
 
-description: "This article introduces topics that describe hardware, software, and other requirements for SharePoint Server."
+description: "This article introduces topics that describe hardware and other requirements for SharePoint Server."
 ---
 
 # System requirements for SharePoint Servers 2016 and 2019

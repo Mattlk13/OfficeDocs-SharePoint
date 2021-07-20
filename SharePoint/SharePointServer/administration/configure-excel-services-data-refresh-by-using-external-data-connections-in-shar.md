@@ -1,11 +1,13 @@
 ---
 title: "Configure Excel Services data refresh by using external data connections in SharePoint Server 2013"
 ms.reviewer: 
-ms.author: mikeplum
-author: MikePlumleyMSFT
-manager: pamgreen
+ms.author: serdars
+author: SerdarSoysal
+manager: serdars
 ms.date: 7/14/2017
 audience: ITPro
+f1.keywords:
+- NOCSH
 ms.topic: article
 ms.prod: sharepoint-server-itpro
 localization_priority: Normal
@@ -21,7 +23,7 @@ Excel Services in SharePoint Server 2013 provides three methods of using Secure 
   
 - You can use an unattended service account. For more information, see [Configure Excel Services data refresh by using the unattended service account in SharePoint Server 2013](configure-the-unattended-service-account-0.md).
     
-- You can specify a Secure Store target application in a workbook. (This is known as an embedded connection.) For more information, see [Configure Excel Services data refresh by using embedded data connections](/SharePoint/administration/excel-services-overview).
+- You can specify a Secure Store target application in a workbook. (This is known as an embedded connection.) For more information, see [Configure Excel Services data refresh by using embedded data connections](./excel-services-overview.md).
     
 - You can use an Office Data Connection (ODC) file that specifies a Secure Store target application. This article describes how to do this. 
     
@@ -31,11 +33,11 @@ Using Excel Services with an ODC file consists of the following steps:
   
 1. [Configure a data access account](#part1)
     
-2. [Create a Secure Store target application](/SharePoint/administration/excel-services-overview#part2)
+2. [Create a Secure Store target application](./excel-services-overview.md#part2)
     
 3. [Create and publish an ODC file](#part3)
     
-4. [Configure an Excel workbook to use the published ODC file as a data connection](/SharePoint/administration/excel-services-overview#part4)
+4. [Configure an Excel workbook to use the published ODC file as a data connection](./excel-services-overview.md#part4)
     
 ## Configure a data access account
 <a name="part1"> </a>
@@ -138,18 +140,18 @@ Now that the Secure Store target application is configured, the next step is to 
     
 3. On the **Data** tab, click **Connections**.
     
-4. On the **Workbook Connections** dialog box, select the connection that you just created, and then click **Properties**.
+4. On the **Workbook Connections** dialog, select the connection that you just created, and then click **Properties**.
     
-5. On the **Connection Properties** dialog box, on the **Definition** tab, click **Authentication Settings**.
+5. On the **Connection Properties** dialog, on the **Definition** tab, click **Authentication Settings**.
     
-6. On the **Excel Services Authentication Settings** dialog box, select the **Use a stored account** option, and in the **Application ID** box, type the Application ID of the Secure Store target application that you created. 
+6. On the **Excel Services Authentication Settings** dialog, select the **Use a stored account** option, and in the **Application ID** box, type the Application ID of the Secure Store target application that you created. 
     
     > [!NOTE]
     > In Excel 2010, select the **SSS** option. 
   
 7. Click **OK**.
     
-8. On the **Connection Properties** dialog box, click **Export Connection File**.
+8. On the **Connection Properties** dialog, click **Export Connection File**.
     
 9. Save the ODC file to a trusted data connection library on your farm.
     
@@ -164,22 +166,22 @@ Use the following procedure to connect to the ODC file in Excel.
   
 1. In Excel, on the **Data** tab, in the **Get External Data** section, click **Existing Connections**.
     
-2. On the **Existing Connections** dialog box, click **Browse for More**.
+2. On the **Existing Connections** dialog, click **Browse for More**.
     
-3. On the **Select Data Source** dialog box, in the URL box, type the URL for the trusted data connection library where you saved the ODC file, and then press Enter. 
+3. On the **Select Data Source** dialog, in the URL box, type the URL for the trusted data connection library where you saved the ODC file, and then press Enter. 
     
     > [!NOTE]
     > It may take several moments for the list to refresh with content from the specified location. 
   
 4. On the list of **Data Connections**, select the ODC file that you saved, and then click **Open**.
     
-5. On the **Import Data** dialog box, select the **PivotTable Report** or **PivotChart and PivotTable Report** option, and then click **OK**.
+5. On the **Import Data** dialog, select the **PivotTable Report** or **PivotChart and PivotTable Report** option, and then click **OK**.
     
 6. On the **Data** tab, click **Connections**.
     
-7. On the **Workbook Connections** dialog box, select the connection that you just opened, and then click **Properties**.
+7. On the **Workbook Connections** dialog, select the connection that you just opened, and then click **Properties**.
     
-8. On the **Connection Properties** dialog box, on the **Definition** tab, select the **Always use connection file** check box, and then click **OK**.
+8. On the **Connection Properties** dialog, on the **Definition** tab, select the **Always use connection file** check box, and then click **OK**.
     
     > [!NOTE]
     > This ensures that the connection file that you connected to will be used rather than the embedded connection information. 
@@ -197,4 +199,3 @@ Once you have completed the data connection wizard, you can create your report a
 #### Concepts
 
 [Configure the Secure Store Service in SharePoint Server](configure-the-secure-store-service.md)
-

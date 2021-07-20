@@ -3,9 +3,11 @@ title: "Add content to a case and place sources on hold in the eDiscovery Center
 ms.reviewer: 
 ms.author: MARKJJO
 author: MARKJJO
-manager: pamgreen
+manager: serdars
 ms.date: 
 audience: ITPro
+f1.keywords:
+- NOCSH
 ms.topic: article
 ms.prod: sharepoint-server-itpro
 localization_priority: Normal
@@ -163,9 +165,9 @@ This procedure creates an eDiscovery Set and adds content sources to it. To also
 
 For more information about eDiscovery cases, see the following articles:
   
-[Scenario: eDiscovery in SharePoint Server 2013 and Exchange Server 2013](/sharepoint/)
+[Scenario: eDiscovery in SharePoint Server 2013 and Exchange Server 2013](../../Hub/index.yml)
   
-[Plan and manage cases in the eDiscovery Center](/sharepoint/governance/plan-and-manage-cases-in-the-ediscovery-center)
+[Plan and manage cases in the eDiscovery Center](./plan-and-manage-cases-in-the-ediscovery-center.md)
   
 [Create and run queries in the eDiscovery Center](create-and-run-queries-in-the-ediscovery-center.md)
   

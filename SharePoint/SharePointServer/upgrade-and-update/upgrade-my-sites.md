@@ -1,11 +1,13 @@
 ---
 title: "Upgrade My Sites to SharePoint Server 2016"
 ms.reviewer: 
-ms.author: mikeplum
-author: MikePlumleyMSFT
-manager: pamgreen
+ms.author: serdars
+author: SerdarSoysal
+manager: serdars
 ms.date: 9/17/2016
 audience: ITPro
+f1.keywords:
+- NOCSH
 ms.topic: get-started-article
 ms.prod: sharepoint-server-itpro
 localization_priority: Normal
@@ -26,7 +28,7 @@ My Sites are personal site collections that end users can use to store their doc
   
 - **My Site Host.** The My Site Host is a special site collection shared among all My Site users. The My Site Host is used to show the profile (person.aspx) and newsfeed pages (default.aspx) on the My Site. The My Site Host is also used for storing the user profile photos. 
     
-- **Personal site collection.** In SharePoint Server 2013, the personal site collection was used to store a user's documents. In SharePoint Server 2016, the personal site collection contains OneDrive for Business, followed content, and so on. 
+- **Personal site collection.** In SharePoint Server 2013, the personal site collection was used to store a user's documents. In SharePoint Server 2016, the personal site collection contains OneDrive, followed content, and so on. 
     
 ## Plan to upgrade My Sites
 
@@ -161,7 +163,7 @@ If users are experiencing issues, such as mixed user interface modes or they can
 
 #### Other Resources
 
-[Upgrade a site collection](https://office.microsoft.com/office365-sharepoint-online-enterprise-help/upgrade-a-site-collection-HA102865473.aspx?CTT=5&amp;origin=HA104034491)
+[Upgrade a site collection](upgrade-a-site-collection.md)
   
 [Update-SPProfilePhotoStore](/powershell/module/sharepoint-server/Update-SPProfilePhotoStore?view=sharepoint-ps)
 

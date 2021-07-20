@@ -1,11 +1,13 @@
 ---
 title: "Application pools recycle when memory limits are exceeded (SharePoint Server)"
 ms.reviewer: 
-ms.author: mikeplum
-author: MikePlumleyMSFT
-manager: pamgreen
+ms.author: serdars
+author: SerdarSoysal
+manager: serdars
 ms.date: 2/22/2018
 audience: ITPro
+f1.keywords:
+- NOCSH
 ms.topic: troubleshooting
 ms.prod: sharepoint-server-itpro
 localization_priority: Normal
@@ -42,12 +44,12 @@ description: "Learn how to resolve the SharePoint Health Analyzer rule: Applicat
     
 7. In the **Application Pools** list, right-click the application pool on which you want to disable the memory limits, and then click **Recycling**.
     
-8. In the **Edit Application Pool Recycling Settings** dialog box, in the **Memory Based Maximums** section, clear the **Virtual memory usage (in KB)** and **Private memory usage (in KB)** check boxes, and then click **Next**. 
+8. In the **Edit Application Pool Recycling Settings** dialog, in the **Memory Based Maximums** section, clear the **Virtual memory usage (in KB)** and **Private memory usage (in KB)** check boxes, and then click **Next**. 
     
-9. In the **Recycling Events to Log** dialog box, click **Finish**.
+9. In the **Recycling Events to Log** dialog, click **Finish**.
     
 ## See also
 
 #### Other Resources
 
-[Recycling Settings for an Application Pool \<recycling\>](https://go.microsoft.com/fwlink/?LinkID=761158&amp;clcid=0x409)
+[Recycling Settings for an Application Pool \<recycling\>](/iis/configuration/system.applicationHost/applicationPools/add/recycling/)

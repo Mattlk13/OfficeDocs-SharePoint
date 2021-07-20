@@ -1,10 +1,12 @@
 ---
 title: "Publish service applications in SharePoint Server"
 ms.reviewer: 
-ms.author: mikeplum
-author: MikePlumleyMSFT
-manager: pamgreen
+ms.author: serdars
+author: SerdarSoysal
+manager: serdars
 audience: ITPro
+f1.keywords:
+- NOCSH
 ms.topic: article
 ms.prod: sharepoint-server-itpro
 localization_priority: Normal
@@ -36,7 +38,7 @@ Before you begin this operation, review [Share service applications across farms
     
 4. On the ribbon, click **Publish**.
     
-5. In the **Publish Service Application** dialog box do the following tasks: 
+5. In the **Publish Service Application** dialog do the following tasks: 
     
    - Select the **Connection Type** that you want from the drop-down list. 
     

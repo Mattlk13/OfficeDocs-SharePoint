@@ -1,11 +1,13 @@
 ---
 title: "Configure properties of the Search Navigation Web Part in SharePoint Server"
 ms.reviewer: 
-ms.author: mikeplum
-author: MikePlumleyMSFT
-manager: pamgreen
+ms.author: serdars
+author: SerdarSoysal
+manager: serdars
 ms.date: 3/8/2018
 audience: ITPro
+f1.keywords:
+- NOCSH
 ms.topic: article
 ms.prod: sharepoint-server-itpro
 localization_priority: Normal
@@ -37,15 +39,15 @@ The search vertical properties, such as display name and links, are configured o
   
 For more information, see the following resources:
   
-- [Plan browser support](https://go.microsoft.com/fwlink/p/?LinkId=246502)
+- [Plan browser support](../install/browser-support-planning.md)
     
-- [Accessibility for SharePoint 2013](/SharePoint/accessibility-guidelines)
+- [Accessibility for SharePoint 2013](../accessibility-guidelines.md)
     
 - [Accessibility features in SharePoint 2013 Products](https://go.microsoft.com/fwlink/p/?LinkId=246501)
     
 - [Keyboard shortcuts](https://go.microsoft.com/fwlink/p/?LinkID=246504)
     
-- [Touch](https://go.microsoft.com/fwlink/p/?LinkId=246506)
+- [Touch](/windows/win32/wintouch/windows-touch-gestures-overview)
     
 ## Configure the properties of the Search Navigation Web Part
 <a name="BKMK_ConfigureSearchNavigation"> </a>
@@ -77,7 +79,7 @@ For more information, see the following resources:
     
 4. On the **Search Settings** page, in the **Configure Search Navigation** section, click to select the search vertical for which you want to change the properties, and then click **Edit**.
     
-5. In the **Navigation Link** dialog box, do the following: 
+5. In the **Navigation Link** dialog, do the following: 
     
   - To change the display name of a search vertical, in the **Title** field, type a display name. 
     
@@ -103,12 +105,10 @@ Before you start this procedure, verify that you have created a new page for the
     
 4. On the **Search Settings** page, in the **Configure Search Navigation** section, click **Add Link**.
     
-5. In the **Navigation Link** dialog box, do the following: 
+5. In the **Navigation Link** dialog, do the following: 
     
   - In the **Title** field, type a display name. 
     
   - In the **URL** field, type the URL to the new search vertical. 
     
   - Click **OK** to save the new search vertical. 
-    
-

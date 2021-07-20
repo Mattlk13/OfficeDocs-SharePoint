@@ -1,11 +1,13 @@
 ---
 title: "Plan for least-privileged administration in SharePoint Server"
 ms.reviewer: 
-ms.author: mikeplum
-author: MikePlumleyMSFT
-manager: pamgreen
+ms.author: serdars
+author: SerdarSoysal
+manager: serdars
 ms.date: 3/5/2018
 audience: ITPro
+f1.keywords:
+- NOCSH
 ms.topic: article
 ms.prod: sharepoint-server-itpro
 localization_priority: Normal
@@ -44,10 +46,10 @@ In a SharePoint Server environment, several accounts may be granted the followin
     
 - **Securityadmin** - Members of the securityadmin fixed server role manage logins and their properties. They can GRANT, DENY, and REVOKE server-level permissions. They can also GRANT, DENY, and REVOKE database-level permissions if they have access to a database. Additionally, they can reset passwords for SQL Server logins. 
     
-    > [!SECURITY NOTE]
-    > The ability to grant access to the database engine and to configure user permissions allows the securityadmin to assign most server permissions. You should treat the securityadmin role as equal to the sysadmin role. 
+> [!NOTE]
+> The ability to grant access to the database engine and to configure user permissions allows the securityadmin to assign most server permissions. You should treat the securityadmin role as equal to the sysadmin role. 
   
-For additional information about SQL Server server-level roles, see [Server Level Roles](https://go.microsoft.com/fwlink/p/?LinkId=213450).
+For additional information about SQL Server server-level roles, see [Server Level Roles](/sql/relational-databases/security/authentication-access/server-level-roles).
   
 If you remove one or more of these SQL Server roles, you might receive "Unexpected" error messages in the Central Administration web site. In addition, you may receive the following message in the Unified Logging Service (ULS) log file:
   
@@ -124,7 +126,7 @@ The following list provides information about locking down other SharePoint Serv
     
 - **Claims To Windows Token service (C2WTS)**
     
-    By default, this service is disabled. The C2WTS service may be required for a deployment with Excel Services, PerformancePoint Servers, or SharePoint shared services that must translate between SharePoint security tokens and Windows-based identities. For example, you use this service when you configure Kerberos-constrained delegation for accessing external data sources. For more information about C2WTS, see [Plan for Kerberos authentication in SharePoint Server](kerberos-authentication-planning.md).
+    By default, this service is disabled. The C2WTS service may be required for a deployment with Excel Services, PerformancePoint Services, or SharePoint shared services that must translate between SharePoint security tokens and Windows-based identities. For example, you use this service when you configure Kerberos-constrained delegation for accessing external data sources. For more information about C2WTS, see [Plan for Kerberos authentication in SharePoint Server](kerberos-authentication-planning.md).
     
 The following features may experience additional symptoms under certain circumstances:
   
@@ -165,4 +167,3 @@ In addition to the previous considerations, you might have to consider more oper
 #### Other Resources
 
 [Least Privilege Configuration for Workflow Manager with SharePoint 2013](https://go.microsoft.com/fwlink/p/?LinkId=288780)
-

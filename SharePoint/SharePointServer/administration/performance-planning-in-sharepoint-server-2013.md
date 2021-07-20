@@ -1,11 +1,13 @@
 ---
 title: "Performance planning in SharePoint Server 2013"
 ms.reviewer: 
-ms.author: jhendr
-author: JoanneHendrickson
-manager: pamgreen
+ms.author: serdars
+author: SerdarSoysal
+manager: serdars
 ms.date: 12/29/2016
 audience: ITPro
+f1.keywords:
+- NOCSH
 ms.topic: article
 ms.prod: sharepoint-server-itpro
 localization_priority: Normal
@@ -37,6 +39,4 @@ The following resources about performance and capacity management are available 
   
 ||**Content**|**Description**|
 |:-----|:-----|:-----|
-|![TechNet logo](../media/otc_LandingPage_55px_MSTechNetLogo.png)|[Capabilities and features in SharePoint 2013 Resource Center](/sharepoint/) <br/> [Architecture design for SharePoint 2013 IT pros](/sharepoint/) <br/> |Visit the TechCenter to access videos, community sites, documentation, and more.  <br/> |
-   
-
+|![TechNet logo](../media/otc_LandingPage_55px_MSTechNetLogo.png)|[Capabilities and features in SharePoint 2013 Resource Center](../../Hub/index.yml) <br/> [Architecture design for SharePoint 2013 IT pros](../../Hub/index.yml) <br/> |Visit the TechCenter to access videos, community sites, documentation, and more.  <br/> |

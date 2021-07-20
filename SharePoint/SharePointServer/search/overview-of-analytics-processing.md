@@ -1,11 +1,13 @@
 ---
 title: "Overview of analytics processing in SharePoint Server"
 ms.reviewer: 
-ms.author: mikeplum
-author: MikePlumleyMSFT
-manager: pamgreen
+ms.author: serdars
+author: SerdarSoysal
+manager: serdars
 ms.date: 7/24/2017
 audience: ITPro
+f1.keywords:
+- NOCSH
 ms.topic: article
 ms.prod: sharepoint-server-itpro
 localization_priority: Normal
@@ -71,7 +73,7 @@ A default set of usage events is defined out of the box. The default events are 
 
 |   **Analysis**   |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 **Description**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 | :--------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Usage counts     | The Usage counts analysis analyzes events, such as viewed or clicked items. The analysis calculates how many times an item is opened  *overall*  , not just from the search result page, but also, for example, when a document is opened from Word or clicked in a SharePoint Server library.   <br/> <br/>The analysis calculates both recent events and all time events, for all defined event types. By default, recent events is set to the last 14 days, but you can set it between 1 and 14 days (on-premises). The statistics data is aggregated on site level, on site collection level, and on tenant level (SPO).   <br/> <br/>The usage events are stored temporarily on the web front end and are pushed to the Search Service Application every 15 minutes. Usage events are kept on disk for up to 14 days before they are deleted. Every day, the previous full day of Usage counts data is analyzed.   <br/> <br/>Usage counts are added to the items in the search index to improve search relevancy. The information is also stored in the Analytics reporting database, and can be used to display popular items on a site. |
+| Usage counts     | The Usage counts analysis analyzes events, such as viewed or clicked items. The analysis calculates how many times an item is opened  *overall*  , not just from the search result page, but also, for example, when a document is opened from Word or clicked in a SharePoint Server library.   <br/> <br/>The analysis calculates both recent events and all time events, for all defined event types. By default, recent events is set to the last 14 days, but you can set it between 1 and 14 days (on-premises). The statistics data is aggregated on the site level, the site collection level, and the organization level (SharePoint in Microsoft 365).   <br/> <br/>The usage events are stored temporarily on the web front end and are pushed to the Search Service Application every 15 minutes. Usage events are kept on disk for up to 14 days before they are deleted. Every day, the previous full day of Usage counts data is analyzed.   <br/> <br/>Usage counts are added to the items in the search index to improve search relevancy. The information is also stored in the Analytics reporting database, and can be used to display popular items on a site. |
 | Recommendations  | The Recommendations analysis creates recommendations between items based on how users have interacted with the items on a site. The analysis uses the same event file as Usage counts, but looks for patterns in the usage. The analysis calculates an item-to-item relationship graph and adds the information to the items in the search index.   <br/> <br/>The information can be used to display recommendations on a site, for example "People who viewed this also viewed".   <br/> <br/>The data is stored in the Analytics reporting database for recovery purposes. Reports related to recommendations are based on the Usage counts analysis.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
 | Activity ranking | The Activity ranking analysis uses the activity tracking of usage events (the event rate) to influence search relevancy. Items that have high usage activity (clicks or views) typically get a higher activity rank score than less popular items.   <br/> <br/>The analysis looks for  *trends*  in item activity. If you only count the number of events, older items will typically "win" in relevancy, because the older documents have had more time to collect activity. The activity tracking helps newer documents that have high usage activity get a higher rank.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
    
@@ -88,7 +90,7 @@ SharePoint Server includes the following default usage events:
     
 In addition to the default events, you can add up to twelve custom events. For example, you can add a custom event that tracks how often an item is accessed from a mobile platform. 
   
-All usage events are counted per item, site collection, and tenant (SPO).
+All usage events are counted per item, site collection, and tenant (SharePoint in Microsoft 365).
   
 ## Reports based on analytics processing
 <a name="BKMK_Reporting"> </a>
@@ -138,6 +140,4 @@ By default, usage cookies are not enabled for a SharePoint Server web applicatio
 > [!IMPORTANT]
 > Local legal restrictions might apply when you enable cookies on sites that have anonymous users. 
   
-To enable usage cookies for a SharePoint web application, see [Edit general settings on a web application in SharePoint Server](/SharePoint/administration/edit-general-settings-on-a-web-application). This article also applies to SharePoint Server 2016.
-  
-
+To enable usage cookies for a SharePoint web application, see [Edit general settings on a web application in SharePoint Server](../administration/edit-general-settings-on-a-web-application.md). This article also applies to SharePoint Server 2016.

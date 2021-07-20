@@ -1,11 +1,13 @@
 ---
 title: "Specify farm security settings"
 ms.reviewer: 
-ms.author: mikeplum
-author: MikePlumleyMSFT
-manager: pamgreen
+ms.author: serdars
+author: SerdarSoysal
+manager: serdars
 ms.date: 3/1/2018
 audience: ITPro
+f1.keywords:
+- NOCSH
 ms.topic: article
 ms.prod: sharepoint-server-itpro
 localization_priority: Normal
@@ -19,13 +21,13 @@ description: "Summary: Learn how to use a passphrase in SharePoint Server ."
 
 # Specify farm security settings
 
- **Summary:** Learn how to use a passphrase in SharePoint Server . 
+ **Summary:** Learn how to use a passphrase in SharePoint Server. 
   
-Type a passphrase to help to secure farm configuration data, and then click **Next**. 
+Type a passphrase to help to secure farm configuration data, and then select **Next**. 
   
 Although a pass phrase is similar to a password, it is usually longer to enhance security. It is used to encrypt credentials of accounts that are registered in SharePoint products, for example, the system account that you provide when you run the SharePoint 2016 Products Configuration Wizard. Ensure that you remember the pass phrase, because you must use it each time you add a server to the farm.
   
-Ensure that the passphrase meets the following criteria :
+Ensure that the passphrase meets the following criteria:
   
 - Has at least eight characters
     
@@ -44,6 +46,6 @@ You can change the passphrase after the farm has been configured by running the 
 Run the **Set-SPPassphrase - LocalServerOnly** cmdlet in Microsoft PowerShell to manually update the passphrase. 
   
 > [!NOTE]
-> The **Specify Farm Security Settings** page is not displayed when you perform an upgrade. 
+> When you perform an upgrade, the **Specify Farm Security Settings** page does not appear. 
   
 

@@ -1,11 +1,13 @@
 ---
 title: "Plan a Business Connectivity Services solution in SharePoint Server"
 ms.reviewer: 
-ms.author: mikeplum
-author: MikePlumleyMSFT
-manager: pamgreen
+ms.author: serdars
+author: SerdarSoysal
+manager: serdars
 ms.date: 7/27/2017
 audience: ITPro
+f1.keywords:
+- NOCSH
 ms.topic: article
 ms.prod: sharepoint-server-itpro
 localization_priority: Normal
@@ -52,14 +54,14 @@ For your Business Connectivity Services solution design, you have to know what a
   
 - **Credentials-based authentication** In credentials-based authentication models, credentials are passed from Business Connectivity Services to the external system. Credentials are a combination of a user name and some form of password. Business Connectivity Services has a number of ways of doing this, including passing the credentials of the user who is logged on, passing the credentials of the service that is making the request, or mapping the credentials of the user who is logged on to a different set of credentials that the external system recognizes. 
     
-- **Claims-based authentication** In some authentication scenarios, the external system will not accept credentials directly from Business Connectivity Services. However, the external system will accept them from a third-party authentication service that it trusts. The third-party authentication service (a security token provider) accepts a grouping of information (known as assertions) about the requestor. The whole grouping is known as a claim, and a claim can contain more information about the requestor than just the user name and password. For example, a claim can contain metadata about the requestor, such as the requestor's email address or the security groups to which the requestor belongs. The third-party authentication service performs the authentication of the requestor based on the assertions in the claim and creates a security token for the requestor to use. The requestor (Business Connectivity Services) then presents the security token to the external system, and the external system looks to see what data the requestor has been authorized to access. 
+- **Claims-based authentication** In some authentication scenarios, the external system will not accept credentials directly from Business Connectivity Services. However, the external system will accept them from a third-party authentication service that it trusts. The third-party authentication service (a security token provider) accepts a grouping of information (known as assertions) about the requestor. The whole grouping is known as a claim, and a claim can contain more info about the requestor than just the user name and password. For example, a claim can contain metadata about the requestor, such as the requestor's email address or the security groups to which the requestor belongs. The third-party authentication service performs the authentication of the requestor based on the assertions in the claim and creates a security token for the requestor to use. The requestor (Business Connectivity Services) then presents the security token to the external system, and the external system looks to see what data the requestor has been authorized to access. 
     
 - **Custom authentication** If the external system that you are working with does not support credentials-based or claims-based authentication, then you will have to develop, test, and implement a custom solution that takes the credentials that Business Connectivity Services can produce and translates them into a format that the external system will accept. You can implement a custom authentication solution for OData data sources that are secured either by OAuth or a custom ASP.NET HTTP module and are on premises. 
     
 ## How will the data be consumed?
 <a name="section4"> </a>
 
-As part of your requirement gathering, you need to find out from your business stakeholders what they need the solution to do and how they need users to interact with it. They might need the users to interact with the data in SharePoint Server, via external lists, and external Web Parts and in Office 2016 clients. Or, they might need the solution to surface data through an apps for Office and SharePoint application in SharePoint Online or an on-premises SharePoint Server installation. For more information about apps for Office and SharePoint, see [(OLD) Overview of apps for SharePoint 2016](/SharePoint/administration/plan-for-apps-for-sharepoint). Or, the solution might require some other combination of browser, client, and application access to the external data. 
+As part of your requirement gathering, you need to find out from your business stakeholders what they need the solution to do and how they need users to interact with it. They might need the users to interact with the data in SharePoint Server, via external lists, and external web parts and Office apps. Or, they might need the solution to surface data through Office apps and SharePoint applications. For more info about apps for Office and SharePoint, see [(OLD) Overview of apps for SharePoint 2016](./plan-for-apps-for-sharepoint.md). Or, the solution might require some other combination of browser, client, and application access to the external data. 
   
 How users access the data affects how you will scope the external content type that Business Connectivity Services uses to access the external data. If your Business Connectivity Services solution requires an apps for Office and SharePoint application, then the external content type must be scoped to that application. If your Business Connectivity Services solution will not use apps for Office and SharePoint to access external data, then the external content type must be scoped to the Business Data Connectivity service application.
   
@@ -84,7 +86,7 @@ There are three fundamental roles that are involved with every Business Connecti
     
 There are also four main aspects to every Business Connectivity Services solution for which you will manage permissions:
   
-- **External system** Every external system will have a method for performing authentication and authorization. (For more information, see [How is the data secured?](plan-a-business-connectivity-services-solution.md#section3) earlier in this article.) You need to work with the external system administrator to identify how to grant access to the solution users according to the principle of least privileges. In general, you will map a group of users from the Business Connectivity Services side to a single account on the external system side and use the single external system account to restrict access. Another way is to do a 1:1 mapping between individual accounts on each system. In either case, unless the external system can directly accept the credentials with which the user authenticates to SharePoint Server, you will need to use the [Secure Store Service](/previous-versions/office/sharepoint-server-2010/ee806889(v=office.14)). For more in-depth information about the authentication models that Business Connectivity Services supports, see [Business Connectivity Services security overview (SharePoint 2010)](https://go.microsoft.com/fwlink/p/?LinkId=254927).
+- **External system** Every external system will have a method for performing authentication and authorization. (For more information, see [How is the data secured?](plan-a-business-connectivity-services-solution.md#section3) earlier in this article.) You need to work with the external system administrator to identify how to grant access to the solution users according to the principle of least privileges. In general, you will map a group of users from the Business Connectivity Services side to a single account on the external system side and use the single external system account to restrict access. Another way is to do a 1:1 mapping between individual accounts on each system. In either case, unless the external system can directly accept the credentials with which the user authenticates to SharePoint Server, you will need to use the [Secure Store Service](/previous-versions/office/sharepoint-server-2010/ee806889(v=office.14)). For more in-depth information about the authentication models that Business Connectivity Services supports, see [Business Connectivity Services security overview (SharePoint 2010)](/previous-versions/office/sharepoint-server-2010/ee661743(v=office.14)).
     
 - **Business Connectivity Services central infrastructure** In Central Administration, you manage the assignment of permissions to the BDC Metadata Store. In the BDC Metadata Store, you manage BDC models, external systems, and external content types. You must assign execute permissions on an external content type to all users who will be using the Business Connectivity Services solution. The following tables provide a detailed mapping of abilities, permissions, and objects. 
     
@@ -158,4 +160,3 @@ There are also four main aspects to every Business Connectivity Services solutio
 #### Concepts
 
 [Overview of Business Connectivity Services in SharePoint Server](business-connectivity-services-overview.md)
-

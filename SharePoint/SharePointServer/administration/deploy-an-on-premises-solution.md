@@ -1,11 +1,13 @@
 ---
 title: "Deploy a Business Connectivity Services on-premises solution in SharePoint Server"
 ms.reviewer: 
-ms.author: mikeplum
-author: MikePlumleyMSFT
-manager: pamgreen
+ms.author: serdars
+author: SerdarSoysal
+manager: serdars
 ms.date: 7/7/2017
 audience: ITPro
+f1.keywords:
+- NOCSH
 ms.topic: article
 ms.prod: sharepoint-server-itpro
 localization_priority: Normal
@@ -117,7 +119,7 @@ In this procedure, you create a SQL Server login and then assign that login to a
     
 3. Under the **Login Name**, with the **User name** box pre-selected, in the first box, enter AdventureWorksUser
     
-4. In the second box, click **Browse**, in the **Select Login** dialog box, click **Browse**, select the SQL Server account, **SharePointGroupAccount**, and then click **OK** twice. 
+4. In the second box, click **Browse**, in the **Select Login** dialog, click **Browse**, select the SQL Server account, **SharePointGroupAccount**, and then click **OK** twice. 
     
 5. Under **Database Role** membership, select **db_owner**.
     
@@ -154,17 +156,17 @@ The BCS Metadata Store holds external content types, external systems and BDC mo
 
 The Secure Store Service stores the credentials that Microsoft Business Connectivity Services uses to access the AdventureWorks external data source and performs credential mapping between your users accounts and the credentials used to access the external data source. 
   
-In this procedure you perform all the steps in [Configure the Secure Store Services in SharePoint 2013 Preview](https://go.microsoft.com/fwlink/?LinkId=262211) article. You must perform the steps in the Configure the Secure Store Services in SharePoint 2013 article with these parameters from start to finish. 
+In this procedure you perform all the steps in [Configure the Secure Store Services in SharePoint 2013 Preview](./configure-the-secure-store-service.md) article. You must perform the steps in the Configure the Secure Store Services in SharePoint 2013 article with these parameters from start to finish. 
   
  **Configure Secure Store Service for on-premises Business Connectivity Services**
   
-1. Perform all the steps in [Configure the Secure Store Services in SharePoint 2013 Preview](https://go.microsoft.com/fwlink/?LinkId=262211) with the following parameters. 
+1. Perform all the steps in [Configure the Secure Store Services in SharePoint 2013 Preview](./configure-the-secure-store-service.md) with the following parameters. 
     
 2. Open the SharePoint Central Administration website for the server farm that your Secure Store Service is in with an account that has Farm Administrator permissions.
     
 3. In the Configure the Secure Store Services in SharePoint 2013 Preview article, perform all procedures in the [Configure Secure Store in SharePoint Server](configure-the-secure-store-service.md#section1) section with these parameters 
     
-1. For the **Register Managed Account**, **User name** type in the name of the service account that you created in the [Prerequisites for deploying a Business Connectivity Services on-premises solution in SharePoint 2013](/SharePoint/administration/deploy-an-on-premises-solution) procedure. 
+1. For the **Register Managed Account**, **User name** type in the name of the service account that you created in the [Prerequisites for deploying a Business Connectivity Services on-premises solution in SharePoint 2013]() procedure. 
     
 2. Do not select the **Enable automatic password change** box. 
     
@@ -198,21 +200,21 @@ In this procedure you perform all the steps in [Configure the Secure Store Servi
     
 6. In the **Target Application Administrators** add the accounts that you want to be administrators of the Target Application. Note that the Farm Administrator has access by default. 
     
-7. In the **Members** box, add the names of the users whom you want to allow access to the external data source. For this example use the **AdventureWorksBCSUsers** security group you created in [Prerequisites for deploying a Business Connectivity Services on-premises solution in SharePoint 2013](/SharePoint/administration/deploy-an-on-premises-solution).
+7. In the **Members** box, add the names of the users whom you want to allow access to the external data source. For this example use the **AdventureWorksBCSUsers** security group you created in [Prerequisites for deploying a Business Connectivity Services on-premises solution in SharePoint 2013]().
     
 8. Perform the steps in the [Set credentials for a Secure Store target application](configure-the-secure-store-service.md#section4) procedure using these parameters: 
     
-1. In the **SQL User Name** box, type **AdventureWorksUser** which is the name SQL Server account you created in [Create database logins for a Business Connectivity Services on-premises solution in SharePoint 2013](/SharePoint/administration/deploy-an-on-premises-solution).
+1. In the **SQL User Name** box, type **AdventureWorksUser** which is the name SQL Server account you created in [Create database logins for a Business Connectivity Services on-premises solution in SharePoint 2013]().
     
-2. In the **SQL Password**, and **Confirm SQL Password** boxes type the password for that account, which is actually the password for the SharePointGroupAccount account that you created in [Create database logins for a Business Connectivity Services on-premises solution in SharePoint 2013](/SharePoint/administration/deploy-an-on-premises-solution).
+2. In the **SQL Password**, and **Confirm SQL Password** boxes type the password for that account, which is actually the password for the SharePointGroupAccount account that you created in [Create database logins for a Business Connectivity Services on-premises solution in SharePoint 2013]().
     
 ### Create an external content type
 
-These procedures walk you through building an external content type for Business Connectivity Services using SharePoint Designer 2013 without writing any code. You will learn how to discover a SQL Server database, connect to the database table, and then return the required data. You will create an external content type named Customers that is based on the Customer view in the AdventureWorks sample database. This article uses the procedures in [How to: Create external content types for SQL Server in SharePoint 2013 Preview](https://go.microsoft.com/fwlink/?LinkId=268041). You must open that article and perform the steps there using the parameters given in the matching sections of this article.
+These procedures walk you through building an external content type for Business Connectivity Services using SharePoint Designer 2013 without writing any code. You will learn how to discover a SQL Server database, connect to the database table, and then return the required data. You will create an external content type named Customers that is based on the Customer view in the AdventureWorks sample database. This article uses the procedures in [How to: Create external content types for SQL Server in SharePoint 2013 Preview](/sharepoint/dev/general-development/how-to-create-external-content-types-for-sql-server-in-sharepoint). You must open that article and perform the steps there using the parameters given in the matching sections of this article.
   
  **Define general information**
   
-1. Open [How to: Create external content types for SQL Server in SharePoint 2013 Preview](https://go.microsoft.com/fwlink/?LinkId=268041)
+1. Open [How to: Create external content types for SQL Server in SharePoint 2013 Preview](/sharepoint/dev/general-development/how-to-create-external-content-types-for-sql-server-in-sharepoint)
     
 2. Create a new external content type named AWcustomers with a display name of AdventureWorks Customers.
     
@@ -250,7 +252,7 @@ These procedures walk you through building an external content type for Business
   
  **Add columns**
   
-1. In the **Parameters Configuration** dialog box, by default all columns are selected. To remove unnecessary columns, clear the checkboxes next to the following columns: **Suffix** and **Demographics**.
+1. In the **Parameters Configuration** dialog, by default all columns are selected. To remove unnecessary columns, clear the checkboxes next to the following columns: **Suffix** and **Demographics**.
     
 2. For the **BusinessEntityID** select the **Map to Identifier** value. 
     
@@ -266,7 +268,7 @@ These procedures walk you through building an external content type for Business
 3. Under properties, in the **Office property** dropdown, select the appropriate matching field: **FirstName** to **First Name (FirstName)**, **LastName** to ** Last Name (LastName) **, and **PhoneNumber** to **Primary Telephone Phone Number (PrimaryTelephonePhoneNumber)**, **EmailAddress** to **EmailAddress1 (Email1Address)**.
     
     > [!NOTE]
-    > Unmapped fields, depending on the number, are displayed as extended properties. For two to five fields they are listed as **Adjoining** meaning that they are appended to the form region at the bottom of an Outlook form's default page. For six or more fields they are listed as **Separate** and are added as a new page to an Microsoft Outlook. 
+    > Unmapped fields, depending on the number, are displayed as extended properties. For two to five fields they are listed as **Adjoining** meaning that they are appended to the form region at the bottom of an Outlook form's default page. For six or more fields they are listed as **Separate** and are added as a new page to a Microsoft Outlook. 
   
 4. For the following fields, **BusinessEntityID**, **FirstName**, **LastName**, and **EmailAddress** click and highlight the field, and then under **Properties**, click **Show in Picker**.
     
@@ -305,7 +307,7 @@ To configure user access and permissions to the external content type:
     
 6. On the ribbon, click **Set Object Permissions**.
     
-7. Enter the user accounts to which you want to grant permissions, and then click **Add**. For this example, you would add the security group that was created in [Prerequisites for deploying a Business Connectivity Services on-premises solution in SharePoint 2013](/SharePoint/administration/deploy-an-on-premises-solution)AdventureWorksBCSUsers.
+7. Enter the user accounts to which you want to grant permissions, and then click **Add**. For this example, you would add the security group that was created in [Prerequisites for deploying a Business Connectivity Services on-premises solution in SharePoint 2013]()AdventureWorksBCSUsers.
     
 8. Select the user accounts that you just added, and then select **Execute** check boxe. 
     
@@ -360,7 +362,7 @@ The external list contains customer data mapped to Microsoft Outlook contacts fo
   
 1. Open the SharePoint Server site that contains the external list. In the ribbon, on the **List** tab, in the **Connect &amp; Export** group, click **Connect to Outlook**.
     
-2. In the **Microsoft Office Customization Installer** dialog box, click **Install**.The installation should take a minute or two. 
+2. In the **Microsoft Office Customization Installer** dialog, click **Install**.The installation should take a minute or two. 
     
 3. Once the installation is complete, click **Close**. 
     
@@ -382,4 +384,3 @@ The external list contains customer data mapped to Microsoft Outlook contacts fo
 #### Concepts
 
 [Configure Business Connectivity Services solutions for SharePoint Server](configure-business-connectivity-services-solutions.md)
-

@@ -1,11 +1,13 @@
 ---
 title: "Choose the server type"
 ms.reviewer: 
-ms.author: mikeplum
-author: MikePlumleyMSFT
-manager: pamgreen
+ms.author: serdars
+author: SerdarSoysal
+manager: serdars
 ms.date: 3/1/2018
 audience: ITPro
+f1.keywords:
+- NOCSH
 ms.topic: article
 ms.prod: sharepoint-server-itpro
 localization_priority: Normal
@@ -25,9 +27,7 @@ SharePoint farm administrators can define each server's role in a farm topology.
   
 There are six pre-defined server roles you can choose. When choosing between the different server roles, you must consider planning, scalability, data storage, and configuration complexity.
   
-For additional information about server role types, see [MinRole overview](/sharepoint/install/overview-of-minrole-server-roles-in-sharepoint-server).
+For additional information about server role types, see [MinRole overview](../install/overview-of-minrole-server-roles-in-sharepoint-server.md).
   
 > [!NOTE]
 > This feature was first made available in SharePoint Server 2016. 
-  
-

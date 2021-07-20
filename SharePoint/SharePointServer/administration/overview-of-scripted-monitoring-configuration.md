@@ -1,11 +1,13 @@
 ---
 title: "Overview of scripted monitoring configuration in SharePoint Server"
 ms.reviewer: 
-ms.author: mikeplum
-author: MikePlumleyMSFT
-manager: pamgreen
+ms.author: serdars
+author: SerdarSoysal
+manager: serdars
 ms.date: 9/20/2017
 audience: ITPro
+f1.keywords:
+- NOCSH
 ms.topic: article
 ms.prod: sharepoint-server-itpro
 localization_priority: Normal
@@ -47,14 +49,14 @@ Scripted monitoring configuration consists of both PowerShell scripts and Profil
     Run this PowerShell script on a farm to back up various logging settings to an XML file.
     
     > [!IMPORTANT]
-    > This script is available on the TechNet Gallery at [Scripted Monitoring Configuration - BackupMonitoringSettings](https://go.microsoft.com/fwlink/p/?LinkId=299269). 
+    > This script is available on the TechNet Gallery at [Scripted Monitoring Configuration - BackupMonitoringSettings](/samples/browse/?redirectedfrom=TechNet-Gallery). 
   
 - **AlterMonitoringSettings.ps1**
     
     Run this PowerShell script on a server to restore or change various logging settings by using an XML Profile as a data source.
     
     > [!IMPORTANT]
-    > This script is available on the TechNet Gallery at [Scripted Monitoring Configuration - AlterMonitoringSettings](https://go.microsoft.com/fwlink/p/?LinkId=299270). 
+    > This script is available on the TechNet Gallery at [Scripted Monitoring Configuration - AlterMonitoringSettings](/samples/browse/?redirectedfrom=TechNet-Gallery). 
   
 - **Backup Profile**
     
@@ -99,4 +101,3 @@ Scripted monitoring configuration consists of both PowerShell scripts and Profil
 #### Other Resources
 
 [App Management Service cmdlets in SharePoint Server](/powershell/module/sharepoint-server/?view=sharepoint-ps)
-

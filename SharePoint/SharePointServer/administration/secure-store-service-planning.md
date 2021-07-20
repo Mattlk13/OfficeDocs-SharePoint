@@ -1,11 +1,13 @@
 ---
 title: "Plan the Secure Store Service in SharePoint Server"
 ms.reviewer: 
-ms.author: mikeplum
-author: MikePlumleyMSFT
-manager: pamgreen
+ms.author: serdars
+author: SerdarSoysal
+manager: serdars
 ms.date: 7/7/2017
 audience: ITPro
+f1.keywords:
+- NOCSH
 ms.topic: concetpual
 ms.prod: sharepoint-server-itpro
 localization_priority: Normal
@@ -39,7 +41,7 @@ Usage scenarios for Secure Store include the following:
     
 - **Power Pivot** requires Secure Store for scheduled refresh of PowerPivot workbooks. 
     
-- **Microsoft Business Connectivity Services** can use Secure Store to map the user's credentials to a set of credentials for an external system. You can either map each user's credentials to a unique account on the external system or you can map a set of authenticated users to a single group account. Business Connectivity Services can also use Secure Store to store certificates for accessing an on-premises data source from SharePoint Online. 
+- **Microsoft Business Connectivity Services** can use Secure Store to map the user's credentials to a set of credentials for an external system. You can either map each user's credentials to a unique account on the external system or you can map a set of authenticated users to a single group account. Business Connectivity Services can also use Secure Store to store certificates for accessing an on-premises data source from SharePoint in Microsoft 365. 
     
 - **SharePoint runtime** can use Secure Store to store credentials necessary to communicate with Azure services, if any of the user apps require SharePoint runtime to provision and use Azure Services. 
     
@@ -90,5 +92,4 @@ The Secure Store Service is a claims-aware service. It can accept security token
 
 #### Other Resources
 
-[Configure the Secure Store Service in SharePoint Server](/SharePoint/administration/configure-the-secure-store-service)
-
+[Configure the Secure Store Service in SharePoint Server](./configure-the-secure-store-service.md)

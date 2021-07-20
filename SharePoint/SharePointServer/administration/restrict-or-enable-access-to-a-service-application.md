@@ -1,10 +1,12 @@
 ---
 title: "Restrict or enable access to a service application in SharePoint Server"
 ms.reviewer: 
-ms.author: mikeplum
-author: MikePlumleyMSFT
-manager: pamgreen
+ms.author: serdars
+author: SerdarSoysal
+manager: serdars
 audience: ITPro
+f1.keywords:
+- NOCSH
 ms.topic: article
 ms.prod: sharepoint-server-itpro
 localization_priority: Normal
@@ -91,7 +93,7 @@ To restrict access to a service application by using the SharePoint Central Admi
     
 4. In the **Sharing** group of the ribbon, click **Permissions**.
     
-5. In the **Connection Permissions** dialog box, type the service account name that you retrieved in the previous procedure, and then click **Add**. 
+5. In the **Connection Permissions** dialog, type the service account name that you retrieved in the previous procedure, and then click **Add**. 
     
 6. Ensure that the newly-added service account name is selected in the middle pane, and then click the appropriate check box in the bottom pane to supply the required permission level.
     
@@ -257,7 +259,7 @@ You can restore farm-wide access to a service application by adding the local fa
 
 1. Perform steps 1 through 3 of the procedure [To grant and remove permissions for service accounts to access a service application by using Central Administration](#Section2CA).
     
-2. In the **Connection Permissions** dialog box, copy the local farm ID that you retrieved in the previous procedure, and then click **Add**. 
+2. In the **Connection Permissions** dialog, copy the local farm ID that you retrieved in the previous procedure, and then click **Add**. 
     
 3. Ensure that the local farm ID is selected in the middle pane. Click the **Full Control** check box in the bottom pane. 
     
@@ -327,9 +329,9 @@ Set-SPServiceApplicationSecurity $spguid -ObjectSecurity $security
 [Account permissions and security settings in SharePoint Servers 2016 and 2019](../install/account-permissions-and-security-settings-in-sharepoint-server-2016.md)
 #### Other Resources
 
-[Create a web application in SharePoint Server](/SharePoint/administration/create-a-web-application)
+[Create a web application in SharePoint Server](./create-a-web-application.md)
   
-[Get-SPWebApplication](/SharePoint/administration/create-a-web-application)
+[Get-SPWebApplication](./create-a-web-application.md)
   
 [New-SPClaimsPrincipal](/powershell/module/sharepoint-server/New-SPClaimsPrincipal?view=sharepoint-ps)
   
@@ -346,4 +348,3 @@ Set-SPServiceApplicationSecurity $spguid -ObjectSecurity $security
 [Get-SPFarm](/powershell/module/sharepoint-server/Get-SPFarm?view=sharepoint-ps)
   
 [Get-SPClaimProvider](/powershell/module/sharepoint-server/Get-SPClaimProvider?view=sharepoint-ps)
-

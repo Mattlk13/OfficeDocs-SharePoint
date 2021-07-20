@@ -1,10 +1,13 @@
 ---
-title: "Migrating Content to OneDrive for Business"
+title: "Migrate content to OneDrive in Microsoft 365"
 ms.reviewer: 
 ms.author: jhendr
 author: JoanneHendrickson
-manager: pamgreen
+manager: serdars
+recommendations: true
 audience: ITPro
+f1.keywords:
+- NOCSH
 ms.topic: article
 ms.service: sharepoint-online
 localization_priority: Priority
@@ -12,25 +15,32 @@ ms.collection:
 - IT_Sharepoint_Server_Top
 - SPMigration
 - M365-collaboration
-description: "Migrating Content to OneDrive for Business."
+ms.custom:
+- seo-marvel-apr2020
+description: "You can use the SharePoint Migration Tool to migrate content to OneDrive (for work or school accounts) for free."
 ---
-# Migrate content to OneDrive for Business 
+# Migrate content to a OneDrive work or school account
  
-**Migrate to OneDrive for FREE**
+You can use either of the following tools to migrate files and folders on your computer or a network drive to your OneDrive work or school account for *FREE!*
 
-If you have files and folders on your computer or on a network drive, you can now use the [SharePoint Migration tool](https://aka.ms/SPMT-ODB-Page) to migrate that content to your own OneDrive for **FREE!**
 
-As an admin, you can also run the tool on behalf of your users.
+## Migration Manager
+Go to the [Migration Manager page in the new SharePoint admin center](https://aka.ms/ODSP-MM). Sign in with an account that has [admin permissions](/sharepoint/sharepoint-admin-role) for your organization.
 
-To learn more, see  [SharePoint and OneDrive Migration Tool](https://aka.ms/SPMT-ODB2). 
- <br><br>
+To learn more, see [Get started with Migration Manager](mm-get-started.md).
 
-**Microsoft FastTrack**
+## SharePoint Migration tool
 
-Additionally, Microsoft offers [Fast Track services](https://fasttrack.microsoft.com/about) that can help you migrate your files and folders not only from file shares, but also **Google Drive** and **Box**.
- <br><br>Interested in getting started? Visit [FastTrack.microsoft.com](https://fasttrack.microsoft.com/), review resources, and submit a Request for Assistance.
+[Download and install the SharePoint Migration Tool](https://aka.ms/SPMT-ODB-Page) for *FREE*.
 
-**Migration service providers**
+As an admin, you can also run the tool for your users. To learn more, see  [SharePoint and OneDrive Migration Tool](./introducing-the-sharepoint-migration-tool.md).
 
-You may decide that your organization has specific business needs that require you to use third-party services or applications to help you execute your migration. Explore the professional services and applications available from partners in the Microsoft Partner Center. There you can find experts to help you in your enterprise content migration to Office 365.  For more information see: [Microsoft Partner Center](https://partnercenter.microsoft.com/partner/home).
+## Microsoft FastTrack
 
+Microsoft offers [FastTrack](https://fasttrack.microsoft.com/about) service to help migrate your files and folders not only from file shares but also from *Google Drive* and *Box*.
+
+To get started, visit [FastTrack.microsoft.com](https://fasttrack.microsoft.com/). Sign in, review the available resources, and submit a request for assistance.
+
+## Migration service providers
+
+Your organization may have business needs that require you to use third-party services or applications to migrate enterprise content to Microsoft 365. Explore the professional services and applications available from the [Microsoft Partner Center](https://partnercenter.microsoft.com/partner/home).

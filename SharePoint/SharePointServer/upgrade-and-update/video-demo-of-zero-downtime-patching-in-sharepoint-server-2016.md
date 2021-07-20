@@ -1,14 +1,16 @@
 ---
 title: "Video demo of Zero Downtime Patching in SharePoint Server 2016"
 ms.reviewer: 
-ms.author: mikeplum
-author: MikePlumleyMSFT
-manager: pamgreen
+ms.author: serdars
+author: SerdarSoysal
+manager: serdars
 ms.date: 3/12/2018
 audience: ITPro
+f1.keywords:
+- NOCSH
 ms.topic: article
 ms.prod: sharepoint-server-itpro
-localization_priority: Priority
+localization_priority: Normal
 ms.collection:
 - IT_Sharepoint_Server
 - IT_Sharepoint_Server_Top
@@ -145,7 +147,7 @@ Get-AzureVM -ServiceName $svc -Name $vmname | Add-AzureEndpoint -Name $epname -L
 
 ```
 
-For additional information about the Microsoft PowerShell for Azure cmdlets, see [Get-AzureVM](https://msdn.microsoft.com/library/mt126007.aspx) and [Add-AzureEndpoint](https://msdn.microsoft.com/library/mt589127.aspx)
+For additional information about the Microsoft PowerShell for Azure cmdlets, see [Get-AzureVM](/previous-versions/azure/mt126007(v=azure.100)) and [Add-AzureEndpoint](https://msdn.microsoft.com/library/mt589127.aspx)
   
 ## Related Topics
 
@@ -154,5 +156,3 @@ For additional information about the Microsoft PowerShell for Azure cmdlets, see
 [SharePoint Server 2016 zero downtime patching steps](sharepoint-server-2016-zero-downtime-patching-steps.md)
   
 [Video: How to enable Remote Windows PowerShell to use with SharePoint Server](video-how-to-enable-remote-windows-powershell-to-use-with-sharepoint-server.md)
-  
-

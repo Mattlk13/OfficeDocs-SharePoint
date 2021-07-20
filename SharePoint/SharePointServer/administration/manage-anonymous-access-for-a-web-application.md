@@ -1,11 +1,13 @@
 ---
 title: "Manage anonymous access for a web application in SharePoint Server"
 ms.reviewer: 
-ms.author: mikeplum
-author: MikePlumleyMSFT
-manager: pamgreen
+ms.author: serdars
+author: SerdarSoysal
+manager: serdars
 ms.date: 7/6/2017
 audience: ITPro
+f1.keywords:
+- NOCSH
 ms.topic: article
 ms.prod: sharepoint-server-itpro
 localization_priority: Normal
@@ -49,7 +51,7 @@ Use the following procedure to configure anonymous access for a web application.
     
 7. In the **Policy** group of the ribbon, click **Anonymous Policy**.
     
-8. In the Anonymous Access Restrictions dialog box, in the ** Zone ** list, click the zone for which you want the policy to apply. 
+8. In the Anonymous Access Restrictions dialog, in the ** Zone ** list, click the zone for which you want the policy to apply. 
     
 9. In the **Permissions** section, select the permission policy that you want anonymous users to have, and then click **Save**.
     

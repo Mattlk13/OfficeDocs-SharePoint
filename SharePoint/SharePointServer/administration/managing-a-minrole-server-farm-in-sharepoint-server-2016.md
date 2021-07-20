@@ -1,11 +1,13 @@
 ---
 title: "Managing a MinRole Server Farm in SharePoint Servers 2016 and 2019"
 ms.reviewer: 
-ms.author: mikeplum
-author: MikePlumleyMSFT
-manager: pamgreen
+ms.author: serdars
+author: SerdarSoysal
+manager: serdars
 ms.date: 7/24/2018
 audience: ITPro
+f1.keywords:
+- NOCSH
 ms.topic: concetpual
 ms.prod: sharepoint-server-itpro
 localization_priority: Normal
@@ -132,12 +134,10 @@ If you are a SharePoint developer intending to create an application with servic
     
 4. Override the **ShouldProvision(SPServerRole serverRole)** method to assign this service to specific server roles if necessary. 
     
-For more information about how to subscribe a service to a specific role, see [SPService class](https://msdn.microsoft.com/elibrary/office/microsoft.sharepoint.administration.spservice.aspx) and [SPServiceInstance class](https://msdn.microsoft.com/library/office/microsoft.sharepoint.administration.spserviceinstance.aspx).
+For more information about how to subscribe a service to a specific role, see [SPService class](/previous-versions/office/sharepoint-server/ms474045(v=office.15)) and [SPServiceInstance class](/previous-versions/office/sharepoint-server/ms461328(v=office.15)).
   
  **Integrate with role conversion pre-validation**
   
 1. ﻿Implement the service instance class of the service by inheriting from the **SPServiceInstance** class. 
     
 2. ﻿Override the **IsReadyForRoleConversion(SPServerRole newRole, out IEnumerable\<string\> errorMessages)** method to detect if your service instance is ready for role conversion to the server role specified by the newRole parameter. Return **true** if it's ready or **false** if it isn't ready. If you return **false**, provide a list of messages to explain why ﻿the service instance isn't ready for role conversion and instructions for resolving the issue ﻿via the errorMessages parameter.
-    
-

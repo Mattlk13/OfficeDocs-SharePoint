@@ -1,11 +1,13 @@
 ---
 title: "Manage unused site collections in SharePoint Server"
 ms.reviewer: 
-ms.author: mikeplum
-author: MikePlumleyMSFT
-manager: pamgreen
+ms.author: serdars
+author: SerdarSoysal
+manager: serdars
 ms.date: 7/26/2017
 audience: ITPro
+f1.keywords:
+- NOCSH
 ms.topic: article
 ms.prod: sharepoint-server-itpro
 localization_priority: Normal
@@ -68,7 +70,7 @@ Use this procedure to manage unused site collections. You can follow these steps
     
 3. On the **Site Use Confirmation and Deletion** page, in the **Web Application** section, if the web application that you want to configure is not listed, expand the **Web Application** list, and then click **Change Web Application**.
     
-4. In the **Select Web Application** dialog box, click the web application that you want to configure. 
+4. In the **Select Web Application** dialog, click the web application that you want to configure. 
     
 5. In the **Confirmation and Automatic Deletion Settings** section: 
     

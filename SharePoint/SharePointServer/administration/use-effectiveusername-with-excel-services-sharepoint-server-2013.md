@@ -1,11 +1,13 @@
 ---
 title: "Use EffectiveUserName with Excel Services (SharePoint Server 2013)"
 ms.reviewer: 
-ms.author: mikeplum
-author: MikePlumleyMSFT
-manager: pamgreen
+ms.author: serdars
+author: SerdarSoysal
+manager: serdars
 ms.date: 7/7/2017
 audience: ITPro
+f1.keywords:
+- NOCSH
 ms.topic: article
 ms.prod: sharepoint-server-itpro
 localization_priority: Normal
@@ -33,7 +35,7 @@ Using the EffectiveUserName option allows passing the user's identity to SQL Ser
 
 Before starting, read the following information about permissions and software requirements.
   
-- This scenario assumes that you have Excel Services configured on your farm and an Excel Services trusted file location where you can save your report. For information about configuring Excel Services, see [Overview of Excel Services in SharePoint Server 2013](excel-services-overview.md) and [Configure Excel Services in SharePoint Server 2013 Preview](/SharePoint/administration/configure-excel-services). For information about configuring a trusted file location, see [Manage Excel Services trusted file locations (SharePoint Server 2013)](manage-excel-services-trusted-file-locations.md).
+- This scenario assumes that you have Excel Services configured on your farm and an Excel Services trusted file location where you can save your report. For information about configuring Excel Services, see [Overview of Excel Services in SharePoint Server 2013](excel-services-overview.md) and [Configure Excel Services in SharePoint Server 2013 Preview](./configure-excel-services.md). For information about configuring a trusted file location, see [Manage Excel Services trusted file locations (SharePoint Server 2013)](manage-excel-services-trusted-file-locations.md).
     
 - This scenario requires that you have Farm Administrator access to the SharePoint Server 2013 farm and administrator access to SQL Server Analysis Services.
     
@@ -147,7 +149,7 @@ In order for the EffectiveUserName feature to be used in a published report, the
     
 3. On the **Definition** tab, click **Authentication Settings**.
     
-4. On the **Excel Services Authentication Settings** dialog box, select the **Use the authenticated user's account** (Excel 2016) or **Windows Authentication** (Excel 2010) option, and then click **OK**.
+4. On the **Excel Services Authentication Settings** dialog, select the **Use the authenticated user's account** (Excel 2016) or **Windows Authentication** (Excel 2010) option, and then click **OK**.
     
 5. Click **OK** and then click **Close**.
     
@@ -164,8 +166,6 @@ When you have finished creating your report, the next step is to save it to a Sh
     
 3. Type the URL of the SharePoint document library where you want to save the file.
     
-4. Type a filename, and then click **Save**.
+4. Type a file name, and then click **Save**.
     
 Once the workbook has been saved to SharePoint Server 2013, you can render it using Excel Services and the data will refresh based on the refresh settings configured in the Excel Services trusted file location settings.
-  
-

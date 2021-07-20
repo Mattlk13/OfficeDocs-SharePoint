@@ -3,9 +3,12 @@ title: "Migration Assessment Scan External List"
 ms.reviewer: 
 ms.author: jhendr
 author: JoanneHendrickson
-manager: pamgreen
+manager: serdars
+recommendations: true
 ms.date: 12/6/2017
 audience: ITPro
+f1.keywords:
+- NOCSH
 ms.topic: article
 ms.service: sharepoint-online
 localization_priority: Normal
@@ -32,9 +35,9 @@ See [Migration Assessment Scan: BCS](migration-assessment-scan-bcs.md) for more 
   
 ## Preparing for Migration
 
-Build out a plan for the external lists. It is possible to configure Hybrid BCS to access on-premises data from SharePoint Online, but this will require some planning. 
+Build out a plan for the external lists. It is possible to configure Hybrid BCS to access on-premises data from SharePoint in Microsoft 365, but this will require some planning. 
   
-See[Migration Assessment Scan: BCS](migration-assessment-scan-bcs.md) for more information about BCS 
+See [Migration Assessment Scan: BCS](migration-assessment-scan-bcs.md) for more information about BCS 
   
 ## Post Migration
 

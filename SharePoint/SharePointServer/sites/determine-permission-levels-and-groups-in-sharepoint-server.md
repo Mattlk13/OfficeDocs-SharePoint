@@ -1,11 +1,13 @@
 ---
 title: "Determine permission levels and groups in SharePoint Server"
 ms.reviewer: 
-ms.author: mikeplum
-author: MikePlumleyMSFT
-manager: pamgreen
+ms.author: serdars
+author: SerdarSoysal
+manager: serdars
 ms.date: 8/17/2017
 audience: ITPro
+f1.keywords:
+- NOCSH
 ms.topic: concetpual
 ms.prod: sharepoint-server-itpro
 localization_priority: Normal
@@ -67,32 +69,32 @@ The ability to view, change, or manage a site is determined by the permission le
   
 By default, the following permission levels are available:
   
-- **View Only ** Includes permissions that enable users to view pages, list items, and documents. 
+- **View Only** Includes permissions that enable users to view pages, list items, and documents. 
     
-- **Limited Access ** Includes permissions that enable users to view specific lists, document libraries, list items, folders, or documents, without giving access to all the elements of a site. You cannot edit this permission level directly. 
+- **Limited Access** Includes permissions that enable users to view specific lists, document libraries, list items, folders, or documents, without giving access to all the elements of a site. You cannot edit this permission level directly. 
     
     > [!NOTE]
     > If this permission level is removed, group members might be unable to navigate the site to access items, even if they have the appropriate permissions for an item within the site. 
   
-- **Read ** Includes permissions that enable users to view items on the site pages. 
+- **Read** Includes permissions that enable users to view items on the site pages. 
     
-- **Edit ** Includes permissions that enable users to add, edit and delete lists; can view, add, update and delete list items and documents. 
+- **Edit** Includes permissions that enable users to add, edit and delete lists; can view, add, update and delete list items and documents. 
     
-- **Contribute ** Includes permissions that enable users to add or change items on the site pages or in lists and document libraries. 
+- **Contribute** Includes permissions that enable users to add or change items on the site pages or in lists and document libraries. 
     
-- **Design ** Includes permissions that enable users to view, add, update, delete, approve, and customize the layout of site pages by using the browser or SharePoint Designer 2013. 
+- **Design** Includes permissions that enable users to view, add, update, delete, approve, and customize the layout of site pages by using the browser or SharePoint Designer 2013. 
     
-- **Full Control ** Includes all permissions. 
+- **Full Control** Includes all permissions. 
     
 For more information about permissions that are included in the default permission levels, see [User permissions and permission levels in SharePoint 2013](user-permissions-and-permission-levels.md).
   
 The following additional permission levels are provided with the publishing template by default:
   
-- **Approve ** Includes permissions to edit and approve pages, list items, and documents. 
+- **Approve** Includes permissions to edit and approve pages, list items, and documents. 
     
-- **Manage Hierarchy ** Includes permissions to sites and edit pages, list items, and documents. 
+- **Manage Hierarchy** Includes permissions to sites and edit pages, list items, and documents. 
     
-- **Restricted Read ** Includes permissions to view pages and documents, but not historical versions or permissions information. 
+- **Restricted Read** Includes permissions to view pages and documents, but not historical versions or permissions information. 
     
 ## Determine whether you need custom permission levels or groups
 <a name="section3"> </a>
@@ -124,7 +126,7 @@ You should customize the default permission levels if either of the following si
 - A default permission level includes a permission that the users do not have to have.
     
     > [!NOTE]
-    > Do not customize the default permission levels if your organization has security or other concerns about a specific permission that is part of the permission level. If you want to make that permission unavailable for all users assigned to the permission level or levels that include that permission, turn off the permission for all Web applications in your server farm, instead of change all of the permission levels To manage permissions for a web application, see [Manage permissions for a web application in SharePoint Server](/SharePoint/administration/manage-permissions-for-a-web-application). 
+    > Do not customize the default permission levels if your organization has security or other concerns about a specific permission that is part of the permission level. If you want to make that permission unavailable for all users assigned to the permission level or levels that include that permission, turn off the permission for all Web applications in your server farm, instead of change all of the permission levels To manage permissions for a web application, see [Manage permissions for a web application in SharePoint Server](../administration/manage-permissions-for-a-web-application.md). 
   
 If you must make several changes to a permission level, create a custom permission level that includes all of the permissions that you need.
   
@@ -138,5 +140,3 @@ To create a permission level, you can create a permission level and then select 
   
 > [!NOTE]
 > Some permissions depend on other permissions. If you clear a permission that another permission depends on, the other permission is also cleared. 
-  
-

@@ -1,10 +1,12 @@
 ---
 title: "Default timer jobs in SharePoint 2013"
 ms.reviewer: 
-ms.author: mikeplum
-author: MikePlumleyMSFT
-manager: pamgreen
+ms.author: serdars
+author: SerdarSoysal
+manager: serdars
 audience: ITPro
+f1.keywords:
+- NOCSH
 ms.topic: reference
 ms.prod: sharepoint-server-itpro
 localization_priority: Normal
@@ -24,7 +26,7 @@ The following table lists the default timer jobs for SharePoint 2013.
   
 |**Timer job**|**Description**|**Default schedule**|
 |:-----|:-----|:-----|
-|Access Services monitor  <br/> |Monitors the connectivity of Access Services on SharePoint Online and SQL Azure.  <br/> |5 minutes  <br/> |
+|Access Services monitor  <br/> |Monitors the connectivity of Access Services on SharePoint and SQL Azure.  <br/> |5 minutes  <br/> |
 |Analytics Event Store Retention  <br/> |Periodically cleans up the Event Store and the Reporting Database. All data older than 14 days is removed from the Event Store whereas all data older than 3 years is removed from the Reporting Database.  <br/> |Weekly  <br/> |
 |Analytics for Search service application  <br/> |Periodically schedules analytics for the Search service application.  <br/> |10 minutes  <br/> |
 |App installation service  <br/> |Installs and uninstalls apps.  <br/> |5 minutes  <br/> |
@@ -145,7 +147,7 @@ The following table lists the default timer jobs for SharePoint 2013.
 |Spelling dictionary update  <br/> |Updates the dynamic dictionary that is used to correct the spelling of queries with changes in the indexed content.  <br/> **Note:** <br/> This is a time-consuming operation. Do not schedule it to run more frequently than one time per day.  <br/> |Daily  <br/> |
 |State Service delete expired sessions  <br/> |Deletes expired data that is stored in the state service databases.  <br/> |Hourly  <br/> |
 |Storage metrics processing  <br/> |Processes storage metrics changes for site collections.  <br/> |5 minutes  <br/> |
-|Taxonomy groups replication  <br/> |A timer job for hybrid connected servers that updates the local SharePoint Server term store with the latest term changes made to the Enterprise Metadata service in the hybrid connected SharePoint Online tenant.  <br/> |Daily  <br/> |
+|Taxonomy groups replication  <br/> |A timer job for hybrid connected servers that updates the local SharePoint Server term store with the latest term changes made to the Enterprise Metadata service in the hybrid connected SharePoint tenant.  <br/> |Daily  <br/> |
 |Taxonomy update scheduler  <br/> |Updates site collections with the latest term changes that were made to the Enterprise Metadata service.  <br/> |Hourly  <br/> |
 |Timer service recycle  <br/> |Recycles the Timer service to free resources.  <br/> |Daily  <br/> |
 |Translation Export Job Definition  <br/> |Exports page and list content to XLIFF for human translation or machine translation via the Machine Translation Service.  <br/> |15 minutes  <br/> |
@@ -161,7 +163,7 @@ The following table lists the default timer jobs for SharePoint 2013.
 |User Profile service application - system job to manage user profile synchronization  <br/> |Manages provisioning and runs additional tasks that are related to User Profile Synchronization.  <br/> **Note:** <br/> Do not change the information or frequency of this job. If you have to change how often incremental synchronization is performed, in Central Administration, go to the **Manage User Profile Service Application** page, and then in the **Synchronization** category, click **Schedule Incremental User Profile Synchronization**.  <br/> |1 minute  <br/> |
 |User Profile service application - user profile change  <br/> |Processes changes to user profiles. Changes the user profile. User rights can be migrated from one user to another user. This timer job is used when a user has to be migrated. But the previous user profile remains in AD DS.  <br/> |Hourly  <br/> |
 |User Profile service application - user profile change cleanup  <br/> |Cleans up data that is 14 days old from User Profile change log. Migrates user rights from one user to another user, and migrates the user rights and removes that user from Active Directory Domain Services (AD DS). This is mainly used when the name of a user is changed in AD DS. The older user name is replaced by a new user name, and the older one is removed from AD DS.  <br/> If you want to change retention settings, see the Profilechangelog: Stsadm operation in [Stsadm to Microsoft PowerShell mapping in SharePoint Server](stsadm-to-microsoft-powershell-mapping.md).  <br/> |Daily  <br/> |
-|User Profile service application - user profile incremental synchronization  <br/> |Runs at the specified interval to synchronize user, group and group membership changes between the User Profile service application and specified directory source (such as AD DS or Lightweight Directory Access Protocol (LDAP)). Synchronization will look for changes since the last time this job was run and only perform these changes for AD DS and LDAP sources.  <br/> **Note:** <br/> Do not change the settings or frequency of this timer job.  <br/> [Schedule profile synchronization](../administration/schedule-profile-synchronization.md) provides two sections: see the first section to learn how to change the schedule for incremental synchronization, see the second section to learn how to check the status of User Profile Synchronization timer jobs.  <br/> |Daily  <br/> |
+|User Profile service application - user profile incremental synchronization  <br/> |Runs at the specified interval to synchronize user, group and group membership changes between the User Profile service application and specified directory source (such as AD DS or Lightweight Directory Access Protocol (LDAP)). Synchronization will look for changes since the last time this job was run and only perform these changes for AD DS and LDAP sources.  <br/> **Note:** <br/> Do not change the settings or frequency of this timer job.  <br/> [Schedule profile synchronization](../administration/schedule-profile-synchronization.md) provides two sections: To learn how to change the schedule for incremental synchronization, see the first section; to learn how to check the status of User Profile Synchronization timer jobs, see the second section.  <br/> |Daily  <br/> |
 |User Profile service application - user profile language synchronization  <br/> |Looks for new language pack installations and makes sure that strings that relate to the user profile service are localized correctly.  <br/> |Hourly  <br/> |
 |User Profile service application proxy - feed cache repopulation  <br/> |Handles the repopulation of feed cache.  <br/> |5 minutes  <br/> |
 |User Profile service application proxy - social rating synchronization  <br/> |Synchronizes rating values between the social database and content database.  <br/> |Hourly  <br/> |

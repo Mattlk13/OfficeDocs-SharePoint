@@ -1,12 +1,14 @@
 ---
 title: "System requirements for SharePoint 2013"
 ms.reviewer: 
-ms.author: mikeplum
-author: MikePlumleyMSFT
-manager: pamgreen
+ms.author: serdars
+author: SerdarSoysal
+manager: serdars
 ms.date: 7/18/2017
 audience: ITPro
-ms.topic: concetpual
+f1.keywords:
+- NOCSH
+ms.topic: conceptual
 ms.prod: sharepoint-server-itpro
 localization_priority: Normal
 ms.collection:

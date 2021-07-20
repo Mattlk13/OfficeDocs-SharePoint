@@ -1,11 +1,13 @@
 ---
 title: "Technical reference for SharePoint Server"
 ms.reviewer: 
-ms.author: mikeplum
-author: MikePlumleyMSFT
-manager: pamgreen
+ms.author: serdars
+author: SerdarSoysal
+manager: serdars
 ms.date: 11/16/2017
 audience: ITPro
+f1.keywords:
+- NOCSH
 ms.topic: hub-page
 ms.prod: sharepoint-server-itpro
 localization_priority: Normal
@@ -43,5 +45,4 @@ The following technical reference articles about SharePoint Server are available
 
 #### Other Resources
 
-[Stsadm command-line tool (Office SharePoint Server)](https://go.microsoft.com/fwlink/p/?LinkID=186993)
-
+[Stsadm command-line tool (Office SharePoint Server)](/previous-versions/office/sharepoint-2007-products-and-technologies/cc261956(v=office.12))

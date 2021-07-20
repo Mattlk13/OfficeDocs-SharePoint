@@ -1,11 +1,13 @@
 ---
 title: "Overview of My Sites in SharePoint Server"
 ms.reviewer: 
-ms.author: mikeplum
-author: MikePlumleyMSFT
-manager: pamgreen
+ms.author: serdars
+author: SerdarSoysal
+manager: serdars
 ms.date: 8/1/2017
 audience: ITPro
+f1.keywords:
+- NOCSH
 ms.topic: concetpual
 ms.prod: sharepoint-server-itpro
 localization_priority: Normal
@@ -20,9 +22,9 @@ description: "Learn about the benefits and uses of My Sites in SharePoint Server
 
 [!INCLUDE[appliesto-2013-2016-2019-xxx-md](../includes/appliesto-2013-2016-2019-xxx-md.md)] 
   
-This article provides an overview of My Sites end-user functionality and benefits for consideration by enterprise business decision makers or SharePoint administrators. It does not discuss the architecture of My Sites or information about planning and configuring My Sites.
+This article provides an overview of My Sites end-user functionality and benefits for consideration by enterprise business decision makers or SharePoint admins. It does not discuss the architecture of My Sites or information about planning and configuring My Sites.
   
-If you are a SharePoint administrator who is responsible for configuring My Sites in your organization, use this article together with [Plan for My Sites in SharePoint Server](my-sites-planning.md) to understand and plan for My Sites. You can then use [Configure My Sites in SharePoint Server](configure-my-sites.md) to configure My Sites and [Plan user profiles in SharePoint Server](../administration/plan-user-profiles.md) to see how user profile setup can influence the information that is displayed in My Sites. 
+If you are a SharePoint admin who is responsible for configuring My Sites in your organization, use this article together with [Plan for My Sites in SharePoint Server](my-sites-planning.md) to understand and plan for My Sites. You can then use [Configure My Sites in SharePoint Server](configure-my-sites.md) to configure My Sites and [Plan user profiles in SharePoint Server](../administration/plan-user-profiles.md) to see how user profile setup can influence the information that is displayed in My Sites. 
   
 ## Uses and benefits of My Sites
 <a name="section1"> </a>
@@ -45,7 +47,7 @@ The default links on the left navigation bar that are visible to the owner of th
     
 - **Apps**
     
-When a user views another user's profile, the links on the left navigation bar are similar, but also include a link to **Documents** and **People**. The **Documents** link lets other users view the My Site owner's public documents stored on the owner's OneDrive for Business, and the **People** link displays the people whom the My Site owner is following. 
+When a user views another user's profile, the links on the left navigation bar are similar, but also include a link to **Documents** and **People**. The **Documents** link lets other users view the My Site owner's public documents stored on the owner's OneDrive, and the **People** link displays the people whom the My Site owner is following. 
   
 My Sites give users rich social networking and collaboration features, which enable users to explore and share interests, projects, business relationships, content, and other data with people in the organization.
   
@@ -72,9 +74,9 @@ The **Newsfeed** page contains the information shown in the following table.
    
 ### OneDrive
 
-The **OneDrive** tab or tile links to the user's OneDrive for Business. OneDrive for Business is the user's personal file storage and synchronization service for business use. 
+The **OneDrive** tab or tile links to the user's OneDrive. OneDrive is the user's personal file storage and synchronization service for business use. 
   
-The user's OneDrive for Business usually includes a private folder and a folder that is shared with everyone, or with specific people. For more information, see [Overview of OneDrive for Business in SharePoint Server](../sites/onedrive-for-business-overview.md).
+The user's OneDrive usually includes a private folder and a folder that is shared with everyone, or with specific people. For more information, see [Overview of OneDrive in SharePoint Server](../sites/onedrive-for-business-overview.md).
   
 ### Sites
 
@@ -124,5 +126,5 @@ The tasks can be viewed based on importance, status (active), whether they are c
   
 [Plan user profiles in SharePoint Server](../administration/plan-user-profiles.md)
   
-[Overview of OneDrive for Business in SharePoint Server](../sites/onedrive-for-business-overview.md)
+[Overview of OneDrive in SharePoint Server](../sites/onedrive-for-business-overview.md)
 

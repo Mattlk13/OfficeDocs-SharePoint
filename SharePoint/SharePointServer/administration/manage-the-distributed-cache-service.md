@@ -1,11 +1,13 @@
 ---
 title: "Manage the Distributed Cache service in SharePoint Server"
 ms.reviewer: 
-ms.author: mikeplum
-author: MikePlumleyMSFT
-manager: pamgreen
+ms.author: serdars
+author: SerdarSoysal
+manager: serdars
 ms.date: 12/5/2017
 audience: ITPro
+f1.keywords:
+- NOCSH
 ms.topic: article
 ms.prod: sharepoint-server-itpro
 localization_priority: Normal
@@ -170,7 +172,7 @@ Use the following PowerShell script to perform a graceful shutdown of the Distri
     
   - See [Add-SPShellAdmin](/powershell/module/sharepoint-server/Add-SPShellAdmin?view=sharepoint-ps).
     
-  - You must read [about_Execution_Policies](https://go.microsoft.com/fwlink/p/?LinkId=193050).
+  - You must read [about_Execution_Policies](/previous-versions//dd347641(v=technet.10)).
     
 2. Copy the following variable declarations, and paste them into a text editor such as Notepad. Set parameter values specific to your organization. Save the file, and name it GracefulShutdown.ps1.
     
@@ -247,7 +249,7 @@ Where  _Domain_name\user_name_ is the domain name and user name of the SharePoin
 **Monitoring**
 
 You can monitor performance counters on the Distributed Cache servers to get a better understanding of cache performance issues.
-Some of the [counters](https://docs.microsoft.com/previous-versions/appfabric/ff637725(v=azure.10)) that are typically useful to troubleshoot issues include:
+Some of the [counters](/previous-versions/appfabric/ff637725(v=azure.10)) that are typically useful to troubleshoot issues include:
 
 1. %cpu used up by cache service
 
@@ -274,12 +276,186 @@ The Distributed Cache service setting for **MaxConnectionsToServer** is often tu
     
   - See [Add-SPShellAdmin](/powershell/module/sharepoint-server/Add-SPShellAdmin?view=sharepoint-ps).
     
-  - You need to read [about_Execution_Policies](https://go.microsoft.com/fwlink/p/?LinkId=193050).
+  - You need to read [about_Execution_Policies](/previous-versions//dd347641(v=technet.10)).
     
 2. Copy the following variable declarations, and paste them into a text editor such as Notepad. Set parameter values specific to your organization. Save the file, and name it MaxConnections.ps1.
     
     > [!NOTE]
     > You can use a different file name, but you must save the file as an ANSI-encoded text file with the extension .ps1. 
+ 
+ 
+**SharePoint Server 2019 PowerShell script**
+  ```
+  Add-PSSnapin Microsoft.Sharepoint.Powershell -ea 0
+
+  #DistributedLogonTokenCache
+  $DLTC = Get-SPDistributedCacheClientSetting -ContainerType DistributedLogonTokenCache
+  $DLTC.MaxConnectionsToServer = 1
+  $DLTC.requestTimeout = "3000"
+  $DLTC.channelOpenTimeOut = "3000"
+  Set-SPDistributedCacheClientSetting -ContainerType DistributedLogonTokenCache $DLTC
+
+  #DistributedViewStateCache
+  $DVSC = Get-SPDistributedCacheClientSetting -ContainerType DistributedViewStateCache
+  $DVSC.MaxConnectionsToServer = 1
+  $DVSC.requestTimeout = "3000"
+  $DVSC.channelOpenTimeOut = "3000"
+  Set-SPDistributedCacheClientSetting -ContainerType DistributedViewStateCache $DVSC
+
+  #DistributedAccessCache
+  $DAC = Get-SPDistributedCacheClientSetting -ContainerType DistributedAccessCache
+  $DAC.MaxConnectionsToServer = 1
+  $DAC.requestTimeout = "3000"
+  $DAC.channelOpenTimeOut = "3000"
+  Set-SPDistributedCacheClientSetting -ContainerType DistributedAccessCache $DAC
+
+  #DistributedActivityFeedCache
+  $DAF = Get-SPDistributedCacheClientSetting -ContainerType DistributedActivityFeedCache
+  $DAF.MaxConnectionsToServer = 1
+  $DAF.requestTimeout = "3000"
+  $DAF.channelOpenTimeOut = "3000"
+  Set-SPDistributedCacheClientSetting -ContainerType DistributedActivityFeedCache $DAF
+
+  #DistributedActivityFeedLMTCache
+  $DAFC = Get-SPDistributedCacheClientSetting -ContainerType DistributedActivityFeedLMTCache
+  $DAFC.MaxConnectionsToServer = 1
+  $DAFC.requestTimeout = "3000"
+  $DAFC.channelOpenTimeOut = "3000"
+  Set-SPDistributedCacheClientSetting -ContainerType DistributedActivityFeedLMTCache $DAFC
+
+  #DistributedBouncerCache
+  $DBC = Get-SPDistributedCacheClientSetting -ContainerType DistributedBouncerCache
+  $DBC.MaxConnectionsToServer = 1
+  $DBC.requestTimeout = "3000"
+  $DBC.channelOpenTimeOut = "3000"
+  Set-SPDistributedCacheClientSetting -ContainerType DistributedBouncerCache $DBC
+
+  #DistributedDefaultCache
+  $DDC = Get-SPDistributedCacheClientSetting -ContainerType DistributedDefaultCache
+  $DDC.MaxConnectionsToServer = 1
+  $DDC.requestTimeout = "3000"
+  $DDC.channelOpenTimeOut = "3000"
+  Set-SPDistributedCacheClientSetting -ContainerType DistributedDefaultCache $DDC
+
+  #DistributedSearchCache
+  $DSC = Get-SPDistributedCacheClientSetting -ContainerType DistributedSearchCache
+  $DSC.MaxConnectionsToServer = 1
+  $DSC.requestTimeout = "3000"
+  $DSC.channelOpenTimeOut = "3000"
+  Set-SPDistributedCacheClientSetting -ContainerType DistributedSearchCache $DSC
+
+  #DistributedSecurityTrimmingCache
+  $DTC = Get-SPDistributedCacheClientSetting -ContainerType DistributedSecurityTrimmingCache
+  $DTC.MaxConnectionsToServer = 1
+  $DTC.requestTimeout = "3000"
+  $DTC.channelOpenTimeOut = "3000"
+  Set-SPDistributedCacheClientSetting -ContainerType DistributedSecurityTrimmingCache $DTC
+
+  #DistributedServerToAppServerAccessTokenCache
+  $DSTAC = Get-SPDistributedCacheClientSetting -ContainerType DistributedServerToAppServerAccessTokenCache
+  $DSTAC.MaxConnectionsToServer = 1
+  $DSTAC.requestTimeout = "3000"
+  $DSTAC.channelOpenTimeOut = "3000"
+  Set-SPDistributedCacheClientSetting -ContainerType DistributedServerToAppServerAccessTokenCache $DSTAC
+
+  #DistributedFileLockThrottlerCache
+  $DFLTC = Get-SPDistributedCacheClientSetting -ContainerType DistributedFileLockThrottlerCache
+  $DFLTC.MaxConnectionsToServer = 1
+  $DFLTC.requestTimeout = "3000"
+  $DFLTC.channelOpenTimeOut = "3000"
+  Set-SPDistributedCacheClientSetting -ContainerType DistributedFileLockThrottlerCache $DFLTC
+
+  #DistributedSharedWithUserCache
+  $DSWUC = Get-SPDistributedCacheClientSetting -ContainerType DistributedSharedWithUserCache
+  $DSWUC.MaxConnectionsToServer = 1
+  $DSWUC.requestTimeout = "3000"
+  $DSWUC.channelOpenTimeOut = "3000"
+  Set-SPDistributedCacheClientSetting -ContainerType DistributedSharedWithUserCache $DSWUC
+
+  #DistributedUnifiedGroupsCache
+  $DUGC = Get-SPDistributedCacheClientSetting -ContainerType DistributedUnifiedGroupsCache
+  $DUGC.MaxConnectionsToServer = 1
+  $DUGC.requestTimeout = "3000"
+  $DUGC.channelOpenTimeOut = "3000"
+  Set-SPDistributedCacheClientSetting -ContainerType DistributedUnifiedGroupsCache $DUGC 
+
+  #DistributedResourceTallyCache
+  $DRTC = Get-SPDistributedCacheClientSetting -ContainerType DistributedResourceTallyCache
+  $DRTC.MaxConnectionsToServer = 1
+  $DRTC.requestTimeout = "3000"
+  $DRTC.channelOpenTimeOut = "3000"
+  Set-SPDistributedCacheClientSetting -ContainerType DistributedResourceTallyCache $DRTC
+
+  #DistributedHealthScoreCache
+  $DHSC = Get-SPDistributedCacheClientSetting -ContainerType DistributedHealthScoreCache
+  $DHSC.MaxConnectionsToServer = 1
+  $DHSC.requestTimeout = "3000"
+  $DHSC.channelOpenTimeOut = "3000"
+  Set-SPDistributedCacheClientSetting -ContainerType DistributedHealthScoreCache $DHSC  
+  
+  #DistributedDbLevelFailoverCache
+  $DDBFC = Get-SPDistributedCacheClientSetting -ContainerType DistributedDbLevelFailoverCache
+  $DDBFC.MaxConnectionsToServer = 1
+  $DDBFC.requestTimeout = "3000"
+  $DDBFC.channelOpenTimeOut = "3000"
+  Set-SPDistributedCacheClientSetting -ContainerType DistributedDbLevelFailoverCache $DDBFC
+
+  #DistributedEdgeHeaderCache
+  $DEHC = Get-SPDistributedCacheClientSetting -ContainerType DistributedEdgeHeaderCache
+  $DEHC.MaxConnectionsToServer = 1
+  $DEHC.requestTimeout = "3000"
+  $DEHC.channelOpenTimeOut = "3000"
+  Set-SPDistributedCacheClientSetting -ContainerType DistributedEdgeHeaderCache $DEHC
+
+  #DistributedFileStorePerformanceTraceCache
+  $DFSPTC = Get-SPDistributedCacheClientSetting -ContainerType DistributedFileStorePerformanceTraceCache
+  $DFSPTC.MaxConnectionsToServer = 1
+  $DFSPTC.requestTimeout = "3000"
+  $DFSPTC.channelOpenTimeOut = "3000"
+  Set-SPDistributedCacheClientSetting -ContainerType DistributedFileStorePerformanceTraceCache $DFSPTC
+
+  #DistributedSPAbsBlobCache
+  $DSPABSC = Get-SPDistributedCacheClientSetting -ContainerType DistributedSPAbsBlobCache
+  $DSPABSC.MaxConnectionsToServer = 1
+  $DSPABSC.requestTimeout = "3000"
+  $DSPABSC.channelOpenTimeOut = "3000"
+  Set-SPDistributedCacheClientSetting -ContainerType DistributedSPAbsBlobCache $DSPABSC
+
+  #DistributedSPCertificateValidatorCache
+  $DSPCVC = Get-SPDistributedCacheClientSetting -ContainerType DistributedSPCertificateValidatorCache
+  $DSPCVC.MaxConnectionsToServer = 1
+  $DSPCVC.requestTimeout = "3000"
+  $DSPCVC.channelOpenTimeOut = "3000"
+  Set-SPDistributedCacheClientSetting -ContainerType DistributedSPCertificateValidatorCache $DSPCVC
+
+  #DistributedSPOAuthTokenCache
+  $DSPOATC = Get-SPDistributedCacheClientSetting -ContainerType DistributedSPOAuthTokenCache
+  $DSPOATC.MaxConnectionsToServer = 1
+  $DSPOATC.requestTimeout = "3000"
+  $DSPOATC.channelOpenTimeOut = "3000"
+  Set-SPDistributedCacheClientSetting -ContainerType DistributedSPOAuthTokenCache $DSPOATC
+
+  #DistributedStopgapCache
+  $DSGC = Get-SPDistributedCacheClientSetting -ContainerType DistributedStopgapCache
+  $DSGC.MaxConnectionsToServer = 1
+  $DSGC.requestTimeout = "3000"
+  $DSGC.channelOpenTimeOut = "3000"
+  Set-SPDistributedCacheClientSetting -ContainerType DistributedStopgapCache $DSGC
+
+  #DistributedUnifiedAppsCache
+  $DUAC = Get-SPDistributedCacheClientSetting -ContainerType DistributedUnifiedAppsCache
+  $DUAC.MaxConnectionsToServer = 1
+  $DUAC.requestTimeout = "3000"
+  $DUAC.channelOpenTimeOut = "3000"
+  Set-SPDistributedCacheClientSetting -ContainerType DistributedUnifiedAppsCache $DUAC
+
+  #DistributedUnifiedAuditCache
+  $DHSC = Get-SPDistributedCacheClientSetting -ContainerType DistributedUnifiedAuditCache
+  $DHSC.MaxConnectionsToServer = 1
+  $DHSC.requestTimeout = "3000"
+  $DHSC.channelOpenTimeOut = "3000"
+  Set-SPDistributedCacheClientSetting -ContainerType DistributedUnifiedAuditCache $DHSC
+  ```
   
   **SharePoint Server 2016 PowerShell script**
   ```
@@ -390,8 +566,8 @@ The Distributed Cache service setting for **MaxConnectionsToServer** is often tu
   $DHSC.channelOpenTimeOut = "3000"
   Set-SPDistributedCacheClientSetting -ContainerType DistributedHealthScoreCache $DHSC  
   ```
-  **SharePoint Server 2013 PowerShell script**
-
+ 
+ **SharePoint Server 2013 PowerShell script**
   ```
   Add-PSSnapin Microsoft.Sharepoint.Powershell -ea 0
 
@@ -475,7 +651,7 @@ The Distributed Cache service setting for **MaxConnectionsToServer** is often tu
   ./MaxConnections.ps1
   ```
 
-For more information, see [Application Configuration Settings (Windows Server AppFabric Caching)](https://go.microsoft.com/fwlink/?LinkID=614970&amp;clcid=0x409). For additional information about Windows PowerShell scripts and .ps1 files, see [Running Windows PowerShell Scripts](/previous-versions/windows/it-pro/windows-powershell-1.0/ee176949(v=technet.10)).
+For more information, see [Application Configuration Settings (Windows Server AppFabric Caching)](/previous-versions/appfabric/ee790816(v=azure.10)). For additional information about Windows PowerShell scripts and .ps1 files, see [Running Windows PowerShell Scripts](/previous-versions/windows/it-pro/windows-powershell-1.0/ee176949(v=technet.10)).
     
 ## Repair a cache host
 <a name="repair"> </a>
@@ -516,4 +692,3 @@ On the non-functioning Distributed Cache host, use the following procedures to r
 #### Concepts
 
 [Plan for feeds and the Distributed Cache service in SharePoint Server](plan-for-feeds-and-the-distributed-cache-service.md)
-

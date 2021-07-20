@@ -1,11 +1,13 @@
 ---
 title: "Upgrade service applications to SharePoint Server 2019"
 ms.reviewer: 
-ms.author: mikeplum
-author: MikePlumleyMSFT
-manager: pamgreen
+ms.author: serdars
+author: SerdarSoysal
+manager: serdars
 ms.date: 7/24/2018
 audience: ITPro
+f1.keywords:
+- NOCSH
 ms.topic: get-started-article
 ms.prod: sharepoint-server-itpro
 localization_priority: Normal
@@ -520,7 +522,7 @@ To upgrade the User Profile service application, you copy the Profile and Social
     
 6. Create the User Profile service application proxy and add it to the default proxy group by completing these actions:
     
-    - Type the following command to get the ID for the Search service application and store it as a variable:
+    - Type the following command to get the ID for the User Profile service application and store it as a variable:
     
       ```
       $sa = Get-SPServiceApplication | ?{$_.TypeName -eq 'User Profile Service Application'}
@@ -528,10 +530,10 @@ To upgrade the User Profile service application, you copy the Profile and Social
 
       For more information, see [Get-SPServiceApplication](/powershell/module/sharepoint-server/get-spserviceapplication?view=sharepoint-ps).        
     
-    - Type the following command to create a proxy for the Search service application:
+    - Type the following command to create a proxy for the User Profile service application:
     
       ```
-      New-SPProfileServiceApplicationProxy -Name ProxyName -ServiceApplication $sa
+      New-SPProfileServiceApplicationProxy -Name 'User Profile Service Application Proxy' -ServiceApplication $sa
       ```
 
         Where:
@@ -544,7 +546,7 @@ To upgrade the User Profile service application, you copy the Profile and Social
     
        For more information, see [New-SPProfileServiceApplicationProxy](/powershell/module/sharepoint-server/new-spprofileserviceapplicationproxy?view=sharepoint-ps).
     
-    - Type the following command to get the Search service application proxy ID for the proxy you just created and set it as the variable $ssap:
+    - Type the following command to get the User Profile service application proxy ID for the proxy you just created and set it as the variable $proxy:
     
       ```
       $proxy = Get-SPServiceApplicationProxy | ?{$_.TypeName -eq 'User Profile Service Application Proxy'}
@@ -744,11 +746,11 @@ SharePoint Server 2019 normally creates a new search topology with all the searc
     
 11. (Optional) Preserve search relevance settings from the SharePoint Server 2016 farm. Because the upgraded Search service application has a new, empty index, search analytics data from the SharePoint Server 2016 farm cannot be fully retained. Copy the Analytics Reporting database from the SharePoint Server 2016 farm and attach it to the new Search service application in the SharePoint Server 2019 farm:
     
-      - In the SharePoint Server 2016 farm, [backup](/SharePoint/administration/move-or-rename-service-application-databases#Backup) the Analytics Reporting database. 
+      - In the SharePoint Server 2016 farm, [backup](../administration/move-or-rename-service-application-databases.md#Backup) the Analytics Reporting database. 
         
-      - In the SharePoint Server 2019 farm, [restore the backed up database](/SharePoint/administration/move-or-rename-service-application-databases#Restore) to the new database server. 
+      - In the SharePoint Server 2019 farm, [restore the backed up database](../administration/move-or-rename-service-application-databases.md#Restore) to the new database server. 
         
-      - In the SharePoint Server 2019 farm, [attach the restored database](/SharePoint/administration/move-or-rename-service-application-databases#PS) to the new Search service application. 
+      - In the SharePoint Server 2019 farm, [attach the restored database](../administration/move-or-rename-service-application-databases.md#PS) to the new Search service application. 
     
 12. Verify that the search topology on the new SharePoint Server 2019 farm is alike that of the SharePoint Server 2016 farm. If your requirements for search have changed, now is a good time to scale out the search topology of the new SharePoint Server 2019 farm.
     

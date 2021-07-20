@@ -3,8 +3,10 @@ title: "Change a specific user's OneDrive storage space"
 ms.reviewer: waynewin
 ms.author: kaarins
 author: kaarins
-manager: pamgreen
+manager: serdars
 audience: Admin
+f1.keywords:
+- NOCSH
 ms.topic: article
 ms.service: one-drive
 localization_priority: Normal
@@ -15,38 +17,106 @@ search.appverid:
 ms.collection: 
 - Strat_OD_admin
 - M365-collaboration
+ms.custom:
+- seo-marvel-apr2020
 ms.assetid: 7448173d-a38c-48cf-acbb-09ac1b6237d4
-description: "Learn how to change a user's OneDrive storage space by using PowerShell."
+description: In this article, you'll learn how to change a user's OneDrive storage space.
 ---
 
 # Change a specific user's OneDrive storage space
 
-As a global or SharePoint admin in Office 365, you can set the OneDrive storage space for a specific user by using Microsoft PowerShell.
+As a global or SharePoint admin in Microsoft 365, you can set the OneDrive storage space for a specific user.
   
 > [!NOTE]
-> For info about setting the default storage space, see [Set the default storage space for OneDrive users](set-default-storage-space.md). For info about the storage available for your Office 365 plan, see the [OneDrive for Business service description](https://go.microsoft.com/fwlink/?linkid=826071).
-  
-## Change the storage space for a specific user's OneDrive
+> For info about setting the default storage space, see [Set the default storage space for OneDrive users](set-default-storage-space.md). For info about the storage available for your Microsoft 365 subscription, see the [OneDrive service description](/office365/servicedescriptions/onedrive-for-business-service-description).
+
+> [!NOTE]
+> If your organization is configured for multi-geo, you need to use PowerShell to change a user's OneDrive storage space. Editing storage limits isn't available in the Microsoft 365 admin center.  
+
+## Change a user's storage space in the Microsoft 365 admin center
+
+1. Sign in to https://admin.microsoft.com as a global or SharePoint admin. (If you see a message that you don't have permission to access the page, you don't have Microsoft 365 admin permissions in your organization.)
+    
+    > [!NOTE]
+    > If you have Office 365 Germany, sign in at https://portal.office.de. If you have Office 365 operated by 21Vianet (China), sign in at https://login.partner.microsoftonline.cn/. Then select the Admin tile to open the admin center.
+    
+2. In the left pane, select **Users** \> **Active users**.
+
+3. Select the user.
+
+4. Select the **OneDrive** tab.
+
+5. Under **Storage used** click **Edit**.
+
+6. Select the **Maximum storage for this user** option, and type the storage limit that you want to use.
+
+7. Click **Save**.
+    
+    ![Screenshot of the OneDrive storage settings in the Microsoft 365 admin center](media/edit-user-storage-limit.png)
+
+When you need cloud storage for individual users beyond the initial 5 TB, additional cloud storage will be granted as follows:
+
+When a user has filled their 5 TB of OneDrive storage to at least 90% capacity, Microsoft will increase your default storage space in OneDrive to up to 25 TB per user (admins may set a lower per-user limit if they want to).
+
+For any user that reaches at least 90% capacity of their 25 TB of OneDrive storage, additional cloud storage will be provided as 25 TB SharePoint team sites to individual users. 
+
+Admins can [open a case with Microsoft technical support](/microsoft-365/admin/contact-support-for-business-products) to request storage beyond 5 TB.
+    
+    
+## Change a user's storage space by using PowerShell
 
 1. [Download the latest SharePoint Online Management Shell](https://go.microsoft.com/fwlink/p/?LinkId=255251).
 
     > [!NOTE]
-    > If you installed a previous version of the SharePoint Online Management Shell, go to Add or remove programs and uninstall "SharePoint Online Management Shell." <br>On the Download Center page, select your language and then click the Download button. You'll be asked to choose between downloading a x64 and x86 .msi file. Download the x64 file if you're running the 64-bit version of Windows or the x86 file if you're running the 32-bit version. If you don't know, see https://support.microsoft.com/help/13443/windows-which-operating-system. After the file downloads, run it and follow the steps in the Setup Wizard.
+    > If you installed a previous version of the SharePoint Online Management Shell, go to Add or remove programs and uninstall "SharePoint Online Management Shell."
 
-2. Connect to SharePoint Online as a global admin or SharePoint admin in Office 365. To learn how, see [Getting started with SharePoint Online Management Shell](/powershell/sharepoint/sharepoint-online/connect-sharepoint-online).
+2. Save the following script as a PowerShell file. For example, you could save it to a file named UpdateOneDriveStorage.ps1.
     
-3. Run the following command:
-    
-      ```PowerShell
-      Set-SPOSite -Identity <user's OneDrive URL> -StorageQuota <quota>
-      ```
+    ```PowerShell
+    $TenantUrl = Read-Host "Enter the SharePoint admin center URL" 
+    Connect-SPOService -Url $TenantUrl 
+ 
+    $OneDriveSite = Read-Host "Enter the OneDrive Site URL" 
+    $OneDriveStorageQuota = Read-Host "Enter the OneDrive Storage Quota in MB" 
+    $OneDriveStorageQuotaWarningLevel = Read-Host "Enter the OneDrive Storage Quota Warning Level in MB" 
+    Set-SPOSite -Identity $OneDriveSite -StorageQuota $OneDriveStorageQuota -StorageQuotaWarningLevel $OneDriveStorageQuotaWarningLevel 
+    Write-Host "Done" 
+    ```
 
-      (Where  _\<user's OneDrive URL\>_ is the URL of the user's OneDrive and  _\<quota\>_ is the value in megabytes for the storage space.
+3. Open the SharePoint Online Management Shell. Run the script in the location you saved it.
 
-      A user's OneDrive URL is based on their username. For example,     
-      https://microsoft-my.sharepoint.com/personal/user1_contoso_com. You can find their username on the Active users (or Deleted users) page in the Microsoft 365 admin center.
-
-      For storage space, you would enter 1048576 for 1 TB or 5242880 for 5 TB. 1024 MB (1 GB) is the minimum. If you enter a lower value, it will be rounded up. If you specify a value greater than that allowed by a user's license, the value will be rounded down to the maximum value allowed by their license.
+    ```PowerShell
+    PS C:\>.\ UpdateOneDriveStorage.ps1
+    ```
 
     > [!NOTE]
-    > If you want to change the storage space for multiple users, you can use PowerShell to [Display a list of OneDrive accounts by using PowerShell](list-onedrive-urls.md). To disable OneDrive creation for specific users, see [Manage user profiles in the SharePoint admin center](/sharepoint/manage-user-profiles).
+    > If you get an error message about being unable to run scripts, you might need to change your execution policies. For more info about PowerShell execution policies, see [About Execution Policies](/powershell/module/microsoft.powershell.core/about/about_execution_policies?view=powershell-7.1&preserve-view=true).
+    
+4. When prompted, enter the SharePoint admin center URL. For example, `https://contoso-admin.sharepoint.com` is the Contoso SharePoint admin center URL.
+
+5. Sign in as a global or SharePoint admin in Microsoft 365.
+
+6. Enter the OneDrive site URL: For example, `https://contoso-my.sharepoint.com/personal/user_contoso_onmicrosoft_com`.
+
+7. Enter the OneDrive Storage Quota in MB.
+
+8. Enter the OneDrive Storage Quota Warning Level in MB.
+
+   | MB  | TB |
+   | ------------- | ------------- |
+   | 1048576 | 1  |
+   | 2097152 | 2  |
+   | 3145728 | 3  |
+   | 4194304 | 4 |
+   | 5242880 | 5 |
+   | 6291456 | 6 |
+   | 7340032 | 7 |
+   | 8388608 | 8 |
+   | 9437184 | 9 |
+   | 10485760 | 10 |
+
+
+> [!NOTE]
+> To change the storage space for multiple users, use PowerShell to [Display a list of OneDrive accounts by using PowerShell](list-onedrive-urls.md) and use [Set-SPOSite](/powershell/module/sharepoint-online/set-sposite?preserve-view=true&view=sharepoint-ps) to make the change.
+> 
+> To disable OneDrive creation for specific users, see [Manage user profiles in the SharePoint admin center](/sharepoint/manage-user-profiles).

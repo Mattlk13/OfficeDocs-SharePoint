@@ -1,11 +1,13 @@
 ---
 title: "Enable TLS 1.1 and TLS 1.2 support in SharePoint Server 2016"
 ms.reviewer: 
-ms.author: mikeplum
-author: MikePlumleyMSFT
-manager: pamgreen
+ms.author: serdars
+author: SerdarSoysal
+manager: serdars
 ms.date: 6/29/2017
 audience: ITPro
+f1.keywords:
+- NOCSH
 ms.topic: article
 ms.prod: sharepoint-server-itpro
 localization_priority: Normal
@@ -488,7 +490,7 @@ To install the WinHTTP KB update, follow the instructions from the KB article [U
     
 2. Copy, and then paste the following text.
     
-    **For 64-bit operating system**
+  **For 64-bit operating system**
     
   ```
   Windows Registry Editor Version 5.00
@@ -498,7 +500,7 @@ To install the WinHTTP KB update, follow the instructions from the KB article [U
   "DefaultSecureProtocols"=dword:00000A80
   ```
 
-    For **32-bit operating system**
+  **For 32-bit operating system**
     
   ```
   [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Internet Settings\WinHttp]
@@ -572,7 +574,7 @@ Microsoft has released an optional security update for .NET Framework 4.5, 4.5.1
     
 2. Copy, and then paste the following text.
     
-    **For 64-bit operating system**
+  **For 64-bit operating system**
     
   ```
   Windows Registry Editor Version 5.00
@@ -582,7 +584,7 @@ Microsoft has released an optional security update for .NET Framework 4.5, 4.5.1
   "SchUseStrongCrypto"=dword:00000001
   ```
 
-    **For 32-bit operating system**
+  **For 32-bit operating system**
     
   ```
   [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework\v4.0.30319]
@@ -644,7 +646,7 @@ No update needs to be installed. Configure the Windows Registry keys as describe
     
 2. Copy, and then paste the following text.
     
-    **For 64-bit operating system**
+  **For 64-bit operating system**
     
   ```
   Windows Registry Editor Version 5.00
@@ -654,7 +656,7 @@ No update needs to be installed. Configure the Windows Registry keys as describe
   "SystemDefaultTlsVersions"=dword:00000001
   ```
 
-    **For 32-bit operating system**
+  **For 32-bit operating system**
     
   ```
   [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework\v2.0.50727]
@@ -694,7 +696,7 @@ To enable strong cryptography in .NET Framework 3.5 on Windows 8.1 and Windows S
     
 2. Copy, and then paste the following text.
     
-    **For 64-bit operating system**
+  **For 64-bit operating system**
     
   ```
   Windows Registry Editor Version 5.00
@@ -704,7 +706,7 @@ To enable strong cryptography in .NET Framework 3.5 on Windows 8.1 and Windows S
   "SchUseStrongCrypto"=dword:00000001
   ```
 
-    **For 32-bit operating system**
+  **For 32-bit operating system**
     
   ```
   [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework\v2.0.50727]

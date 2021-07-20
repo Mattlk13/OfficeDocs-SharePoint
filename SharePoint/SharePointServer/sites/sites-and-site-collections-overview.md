@@ -1,10 +1,12 @@
 ---
 title: "Overview of sites and site collections in SharePoint Server"
 ms.reviewer: 
-ms.author: mikeplum
-author: MikePlumleyMSFT
-manager: pamgreen
+ms.author: serdars
+author: SerdarSoysal
+manager: serdars
 audience: ITPro
+f1.keywords:
+- NOCSH
 ms.topic: article
 ms.prod: sharepoint-server-itpro
 localization_priority: Normal
@@ -26,7 +28,7 @@ A site collection is made up of one top-level site and all sites below it. As sh
 
 ![Diagram of a site collection](../media/DiagramOfSiteCollection.gif)
   
-The SharePoint Server 2019 modern experience is similar to the experience in SharePoint Online. The main difference is Hub sites aren't available in SharePoint Server. We do recommend that you use the same process as in SharePoint Online, create site collections for each unit of work instead of creating subsites. This will make it easier when migrating your SharePoint farm to SharePoint Online.
+The SharePoint Server 2019 modern experience is similar to the experience in SharePoint in Microsoft 365. The main difference is Hub sites aren't available in SharePoint Server. We do recommend that you use the same process as in SharePoint in Microsoft 365, create site collections for each unit of work instead of creating subsites. This will make it easier when migrating your SharePoint farm to SharePoint in Microsoft 365.
 
 The following guidelines show the relationship between SharePoint Server sites and site collections, and content databases:
   
@@ -42,11 +44,11 @@ The following guidelines show the relationship between SharePoint Server sites a
 ## Overview of SharePoint site collections
 <a name="section1"> </a>
 
-You create a site collection to host sites that have something in common. For example, the sites might be in a common administrative boundary or share common branding. The site collection might be created to house all the sites and content for a business unit. Or, a single site collection might have become too large to manage, and it must be split into smaller ones. Lastly, some site collections are created exclusively to host specific SharePoint Server functionality, such as Enterprise Search Center or to host My Sites. Site collections are a way of organizing sites for a common purpose. We recommend ahat you create site collections for each unit of work instead of creating subsites.
+You create a site collection to host sites that have something in common. For example, the sites might be in a common administrative boundary or share common branding. The site collection might be created to house all the sites and content for a business unit. Or, a single site collection might have become too large to manage, and it must be split into smaller ones. Lastly, some site collections are created exclusively to host specific SharePoint Server functionality, such as Enterprise Search Center or to host My Sites. Site collections are a way of organizing sites for a common purpose. We recommend that you create site collections for each unit of work instead of creating subsites.
   
 SharePoint Server supports two types of site collections: host-named site collections and path-based site collections. In a path-based site collection, all the subsites in the site collection will share a root or parent URL (DNS name). For example, Team A could have a site collection at http<!-- nolink -->://contoso.com/sites/teamA, and Team B would have a site collection at http<!-- nolink -->://contoso/sites/teamB. All sites in either site collection would have the http<!-- nolink -->://contoso.com/sites/teamA or /teamB root. The only way to have a different URL root is to create a different web application.
   
-To better align with SharePoint Online best practices, you should use host-named site collections. Host-named site collections allow you to assign custom names to each site collection that you create in a web application. For example, you can have two site collections in the same web application addressed like this: http<!-- nolink -->://TeamA.contoso.com and http<!-- nolink -->://TeamB.contoso.com. This is much more scalable and has been heavily tested in SharePoint Online.
+To better align with SharePoint best practices, you should use host-named site collections. Host-named site collections allow you to assign custom names to each site collection that you create in a web application. For example, you can have two site collections in the same web application addressed like this: http<!-- nolink -->://TeamA.contoso.com and http<!-- nolink -->://TeamB.contoso.com. This is much more scalable and has been heavily tested in SharePoint.
   
 Because site collections and sites exist in a parent-child relationship, there are aspects of control and functionality that can be configured at the site collection level and used at the site level. This provides many benefits as follows:
   
@@ -54,7 +56,7 @@ Because site collections and sites exist in a parent-child relationship, there a
     
 - For site collection administrators, a site collection provides a unified mechanism and scope for administration. For example, security, policies, and features can be managed for a whole site collection; Site Collection Web Analytics Reports, audit log reports, and other data can help administrators track site collection security and performance.
 
-  SharePoint Server 2019 offers the choice to create modern Team and Communication sites like in SharePoint Online, or keep the classic experience. Using the modern experience site collections is inline with our recommendation to create site collections for each unit of work to make it easier when you decide to migrate to SharePoint Online.     
+  SharePoint Server 2019 offers the choice to create modern Team and Communication sites like in SharePoint in Microsoft 365, or keep the classic experience. Using the modern experience site collections is inline with our recommendation to create site collections for each unit of work to make it easier when you decide to migrate to SharePoint.
     
 - For farm administrators, site collections can be moved between content databases. By doing this, farm administrators can manage the size of their content databases.
     
@@ -79,10 +81,10 @@ Every site collection starts as a single, top-level site. Because it is a site, 
 |**Enterprise** <br/> |Records Center  <br/> |This template creates a site designed for records management. Records managers can configure the routing table to direct incoming files to specific locations. The site also lets you manage whether records can be deleted or modified after they are added to the repository.  <br/> |Site collection and site  <br/> |
 |**Enterprise** <br/> |Business Intelligence Center  <br/> |A site for presenting Business Intelligence content.  <br/> |Site collection and site  <br/> |
 |**Enterprise** <br/> |Compliance Policy Center  <br/> |A site to manage policies and delete documents after specified times.  <br/> |Site collection and site  <br/> |
-|**Enterprise** <br/> |Enterprise Search Center  <br/> |A site focused on delivering an enterprise-wide search experience.  <br/> **Note:** <br/> Search Centers should be separate site collections because they search for information across a company portal or division. If you create a Search Center as a subsite, you might have to create some workarounds for a full customization. For more information, see [Customizing the Search Center](https://go.microsoft.com/fwlink/p/?LinkID=194624&amp;clcid=0x409).  <br/> |Site collection and site  <br/> |
+|**Enterprise** <br/> |Enterprise Search Center  <br/> |A site focused on delivering an enterprise-wide search experience.  <br/> **Note:** <br/> Search Centers should be separate site collections because they search for information across a company portal or division. If you create a Search Center as a subsite, you might have to create some workarounds for a full customization. For more info, see [Customizing the Search Center](/previous-versions/office/developer/sharepoint-2010/ee872308(v=office.14)).  <br/> |Site collection and site  <br/> |
 |**Enterprise** <br/> |My Site Host  <br/> |A site used for hosting personal sites (My Sites) and the public People Profile page.  <br/> |Site collection only  <br/> |
 |**Enterprise** <br/> |Community Portal  <br/> |A site for discovering communities.  <br/> |Site collection only  <br/> |
-|**Enterprise** <br/> |Basic Search Center  <br/> |A site focused on delivering a basic search experience. It includes a welcome page with a search box that connects users to a search results page and an advanced search page. This Search Center will not appear in navigation.  <br/> **Note:** <br/> Search Centers should be separate site collections because they search for information across a company portal or division. If you create a Search Center as a subsite, you might have to create some workarounds for a full customization. For more information, see [Customizing the Search Center](https://go.microsoft.com/fwlink/p/?LinkID=194624).  <br/> |Site collection and site  <br/> |
+|**Enterprise** <br/> |Basic Search Center  <br/> |A site focused on delivering a basic search experience. It includes a welcome page with a search box that connects users to a search results page and an advanced search page. This Search Center will not appear in navigation.  <br/> **Note:** <br/> Search Centers should be separate site collections because they search for information across a company portal or division. If you create a Search Center as a subsite, you might have to create some workarounds for a full customization. For more info, see [Customizing the Search Center](/previous-versions/office/developer/sharepoint-2010/ee872308(v=office.14)).  <br/> |Site collection and site  <br/> |
 |**Enterprise** <br/> |Visio Process Repository  <br/> |A site for viewing, sharing, and storing Visio process diagrams. It includes a versioned document library and templates for Basic Flowcharts, Cross-functional Flowcharts, and BPMN diagrams.  <br/> **Note:** <br/> The Visio Process Repository site template will be removed in the next version of SharePoint Server.  <br/> |Site collection and site  <br/> |
 |**Publishing** <br/> |Publishing Portal  <br/> |A starter hierarchy for an Internet-facing site or a large intranet portal. This site can be customized easily with distinctive branding. Typically, this site has many more readers than contributors and it is used to publish web pages with approval workflows.  <br/> |Site collection only  <br/> |
 |**Publishing** <br/> |Enterprise Wiki  <br/> |A site for publishing knowledge that you capture and want to share across the enterprise.  <br/> |Site collection and site  <br/> |
@@ -105,10 +107,10 @@ The following table describes the 2013 experience version site templates that ar
 |**eDiscovery Center** <br/> ||A site to manage the preservation, search, and export of content for legal matters and investigations.  <br/> |Site collection only, Server only  <br/> |
 |**Records Center** <br/> ||This template creates a site designed for records management. Records managers can configure the routing table to direct incoming files to specific locations. The site also lets you manage whether records can be deleted or modified after they are added to the repository.  <br/> |Site collection and site, Server only  <br/> |
 |**Business Intelligence Center** <br/> ||A site for presenting Business Intelligence content.  <br/> |Site collection and site, Server only  <br/> |
-|**Enterprise Search Center** <br/> ||A site focused on delivering an enterprise-wide search experience.  <br/> **Note:** <br/> Search Centers should be separate site collections because they search for information across a company portal or division. If you create a Search Center as a subsite, you might have to create some workarounds for a full customization. For more information, see [Customizing the Search Center](https://go.microsoft.com/fwlink/p/?LinkID=194624&amp;clcid=0x409) in the MSDN Library.  <br/> |Site collection and site, Server only  <br/> |
+|**Enterprise Search Center** <br/> ||A site focused on delivering an enterprise-wide search experience.  <br/> **Note:** <br/> Search Centers should be separate site collections because they search for information across a company portal or division. If you create a Search Center as a subsite, you might have to create some workarounds for a full customization. For more information, see [Customizing the Search Center](/previous-versions/office/developer/sharepoint-2010/ee872308(v=office.14)) in the MSDN Library.  <br/> |Site collection and site, Server only  <br/> |
 |**My Site Host** <br/> ||A site used for hosting personal sites (My Sites) and the public People Profile page.  <br/> |Site collection only, Server only  <br/> |
 |**Community Portal** <br/> ||A site for discovering communities.  <br/> |Site collection only, Server only  <br/> |
-|**Basic Search Center** <br/> ||A site focused on delivering a basic search experience. It includes a welcome page with a search box that connects users to a search results page and an advanced search page. This Search Center will not appear in navigation.  <br/> **Note:** <br/> Search Centers should be separate site collections because they search for information across a company portal or division. If you create a Search Center as a subsite, you might have to create some workarounds for a full customization. For more information, see [Customizing the Search Center](https://go.microsoft.com/fwlink/p/?LinkID=194624) in the MSDN Library.  <br/> |Site collection and site, Server and Foundation  <br/> |
+|**Basic Search Center** <br/> ||A site focused on delivering a basic search experience. It includes a welcome page with a search box that connects users to a search results page and an advanced search page. This Search Center will not appear in navigation.  <br/> **Note:** <br/> Search Centers should be separate site collections because they search for information across a company portal or division. If you create a Search Center as a subsite, you might have to create some workarounds for a full customization. For more information, see [Customizing the Search Center](/previous-versions/office/developer/sharepoint-2010/ee872308(v=office.14)) in the MSDN Library.  <br/> |Site collection and site, Server and Foundation  <br/> |
 |**Visio Process Repository** <br/> ||A site for viewing, sharing, and storing Visio process diagrams. It includes a versioned document library and templates for Basic Flowcharts, Cross-functional Flowcharts, and BPMN diagrams.  <br/> **Note:** <br/> The Visio Process Repository site template will be removed in the next version of SharePoint Server.  <br/> |Site collection and site, Server only  <br/> |
 |**Publishing** <br/> |Publishing Portal  <br/> |A starter hierarchy for an Internet-facing site or a large intranet portal. This site can be customized easily with distinctive branding. Typically, this site has many more readers than contributors and it is used to publish web pages with approval workflows.  <br/> |Site collection only, Server only  <br/> |
 |**Enterprise Wiki** <br/> ||A site for publishing knowledge that you capture and want to share across the enterprise.  <br/> |Site collection and site, Server only  <br/> |
@@ -209,4 +211,3 @@ You can configure the following items for a site:
 [Overview of site navigation in SharePoint Server](site-navigation-overview.md)
   
 [Overview of site policies in SharePoint Server](site-policy-overview.md)
-

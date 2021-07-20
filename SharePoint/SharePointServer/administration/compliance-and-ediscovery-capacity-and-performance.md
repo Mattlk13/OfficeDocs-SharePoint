@@ -1,11 +1,13 @@
 ---
 title: "Estimate capacity and performance for compliance and eDiscovery for SharePoint Server 2013"
 ms.reviewer: 
-ms.author: jhendr
-author: JoanneHendrickson
-manager: pamgreen
+ms.author: serdars
+author: SerdarSoysal
+manager: serdars
 ms.date: 8/25/2017
 audience: ITPro
+f1.keywords:
+- NOCSH
 ms.topic: article
 ms.prod: sharepoint-server-itpro
 localization_priority: Normal
@@ -53,7 +55,7 @@ Note that the effect of export on Exchange Server 2013 may be different. Exchang
 ## Large-scale document repositories with SharePoint Server 2013
 <a name="export"> </a>
 
-Aside from the compliance and eDiscovery features, the SharePoint Server 2013 large scale document repositories feature has not changed significantly from SharePoint Server 2010. In this section we refer to [Scale test report for very large scale document repositories (SharePoint Server 2010)](https://go.microsoft.com/fwlink/p/?LinkId=403866), and point out differences for scenarios that involve SharePoint Server 2013 document repositories. The following sections summarize the main differences.
+Aside from the compliance and eDiscovery features, the SharePoint Server 2013 large scale document repositories feature has not changed significantly from SharePoint Server 2010. In this section we refer to [Scale test report for very large scale document repositories (SharePoint Server 2010)](/previous-versions/office/sharepoint-server-2010/hh867542(v=office.14)), and point out differences for scenarios that involve SharePoint Server 2013 document repositories. The following sections summarize the main differences.
   
 ### Guidance for putting interactive service applications on front-end web servers
 
@@ -82,4 +84,3 @@ Column limits are updated in SharePoint Server 2013. For more information, see [
   
   
 [Configure eDiscovery in SharePoint Server](../governance/configure-ediscovery-0.md)
-

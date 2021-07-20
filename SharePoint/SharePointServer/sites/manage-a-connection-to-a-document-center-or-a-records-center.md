@@ -1,10 +1,12 @@
 ---
 title: "Manage a connection to a document center or a records center in SharePoint Server"
 ms.reviewer: 
-ms.author: mikeplum
-author: MikePlumleyMSFT
-manager: pamgreen
+ms.author: serdars
+author: SerdarSoysal
+manager: serdars
 audience: ITPro
+f1.keywords:
+- NOCSH
 ms.topic: article
 ms.prod: sharepoint-server-itpro
 localization_priority: Normal
@@ -59,7 +61,7 @@ Use this procedure to create a connection to a document repository or a records 
     
    - **Move and Leave a Link** Select this option to delete the document from its current location, move it to the destination repository, and leave a link at the current location indicating that the document has been moved. When a user clicks this link, a page will appear that displays the URL of the document and the document's metadata. 
     
-10. In the **Explanation** dialog box, type the information to be added to the audit log when the user sends a document by using this connection. If you selected **Move and Leave a Link** in the previous step, the page that appears when the user clicks the link will also display the explanation. 
+10. In the **Explanation** dialog, type the information to be added to the audit log when the user sends a document by using this connection. If you selected **Move and Leave a Link** in the previous step, the page that appears when the user clicks the link will also display the explanation. 
     
 11. Click **Add Connection** to create the connection, and then click **OK** when you are finished configuring connections. 
     
@@ -110,5 +112,4 @@ Use this procedure to delete an existing connection to a document repository or 
 [Manage site collections in SharePoint Server](manage-site-collections.md)
 #### Other Resources
 
-[Manage site collections and global settings in the SharePoint admin center](https://go.microsoft.com/fwlink/?linkid=845346)
-
+[SharePoint planning guide](../../SharePointOnline/planning-guide.md)

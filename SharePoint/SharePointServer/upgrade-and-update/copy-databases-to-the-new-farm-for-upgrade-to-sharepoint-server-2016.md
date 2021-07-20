@@ -1,11 +1,13 @@
 ---
 title: "Copy databases to the new farm for upgrade to SharePoint Server 2016"
 ms.reviewer: 
-ms.author: mikeplum
-author: MikePlumleyMSFT
-manager: pamgreen
+ms.author: serdars
+author: SerdarSoysal
+manager: serdars
 ms.date: 5/30/2017
 audience: ITPro
+f1.keywords:
+- NOCSH
 ms.topic: get-started-article
 ms.prod: sharepoint-server-itpro
 localization_priority: Normal
@@ -49,7 +51,7 @@ Before you copy the databases, review the following information and take any rec
 To maintain user access to your original environment, set the SharePoint Server 2013 databases to read-only before you back up the databases. Even if you don't want to maintain access over the long term, set the databases to read-only to make sure that you capture all the data in the backup so that you restore and upgrade the current state of the environment without allowing additional changes to be made. If the databases are set to read-only, users can continue to view content. However, they will be unable to add or change content. 
   
 > [!NOTE]
-> Don't set search databases to read-only at this point. It's best not to interrupt the search experience until you're ready to upgrade the Search service applications. You will handle these databases when you [upgrade service applications](/SharePoint/upgrade-and-update/upgrade-service-applications-to-sharepoint-server-2016) (the fourth phase in the process to upgrade SharePoint Server 2013 data and sites to SharePoint Server 2016). 
+> Don't set search databases to read-only at this point. It's best not to interrupt the search experience until you're ready to upgrade the Search service applications. You will handle these databases when you [upgrade service applications](./upgrade-service-applications-to-sharepoint-server-2016.md) (the fourth phase in the process to upgrade SharePoint Server 2013 data and sites to SharePoint Server 2016). 
   
 > [!IMPORTANT]
 > Perform this step in the SharePoint Server 2013 environment. 
@@ -62,11 +64,11 @@ To maintain user access to your original environment, set the SharePoint Server 
     
 3. Find the database that you want to configure to be read-only, right-click the database, and then click **Properties**.
     
-4. In the **Database Properties** dialog box, in the **Select a page** section, click **Options**.
+4. In the **Database Properties** dialog, in the **Select a page** section, click **Options**.
     
 5. In the details pane, under **Other options**, in the **State** section, next to **Database Read-Only**, click the arrow, and then select **True**.
     
-You can use Transact-SQL to configure the **READ_ONLY** database availability option. For more information about how to use the **SET** clause of the **ALTER DATABASE** statement, see [Setting Database Options](https://go.microsoft.com/fwlink/p/?LinkId=148362).
+You can use Transact-SQL to configure the **READ_ONLY** database availability option. For more information about how to use the **SET** clause of the **ALTER DATABASE** statement, see [Setting Database Options](/previous-versions/sql/sql-server-2008-r2/ms190249(v=sql.105)).
   
 ## Back up the SharePoint Server 2013 databases by using SQL Server tools
 <a name="backup"> </a>
@@ -99,7 +101,7 @@ After you complete this procedure, you will have created backups of the read-onl
     
 3. Right-click the database that you want to back up, point to **Tasks**, and then click **Back Up**. 
     
-    The **Back Up Database** dialog box appears. 
+    The **Back Up Database** dialog appears. 
     
 4. In the **Source** area, in the **Database** box, verify the database name. 
     
@@ -136,9 +138,9 @@ After you configure the new SharePoint Server 2016 server farm, you can restore 
     
 3. Right-click **Databases**, and then click **Restore Database**. 
     
-    The **Restore Database** dialog box appears. 
+    The **Restore Database** dialog appears. 
     
-4. In the **Restore Database** dialog box, on the **General** page, type the name of the database to be restored in the **To database** list. 
+4. In the **Restore Database** dialog, on the **General** page, type the name of the database to be restored in the **To database** list. 
     
     > [!TIP]
     > When you type the name for the restored database, you do not have to use the original name. If you want to change the database name from a name with a long GUID to a shorter, friendlier name, this is an opportunity to make that change. Be sure to also change the database and log file names in the file system (the MDF and LDF files) so that they match. 
@@ -147,15 +149,15 @@ After you configure the new SharePoint Server 2016 server farm, you can restore 
     
 6. To specify the source and location of the backup sets to restore, click **From device**, and then use the ellipsis ( **...**) to select the backup file.
     
-7. In the **Specify Backup** dialog box, in the **Backup media** box, be sure that **File** is selected. 
+7. In the **Specify Backup** dialog, in the **Backup media** box, be sure that **File** is selected. 
     
 8. In the **Backup location** area, click **Add**.
     
-9. In the **Locate Backup File** dialog box, select the file that you want to restore, click **OK**, and then, in the **Specify Backup** dialog box, click **OK**.
+9. In the **Locate Backup File** dialog, select the file that you want to restore, click **OK**, and then, in the **Specify Backup** dialog, click **OK**.
     
-10. In the **Restore Database** dialog box, under **Select the backup sets to restore** grid, select the **Restore** check box next to the most recent full backup. 
+10. In the **Restore Database** dialog, under **Select the backup sets to restore** grid, select the **Restore** check box next to the most recent full backup. 
     
-11. In the **Restore Database** dialog box, on the **Options** page, under **Restore options**, select the **Overwrite the existing database** check box. 
+11. In the **Restore Database** dialog, on the **Options** page, under **Restore options**, select the **Overwrite the existing database** check box. 
     
 12. Click **OK** to start the restore process. 
     
@@ -173,7 +175,7 @@ You cannot upgrade a database that is set to read-only. You must set the databas
     
 2. Select the database that you want to configure to be read-write, right-click the database, and then click **Properties**.
     
-3. In the **Database Properties** dialog box, in the **Select a page** section, click **Options**.
+3. In the **Database Properties** dialog, in the **Select a page** section, click **Options**.
     
 4. In the details pane, under **Other options**, in the **State** section, next to **Database Read-Only**, click the arrow, and then select **False**.
     
@@ -191,4 +193,3 @@ You cannot upgrade a database that is set to read-only. You must set the databas
 [Upgrade service applications to SharePoint Server 2016](upgrade-service-applications-to-sharepoint-server-2016.md)
   
 [Upgrade content databases to SharePoint Server 2016](upgrade-content-databases.md)
-

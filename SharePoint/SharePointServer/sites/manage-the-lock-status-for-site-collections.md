@@ -1,10 +1,12 @@
 ---
 title: "Manage the lock status for site collections in SharePoint Server"
 ms.reviewer: 
-ms.author: mikeplum
-author: MikePlumleyMSFT
-manager: pamgreen
+ms.author: serdars
+author: SerdarSoysal
+manager: serdars
 audience: ITPro
+f1.keywords:
+- NOCSH
 ms.topic: article
 ms.prod: sharepoint-server-itpro
 localization_priority: Normal
@@ -104,4 +106,4 @@ Use this procedure to lock or unlock a site collection by using PowerShell.
 
 #### Other Resources
 
-[Manage site collections and global settings in the SharePoint admin center](https://go.microsoft.com/fwlink/?linkid=845346)
+[SharePoint planning guide](../../SharePointOnline/planning-guide.md)

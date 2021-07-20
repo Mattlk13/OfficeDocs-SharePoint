@@ -3,9 +3,12 @@ title: "Migration Assessment Scan Site Notebook"
 ms.reviewer: 
 ms.author: jhendr
 author: JoanneHendrickson
-manager: pamgreen
+manager: serdars
+recommendations: true
 ms.date: 7/23/2018
 audience: ITPro
+f1.keywords:
+- NOCSH
 ms.topic: article
 ms.service: sharepoint-online
 localization_priority: Priority
@@ -23,7 +26,7 @@ ms.custom:
 ## Overview
 
 SharePoint 2013 and later support a feature called Site Notebook. This SharePoint feature is activated on the site and will generate a OneNote in the Site Assets library of the web. The file will be named with the title of the site.
-Depending on the migration tools being used your Site Notebook will migrate. However, the name of the Site Notebook in SharePoint Online is different from the name of the file in the OnPremises environment. As a result, links referencing the original file name will be broken. This report will provide a list of OneNote files that match the following scenario:
+Depending on the migration tools being used, your Site Notebook will migrate. However, the name of the Site Notebook in SharePoint in Microsoft 365 is different from the name of the file in the on-premises environment. As a result, links referencing the original file name will be broken. This report will provide a list of OneNote files that match the following scenario:
 	• OneNote Notebook files
 	• Exist in the Site Assets library
 	• Have a name that ends in Notebook

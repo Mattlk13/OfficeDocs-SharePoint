@@ -1,10 +1,12 @@
 ---
 title: "Configure SQL Server security for SharePoint Server"
 ms.reviewer: 
-ms.author: mikeplum
-author: MikePlumleyMSFT
-manager: pamgreen
+ms.author: serdars
+author: SerdarSoysal
+manager: serdars
 audience: ITPro
+f1.keywords:
+- NOCSH
 ms.topic: get-started-article
 ms.prod: sharepoint-server-itpro
 localization_priority: Normal
@@ -22,7 +24,7 @@ description: "Learn how to improve the security of SQL Server for SharePoint Ser
 When you install SQL Server, the default settings help to provide a safe database. In addition, you can use SQL Server tools and Windows Firewall to add additional security to SQL Server for SharePoint Server environments. 
   
 > [!IMPORTANT]
-> The security steps in this topic are fully tested by the SharePoint team. There are other ways to help secure SQL Server in a SharePoint Server farm. For more information, see [Securing SQL Server](https://go.microsoft.com/fwlink/?linkid=865827). 
+> The security steps in this topic are fully tested by the SharePoint team. There are other ways to help secure SQL Server in a SharePoint Server farm. For more information, see [Securing SQL Server](/sql/relational-databases/security/securing-sql-server). 
   
     
 ## Before you begin
@@ -110,7 +112,7 @@ SQL Server provides the ability to reassign the ports that are used by the defau
 ## Blocking default SQL Server listening ports
 <a name="proc2"> </a>
 
-Windows Firewall with Advanced Security uses Inbound Rules and Outbound Rules to help secure incoming and outgoing network traffic. Because Windows Firewall blocks all incoming unsolicited network traffic by default, you do not have to explicitly block the default SQL Server listening ports. For more information, see [Windows Firewall with Advanced Security](https://go.microsoft.com/fwlink/p/?LinkID=718056&amp;clcid=0x409) and [Configuring the Windows Firewall to Allow SQL Server Access](https://go.microsoft.com/fwlink/p/?LinkID=718059&amp;clcid=0x409).
+Windows Firewall with Advanced Security uses Inbound Rules and Outbound Rules to help secure incoming and outgoing network traffic. Because Windows Firewall blocks all incoming unsolicited network traffic by default, you do not have to explicitly block the default SQL Server listening ports. For more information, see [Windows Firewall with Advanced Security](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831365(v=ws.11)) and [Configuring the Windows Firewall to Allow SQL Server Access](/sql/sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access?viewFallbackFrom=sql-server-2014).
   
 ## Configuring Windows Firewall to open manually assigned ports
 <a name="proc3"> </a>
@@ -123,7 +125,7 @@ To access a SQL Server instance through a firewall, you must configure the firew
     
 2. In **Control Panel**, open **System and Security**.
     
-3. Click **Windows Firewall**, and then click **Advanced Settings** to open the **Windows Firewall with Advanced Security** dialog box. 
+3. Click **Windows Firewall**, and then click **Advanced Settings** to open the **Windows Firewall with Advanced Security** dialog. 
     
 4. In the navigation pane, click **Inbound Rules** to display the available options in the **Actions** pane. 
     
@@ -132,7 +134,7 @@ To access a SQL Server instance through a firewall, you must configure the firew
 6. Use the wizard to complete the steps that are required to allow access to the port that you defined in [Configuring a SQL Server instance to listen on a non-default port](#proc1).
     
     > [!NOTE]
-    > You can configure the Internet Protocol security (IPsec) to help secure communication to and from your computer that is running SQL Server by configuring the Windows firewall. You do this by selecting **Connection Security Rules** in the navigation pane of the Windows Firewall with Advanced Security dialog box. 
+    > You can configure the Internet Protocol security (IPsec) to help secure communication to and from your computer that is running SQL Server by configuring the Windows firewall. You do this by selecting **Connection Security Rules** in the navigation pane of the Windows Firewall with Advanced Security dialog. 
   
 ## Configuring SQL Server client aliases
 <a name="proc4"> </a>
@@ -155,7 +157,7 @@ If you block UDP port 1434 or TCP port 1433 on the computer that is running SQL 
     
 5. In the main window under Items, right-click **Aliases**, and select **New Alias**.
     
-6. In the **Alias - New** dialog box, in the **Alias Name** field, enter a name for the alias. For example, enter SharePoint  __alias_.
+6. In the **Alias - New** dialog, in the **Alias Name** field, enter a name for the alias. For example, enter SharePoint  __alias_.
     
 7. In the **Port No** field, enter the port number for the database instance. For example, enter 40000. Make sure that the protocol is set to TCP/IP. 
     
@@ -176,13 +178,12 @@ If you block UDP port 1434 or TCP port 1433 on the computer that is running SQL 
 
 #### Other Resources
 
-[SQL Server Security Blog](https://blogs.msdn.microsoft.com/sqlsecurity/)
+[SQL Server Security Blog](/archive/blogs/sqlsecurity/)
 
 [SQL Vulnerability Assessment](/sql/relational-databases/security/sql-vulnerability-assessment?view=sql-server-2017)
   
-[Securing SharePoint: Harden SQL Server in SharePoint Environments](https://blogs.technet.com/b/rycampbe/archive/2013/10/14/securing-sharepoint-harden-sql-server-in-sharepoint-environments.aspx)
+[Securing SharePoint: Harden SQL Server in SharePoint Environments](/archive/blogs/rycampbe/securing-sharepoint-harden-sql-server-in-sharepoint-environments)
   
-[Configure a Windows Firewall for Database Engine Access](https://go.microsoft.com/fwlink/p/?LinkID=718060&amp;clcid=0x409)
+[Configure a Windows Firewall for Database Engine Access](/sql/database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access?viewFallbackFrom=sql-server-2014)
   
-[Configure a Server to Listen on a Specific TCP Port (SQL Server Configuration Manager)](https://go.microsoft.com/fwlink/p/?LinkID=718061&amp;clcid=0x409)
-
+[Configure a Server to Listen on a Specific TCP Port (SQL Server Configuration Manager)](/sql/database-engine/configure-windows/configure-a-server-to-listen-on-a-specific-tcp-port?viewFallbackFrom=sql-server-2014)

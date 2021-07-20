@@ -1,11 +1,13 @@
 ---
 title: "Plan Visio Services security in SharePoint Server"
 ms.reviewer: 
-ms.author: mikeplum
-author: MikePlumleyMSFT
-manager: pamgreen
+ms.author: serdars
+author: SerdarSoysal
+manager: serdars
 ms.date: 7/6/2017
 audience: ITPro
+f1.keywords:
+- NOCSH
 ms.topic: concetpual
 ms.prod: sharepoint-server-itpro
 localization_priority: Normal
@@ -73,5 +75,4 @@ In a larger server farm it is likely that Visio diagrams will use a mix of the a
 
 #### Other Resources
 
-[Secure Store for Business Intelligence service applications](/SharePoint/administration/secure-store-for-business-intelligence-service-applications)
-
+[Secure Store for Business Intelligence service applications](./secure-store-for-business-intelligence-service-applications.md)

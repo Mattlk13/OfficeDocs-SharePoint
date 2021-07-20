@@ -1,11 +1,13 @@
 ---
 title: "Configure Excel Services data refresh by using embedded data connections in SharePoint Server 2013"
 ms.reviewer: 
-ms.author: mikeplum
-author: MikePlumleyMSFT
-manager: pamgreen
+ms.author: serdars
+author: SerdarSoysal
+manager: serdars
 ms.date: 7/14/2017
 audience: ITPro
+f1.keywords:
+- NOCSH
 ms.topic: article
 ms.prod: sharepoint-server-itpro
 localization_priority: Normal
@@ -23,7 +25,7 @@ Excel Services in SharePoint Server 2013 supports three methods of using Secure 
     
 - You can use an unattended service account. For more information, see [Configure Excel Services data refresh by using the unattended service account in SharePoint Server 2016](configure-the-unattended-service-account-0.md).
     
-- You can use an Office Data Connection (ODC) file that specifies a Secure Store target application. For more information, see [Configure Excel Services data refresh by using external data connections](/SharePoint/administration/excel-services-overview).
+- You can use an Office Data Connection (ODC) file that specifies a Secure Store target application. For more information, see [Configure Excel Services data refresh by using external data connections](./excel-services-overview.md).
     
 To configure Excel Services data access to use embedded data connections, you use the following process:
   
@@ -127,21 +129,21 @@ You must configure the Excel Services Authentication Settings in the workbook be
   
 1. In a data-connected Excel workbook, on the **Data** tab, click **Connections**.
     
-2. On the **Workbook Connections** dialog box, select the data connection that you want to update, and then click **Properties**.
+2. On the **Workbook Connections** dialog, select the data connection that you want to update, and then click **Properties**.
     
-3. On the **Connection Properties** dialog box, on the **Definition** tab, click **Authentication Settings**.
+3. On the **Connection Properties** dialog, on the **Definition** tab, click **Authentication Settings**.
     
-4. On the **Excel Services Authentication Settings** dialog box, select the **Use a stored account** option, type the Application ID of the target application in the text box, and then click **OK**.
+4. On the **Excel Services Authentication Settings** dialog, select the **Use a stored account** option, type the Application ID of the target application in the text box, and then click **OK**.
     
     > [!NOTE]
     > If you are using Excel 2010, select the **SSS** option. 
   
-5. On the **Connection Properties** dialog box, click **OK**.
+5. On the **Connection Properties** dialog, click **OK**.
     
     > [!NOTE]
     > If you see a warning that the link to the external connection file will be removed, click **Yes**. 
   
-6. On the Workbook Connections dialog box, click **Close**.
+6. On the Workbook Connections dialog, click **Close**.
     
 With the target application specified in the Excel Services Authentication Settings, Excel Services uses the credentials associated with that target application to refresh the data in the workbook after you have published it to SharePoint Server 2013.
   
@@ -151,4 +153,3 @@ With the target application specified in the Excel Services Authentication Setti
 #### Concepts
 
 [Configure the Secure Store Service in SharePoint Server](configure-the-secure-store-service.md)
-

@@ -3,9 +3,12 @@ title: "Introduction to managed metadata"
 ms.reviewer: vrchowdh
 ms.author: mikeplum
 author: MikePlumleyMSFT
-manager: pamgreen
+manager: serdars
+recommendations: true
 ms.date: 5/22/2018
 audience: End User
+f1.keywords:
+- CSH
 ms.topic: overview
 ms.service: sharepoint-online
 localization_priority: Normal
@@ -15,7 +18,8 @@ search.appverid:
 - SPO160
 - MET150
 ms.assetid: a180fa28-6405-4679-9ec3-81d2028c4efc
-description: "Learn about managed metadata to enable enhanced search and navigation, creating terms that become document attributes and let users progressively refine search parameters."
+description: Managed metadata enables enhanced search and navigation, creating terms that become document attributes and let users progressively refine search parameters.
+ms.custom: seo-marvel-apr2020
 ---
 
 # Introduction to managed metadata
@@ -56,7 +60,7 @@ A Term set is a group of related terms.
   
 Terms sets can have different scope, depending on where you create the term set.
   
-- **Local term sets** are created within the context of a site collection, and are available for use (and visible) only to users of that site collection. For example, when you create a term set for a metadata column in a list or library, then the term set is local. It is available only in the site collection that contains this list or library. For example, a media library might have a metadata column that shows the kind of media (diagram, photograph, screen shot, video, etc.). The list of permitted terms is relevant only to this library, and available for use in the library. 
+- **Local term sets** are created within the context of a site collection, and are available for use (and visible) only to users of that site collection. For example, when you create a term set for a metadata column in a list or library, then the term set is local. It is available only in the site collection that contains this list or library. For example, a media library might have a metadata column that shows the kind of media (diagram, photograph, screenshot, video, etc.). The list of permitted terms is relevant only to this library, and available for use in the library. 
     
 - **Global term sets** are available for use across all sites that subscribe to a specific Managed Metadata Service application. For example, an organization might create a term set that lists names of business units in the organization, such as Human Resources, Marketing, Information Technology, and so on. 
     
@@ -149,7 +153,7 @@ When the content across sites in an organization has consistent metadata, it is 
 ### Metadata navigation for sites
 <a name="__migbm_12"></a>
 
-Metadata navigation for sites enables a site administrator to create navigation elements based on metadata terms. For more information including performance recommendations, see [Navigation options for SharePoint Online](/office365/enterprise/navigation-options-for-sharepoint-online).
+Metadata navigation for sites enables a site administrator to create navigation elements based on metadata terms. For more information including performance recommendations, see [Navigation options for SharePoint](/office365/enterprise/navigation-options-for-sharepoint-online).
   
 ### Metadata navigation for lists and libraries
 <a name="__migbm_13"> </a>
@@ -197,7 +201,7 @@ If your organization wants to use managed term sets to implement formal taxonomi
 ### Managing terms, term sets, and groups
 <a name="__toc262648181"> </a>
 
-The Term Store management tool provides a tree control that you can use to perform most tasks. Your user role for this tool determines the tasks that you can perform. To work on global terms in the Term Store management tool, you must be a global admin or SharePoint admin in Office 365, or a Term Store Administrator in SharePoint. To work on terms for a site, you can be a designated Group Manager or Contributor for term sets. 
+The Term Store management tool provides a tree control that you can use to perform most tasks. Your user role for this tool determines the tasks that you can perform. To work on global terms in the Term Store management tool, you must be a global admin or SharePoint admin in Microsoft 365, or a Term Store Administrator in SharePoint. To work on terms for a site, you can be a designated Group Manager or Contributor for term sets. 
   
 For more information, see [Create and manage groups and term sets](set-up-new-group-for-term-sets.md).
   
@@ -217,5 +221,18 @@ For example, if you are a Term Store Administrator or a Group Manager you can cr
 At each level of the hierarchy, you can configure specific properties for a group, term set, or term by using the properties pane in the Term Store management tool. For example, if you are configuring a term set, you can specify information such as Name, Description, Owner, Contact, and Stakeholders in pane available on the **General** tab. You can also specify whether you want a term set to be open or closed to new submissions from users. Or, you can choose the **Intended Use** tab, and specify whether the term set should be available for tagging or site navigation. 
   
 ![Term Store properties let you configure settings such as tagging](media/d2dc3643-9d66-4e74-8609-c12663436157.png)
-  
 
+## See also
+<a name="additionalinformation"></a>
+         
+[Introduction to managed metadata in SharePoint Server](https://support.office.com/article/b324aebd-67ab-45a8-933d-ceedb2d909ea)
+
+[Set up metadata navigation for a list or library](https://support.office.com/article/c222a75d-8b18-44e2-9ed8-7ee4e0d23cfc)
+
+[Configure metadata navigation for a list or library](https://support.office.com/article/a8ddfcd1-a486-4e0f-b1b1-f10ca79fa9bc)
+
+[Add an enterprise keywords column to a list or library](https://support.office.com/article/314ce556-e4bf-4ef7-9939-6a1bedfc434a)
+
+[Create a Managed Metadata column](https://support.office.com/article/8fad9e35-a618-4400-b3c7-46f02785d27f)
+
+[Import term sets](https://support.office.com/article/168fbc86-7fce-4288-9a1f-b83fc3921c18)

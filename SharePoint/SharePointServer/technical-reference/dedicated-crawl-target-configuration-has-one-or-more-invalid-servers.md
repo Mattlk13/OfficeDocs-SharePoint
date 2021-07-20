@@ -1,11 +1,13 @@
 ---
 title: "Dedicated crawl target configuration has one or more invalid servers (SharePoint Server)"
 ms.reviewer: 
-ms.author: mikeplum
-author: MikePlumleyMSFT
-manager: pamgreen
+ms.author: serdars
+author: SerdarSoysal
+manager: serdars
 ms.date: 8/29/2017
 audience: ITPro
+f1.keywords:
+- NOCSH
 ms.topic: troubleshooting
 ms.prod: sharepoint-server-itpro
 localization_priority: Normal
@@ -36,7 +38,7 @@ description: "Learn how to resolve the SharePoint Health Analyzer rule: Dedicate
     
   - The URI must not contain an absolute path.
     
-    For more information, see [URI class](https://go.microsoft.com/fwlink/p/?LinkID=193513).
+    For more information, see [URI class](/dotnet/api/system.uri).
     
 2. Make sure that the server is joined with a valid role to the SharePoint farm. The server can be any of the following:
     
@@ -59,4 +61,3 @@ For more information, see [Overview of MinRole Server Roles in SharePoint Server
 #### Concepts
 
 [Add a server to a SharePoint Server 2016 farm](../install/add-a-server-to-a-sharepoint-server-2016-farm.md)
-

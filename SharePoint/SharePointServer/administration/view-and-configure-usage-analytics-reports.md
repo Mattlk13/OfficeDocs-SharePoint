@@ -1,11 +1,13 @@
 ---
 title: "View and configure usage analytics reports in SharePoint Server"
 ms.reviewer: 
-ms.author: jhendr
-author: JoanneHendrickson
-manager: pamgreen
+ms.author: serdars
+author: SerdarSoysal
+manager: serdars
 ms.date: 7/26/2017
 audience: ITPro
+f1.keywords:
+- NOCSH
 ms.topic: article
 ms.prod: sharepoint-server-itpro
 localization_priority: Normal
@@ -129,7 +131,7 @@ Notice that the value for the  *RecentPopularityTimeframe*  parameter has change
 ## Narrow the Most Popular Items report to a specific attribute or category
 <a name="BKMK_NarrowtheMostPopularItemsReporttoaSpecificAttributeorCategory"> </a>
 
-Viewing usage reports per usage event is useful when we want to see how visitors are interacting with our site. But many times we want to narrow the report to a specific attribute or category, for example all items that are on sale or all Laptops. To do this, we can use [Keyword Query Language (KQL)](https://go.microsoft.com/fwlink/p/?LinkId=400770) If you don't know KQL, don't worry. You can easily narrow your Most Popular Items report without having much knowledge of the KQL syntax. 
+Viewing usage reports per usage event is useful when we want to see how visitors are interacting with our site. But many times we want to narrow the report to a specific attribute or category, for example all items that are on sale or all Laptops. To do this, we can use [Keyword Query Language (KQL)](/sharepoint/dev/general-development/keyword-query-language-kql-syntax-reference) If you don't know KQL, don't worry. You can easily narrow your Most Popular Items report without having much knowledge of the KQL syntax. 
   
 In our Contoso catalog, we have a site column called  *RetOnSale*  . For each item, the value of  *RetOnSale*  specifies whether the item is on sale or not. 
   
@@ -225,5 +227,3 @@ If you want the usage analytics reports to be updated regardless of minimum amou
 Notice that the value of the  *TailTrimming*  parameter has changed to 0. 
     
 So with that, this series has come to an end. Hopefully you now have a better understanding of how recommendations and popular items work, and can start adding them to your website.
-  
-

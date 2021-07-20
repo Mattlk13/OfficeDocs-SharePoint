@@ -35,14 +35,23 @@
     "globalMetadata": {
       "breadcrumb_path": "/onedrive/breadcrumb/toc.json",
       "extendBreadcrumb": "true",
-      "OneDrive/*.md": "OneDrive",
+      "uhfHeaderId": "MSDocsHeader-M365-IT",
+      "titleSuffix": "OneDrive",
+      "recommendations": true,
       "contributors_to_exclude": [
         "dstrome",
         "daswifty",
         "Reraghavan",
-        "denisebmsft"
+        "denisebmsft",
+        "rjagiewich", 
+        "traya1", 
+        "rmca14", 
+        "claydetels19", 
+        "jborsecnik",
+        "tiburd",
+        "garycentric"
       ],
-      "searchScope": ["OneDrive for Business"],
+      "searchScope": ["OneDrive"],
       "feedback_system": "GitHub",
       "feedback_github_repo": "MicrosoftDocs/OfficeDocs-SharePoint",
       "feedback_product_url": "https://onedrive.uservoice.com" 

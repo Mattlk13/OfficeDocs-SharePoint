@@ -1,11 +1,13 @@
 ---
 title: "Stage 7 Upload page layouts and create new pages in a publishing site in SharePoint Server"
 ms.reviewer: 
-ms.author: jhendr
-author: JoanneHendrickson
-manager: pamgreen
+ms.author: serdars
+author: SerdarSoysal
+manager: serdars
 ms.date: 12/29/2016
 audience: ITPro
+f1.keywords:
+- NOCSH
 ms.topic: article
 ms.prod: sharepoint-server-itpro
 localization_priority: Normal
@@ -19,7 +21,7 @@ description: "Learn how to upload page layouts and create new pages in a publish
 [!INCLUDE[appliesto-2013-2016-2019-xxx-md](../includes/appliesto-2013-2016-2019-xxx-md.md)]
   
 > [!NOTE]
-> Most of the features described in this series are available only for private sites collections in SharePoint Online. 
+> Many of the features described in this series are also available for most sites in SharePoint in Microsoft 365. 
   
 ## Quick overview
 
@@ -38,7 +40,7 @@ In this stage, you'll learn:
 - [How to create a page based on a page layout](stage-7-upload-page-layouts-and-create-new-pages-in-a-publishing-site.md#BKMK_HowToCreateAPageBasedOnAPageLayout)
     
 > [!NOTE]
-> This article doesn' *t*  cover how to create a page layout. It explains how to upload already completed page layouts. These files won't be made available for download. 
+> This article doesn't cover how to create a page layout. It explains how to upload already completed page layouts. These files won't be made available for download. 
   
 ## Start stage 7
 
@@ -55,9 +57,9 @@ Page layouts contain page field controls and Web Part zones. Page field controls
   
 For more information, see:
   
-- [Overview of the SharePoint 2013 page model](https://go.microsoft.com/fwlink/p/?LinkId=400535)
+- [Overview of the SharePoint 2013 page model](/sharepoint/dev/general-development/overview-of-the-sharepoint-page-model)
     
-- [How to: Create a page layout in SharePoint 2013](https://go.microsoft.com/fwlink/p/?LinkId=400538)
+- [How to: Create a page layout in SharePoint 2013](/sharepoint/dev/general-development/how-to-create-a-page-layout-in-sharepoint)
     
 ### About pages and rendered pages
 <a name="BKMK_AboutPagesAndRenderedPages"> </a>
@@ -70,7 +72,7 @@ When visitors browse a site, they will see a rendered page. In a rendered page, 
   
 ![Rendered Page](../media/OTCSP_RenderedPage.png)
   
-For more information, see [Overview of the SharePoint 2013 page model](https://go.microsoft.com/fwlink/p/?LinkId=400535).
+For more information, see [Overview of the SharePoint 2013 page model](/sharepoint/dev/general-development/overview-of-the-sharepoint-page-model).
   
 ### How to upload a new page layout
 <a name="BKMK_HowToUploadANewPageLayout"> </a>
@@ -96,11 +98,11 @@ To turn off versioning for the **Pages** library:
     
      ![Create Search Vertical: Site Contents](../media/OTCSP_SiteContents.png)
   
-2. On the **Site Contents** page, click **Pages**. 
+2. On the **Site Contents** page, select **Pages**. 
     
-3. In the **Pages** library, on the **LIBRARY** tab, click **Library Settings**. 
+3. In the **Pages** library, on the **LIBRARY** tab, select **Library Settings**. 
     
-4. On the **Settings** page, click **Versioning settings**. 
+4. On the **Settings** page, select **Versioning settings**. 
     
 5. In the **Require Check Out section**, for **Require documents to be checked out before they can be edited**, select **No**. 
     
@@ -113,25 +115,25 @@ We are now ready to create our two new pages.
 
 To create a new page:
   
-1. On the **Site Contents** page, click **Pages**. 
+1. On the **Site Contents** page, select **Pages**. 
     
-2. In the **Pages** library, click the **FILES** tab, and then click **New Document**. 
+2. In the **Pages** library, select the **FILES** tab, and then select **New Document**. 
     
      ![New Document](../media/OTCSP_NewDocument.png)
   
-3. On the **Create Page** page, enter a **Title** and a **URL name**. From the **Page Layout** list, select the page layout that you want to apply to the new page. In our scenario, the page layout is the newly uploaded page layout called  *ContosoElectronicsCategoryPageLayout*  . 
+3. On the **Create Page** page, enter a **Title** and a **URL name**. From the **Page Layout** list, select the page layout that you want to apply to the new page. In our scenario, the page layout is the newly uploaded page layout called *ContosoElectronicsCategoryPageLayout*. 
     
      ![Create Page](../media/OTCSP_CreatePage.png)
   
-After you click **OK**, the newly created page is shown in the **Pages** library. 
+After you select **OK**, the newly created page is shown in the **Pages** library. 
     
      ![New Category Page](../media/OTCSP_NewCategoryPage.png)
   
-4. In our Contoso scenario, we'll also need a catalog item page. To create this page, repeat steps 3 and 4 from the previous procedure. However for **Page Layout**, select  *ContosoElectroniceCatalogItemPageLayout*  . 
+4. In our Contoso scenario, we'll also need a catalog item page. To create this page, repeat Steps 3 and 4 from the previous procedure. However for **Page Layout**, select *ContosoElectroniceCatalogItemPageLayout*. 
     
      ![Create Catalog Item Page](../media/OTCSP_CreateCatalogItemPage.png)
   
-Our **Pages** library now contains two new pages:  *ContosoCategoryPage*  and  *ContosoCatalogItemPage*  . 
+Our **Pages** library now contains two new pages: *ContosoCategoryPage* and *ContosoCatalogItemPage*. 
     
      ![Two New Pages](../media/OTCSP_TwoNewPages.png)
   
@@ -145,7 +147,6 @@ Now that we have created these pages, the next step is to assign them to the ter
 
 #### Other Resources
 
-[How to: Create a page layout in SharePoint Server 2013](https://msdn.microsoft.com/library/jj822368.aspx)
+[How to: Create a page layout in SharePoint Server 2013](/sharepoint/dev/general-development/how-to-create-a-page-layout-in-sharepoint)
   
-[Add snippets to a master page or a page layout in SharePoint Server 2013](https://msdn.microsoft.com/library/office/jj822367.aspx)
-
+[Add snippets to a master page or a page layout in SharePoint Server 2013](/sharepoint/dev/general-development/sharepoint-design-manager-display-templates)

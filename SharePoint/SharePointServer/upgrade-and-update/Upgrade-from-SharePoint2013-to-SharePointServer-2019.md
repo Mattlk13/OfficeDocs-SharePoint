@@ -1,10 +1,12 @@
 ---
 title: "High level overview to upgrade from SharePoint 2013 to SharePoint Server 2019"
 ms.reviewer: 
-ms.author: mikeplum
-author: MikePlumleyMSFT
-manager: pamgreen
+ms.author: serdars
+author: SerdarSoysal
+manager: serdars
 audience: ITPro
+f1.keywords:
+- NOCSH
 ms.topic: get-started-article
 ms.prod: sharepoint-server-itpro
 localization_priority: Normal
@@ -44,7 +46,7 @@ For a visual look of the high-level steps, see
 •	User Profile service application<br/>
 •	Search service application
 
-For the specific, end to end steps to upgrade SharePoint 2013 to SharePoint Server 2016, see [Upgrade to SharePoint Server 2016](/SharePoint/upgrade-and-update/upgrade-to-sharepoint-server-2016)
+For the specific, end to end steps to upgrade SharePoint 2013 to SharePoint Server 2016, see [Upgrade to SharePoint Server 2016](./upgrade-to-sharepoint-server-2016.md)
 
 ## Steps to Upgrade
 

@@ -1,11 +1,13 @@
 ---
 title: "Stage 2 Import list content into the Product Catalog Site Collection in SharePoint Server"
 ms.reviewer: 
-ms.author: jhendr
-author: JoanneHendrickson
-manager: pamgreen
+ms.author: serdars
+author: SerdarSoysal
+manager: serdars
 ms.date: 12/29/2016
 audience: ITPro
+f1.keywords:
+- NOCSH
 ms.topic: article
 ms.prod: sharepoint-server-itpro
 localization_priority: Normal
@@ -19,7 +21,7 @@ description: "Learn how to import list content into the Product Catalog Site Col
 [!INCLUDE[appliesto-2013-2016-2019-xxx-md](../includes/appliesto-2013-2016-2019-xxx-md.md)]
   
 > [!NOTE]
-> Most of the features described in this series are available only for private sites collections in SharePoint Online. 
+> Many of the features described in this series are also available for most sites in SharePoint in Microsoft 365. 
   
 ## Start stage 2
 
@@ -53,7 +55,7 @@ Before we can run the PowerShell scripts, we'll have to prepare the following:
     
 - A tab delimited text file that contains the taxonomy to be added to the **Product Hierarchy** term set. 
     
-The PowerShell scripts, instructions on how to create the tab delimited text files, and instructions on how to change and use the import scripts can be found in [Import list content to Products list for SharePoint 2013](https://go.microsoft.com/fwlink/p/?LinkId=400443).
+The PowerShell scripts, instructions on how to create the tab delimited text files, and instructions on how to change and use the import scripts can be found in [Import list content to Products list for SharePoint 2013](/samples/browse/?redirectedfrom=TechNet-Gallery).
   
 After we have run the five PowerShell scripts, we get the following:
   
@@ -61,7 +63,7 @@ After we have run the five PowerShell scripts, we get the following:
     
 - Terms in the **Product Hierarchy** term set. In our scenario, the term set reflects how Contoso has categorized their products, for example one category is called "Laptops" and another is "MP3" players. 
     
-- In the **Products** list, content in the **Item Category** column is associated with the correct term from the **Product Hierarchy** term set. The following screen shot shows how the list item  *Southridge Video Laptop15.4W M1548*  is associated with the term  *Laptops*  through the **Item Category** column. 
+- In the **Products** list, content in the **Item Category** column is associated with the correct term from the **Product Hierarchy** term set. The following screen shot shows how the list item *Southridge Video Laptop15.4W M1548* is associated with the term *Laptops* through the **Item Category** column. 
     
 ![Item Term Connection](../media/OTCSP_ItemTermConnection.PNG)
   
@@ -76,4 +78,3 @@ So, now that we have content in the **Products** list, the next task is to enabl
 #### Concepts
 
 [Configure cross-site publishing in SharePoint Server](configure-cross-site-publishing.md)
-

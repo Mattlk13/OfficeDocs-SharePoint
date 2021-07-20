@@ -1,10 +1,13 @@
 ---
 title: "Show the right search results"
 ms.reviewer: 
-ms.author: mikeplum
-author: MikePlumleyMSFT
-manager: pamgreen
+ms.author: serdars
+author: SerdarSoysal
+manager: serdars
+recommendations: true
 audience: Admin
+f1.keywords:
+- NOCSH
 ms.topic: overview
 ms.service: sharepoint-online
 localization_priority: Normal

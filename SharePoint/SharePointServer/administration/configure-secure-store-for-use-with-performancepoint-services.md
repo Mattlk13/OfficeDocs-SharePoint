@@ -1,11 +1,13 @@
 ---
 title: "Configure Secure Store for use with PerformancePoint Services"
 ms.reviewer: 
-ms.author: mikeplum
-author: MikePlumleyMSFT
-manager: pamgreen
+ms.author: serdars
+author: SerdarSoysal
+manager: serdars
 ms.date: 7/6/2017
 audience: ITPro
+f1.keywords:
+- NOCSH
 ms.topic: article
 ms.prod: sharepoint-server-itpro
 localization_priority: Normal
@@ -125,7 +127,7 @@ You must configure your PerformancePoint Services data connection to use the Sec
   
 1. In Dashboard Designer, on the Create tab, click Data Source.
     
-2. On the **Select a Data Source Template** dialog box, choose your data source and click OK. 
+2. On the **Select a Data Source Template** dialog, choose your data source and click OK. 
     
 3. In the Data Source Settings section, choose the Use a stored account option.
     
@@ -138,7 +140,7 @@ You must configure your PerformancePoint Services data connection to use the Sec
 7. Create and publish your dashboard.
     
     > [!NOTE]
-    > For detailed information about creating dashboards, see [Create Dashboards by using PerformancePoint Services (SharePoint Server 2016)](/SharePoint/administration/performancepoint-services-overview). 
+    > For detailed information about creating dashboards, see [Create Dashboards by using PerformancePoint Services (SharePoint Server 2016)](./performancepoint-services-overview.md). 
   
 With the target application specified in Dashboard Designer, PerformancePoint Services uses the credentials associated with that target application to refresh the data in the dashboard after you have published it to SharePoint Server.
   
@@ -148,4 +150,3 @@ With the target application specified in Dashboard Designer, PerformancePoint Se
 #### Concepts
 
 [Configure the Secure Store Service in SharePoint Server](configure-the-secure-store-service.md)
-
